@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1">
 
     <application
         android:allowBackup="true"
@@ -10,14 +10,15 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Controladores.CoordinadorActivity"></activity>
-        <activity android:name=".Controladores.EstudianteActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Controladores.CoordinadorActivity" />
+        <activity android:name=".Controladores.EstudianteActivity" />
+        <activity android:name=".Controladores.BitacoraActivity"></activity>
     </application>
 
 </manifest>
