@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Proyecto 1 - Grupo 07 - PDM115</string>
+
+
+    <!--Nombre de la clase, con su descripcion.
+        Se implementa de esta forma para luego traducir
+        cada descripcion-->
+    <string name="CoordinadorActivity">
+        Esta opcion lleva al menu de la tabla Coordinador.
+    </string>
+    <string name="EstudianteActivity">
+        Menu para gestionar la tabla Estudiante.
+    </string>
+
+</resources>
