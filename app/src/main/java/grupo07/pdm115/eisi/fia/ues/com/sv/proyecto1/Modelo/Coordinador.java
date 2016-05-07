@@ -13,12 +13,6 @@ public class Coordinador {
     private String email;
     private String telefono;
 
-    //Constantes para la base de datos
-    public static final String COORDINADOR_TABLE = "coordinador";
-    public static final String IDENTIFICADOR_COORDINADOR = "id_coordinador";
-    public static final String NOM_COORDINADOR = "nombre_coordinador";
-    public static final String EMAIL_COORDINADOR = "email_coordiandor";
-    public static final String TEL_COORDINADOR = "telefono_coordinador";
 
     public Coordinador(String email, String id_coordinador, String nombre, String telefono) {
         this.email = email;
@@ -64,18 +58,6 @@ public class Coordinador {
     * la tabla Coordinador
     * */
 
-    public static String crearTablaCoordinador(){
-        return "CREATE TABLE " + COORDINADOR_TABLE + " (" +
-                IDENTIFICADOR_COORDINADOR + " TEXT(5) NOT NULL, " +
-                NOM_COORDINADOR + " TEXT(10) NOT NULL, " +
-                EMAIL_COORDINADOR + " TEXT(25), " +
-                TEL_COORDINADOR + " TEXT(8) NOT NULL, " +
-                " PRIMARY KEY(" + IDENTIFICADOR_COORDINADOR + ") " +
-                ");";
-    }
 
-    public static String eliminarTablaCoordinador(){
-        return "DROP TABLE IF EXISTS " + COORDINADOR_TABLE;
-    }
 
 }

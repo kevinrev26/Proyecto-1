@@ -21,7 +21,7 @@ public class MasterDAO {
         abrirDB();
     }
 
-    public void abrirDB(){
+    private void abrirDB(){
         if (manager == null){
             manager = DatabaseManager.getInstance(this.mContext);
             mDatabase = manager.getReadableDatabase();

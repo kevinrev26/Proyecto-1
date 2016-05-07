@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.CoordinadorDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.EstudianteDAO;
+
 /**
  * Creado por Kevin Rivera, 05-07-16.
  * Puede usar, modificar y compartir este archivo
@@ -49,8 +52,8 @@ public class DatabaseManager extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         //Llamadas a los metodos estaticos
         //Cuidado con aquellas entidades con llaves foraneas, esas deben crearse al final
-        db.execSQL(Coordinador.crearTablaCoordinador());
-        db.execSQL(Estudiante.crearTablaEstudiante());
+        db.execSQL(CoordinadorDAO.crearTablaCoordinador());
+        db.execSQL(EstudianteDAO.crearTablaEstudiante());
     }
 
 
@@ -80,8 +83,8 @@ public class DatabaseManager extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //Se ha modificado de la version oldVersion a newVersion
         //Se ejecutan los metodos estaticos para eliminar las tablas de las entidades
-        db.execSQL(Coordinador.eliminarTablaCoordinador());
-        db.execSQL(Estudiante.eliminarTablaEstudiante());
+        db.execSQL(CoordinadorDAO.eliminarTablaCoordinador());
+        db.execSQL(EstudianteDAO.eliminarTablaEstudiante());
         //Luego se manda a llamar el metodo para crear la base
         onCreate(db);
 

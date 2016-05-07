@@ -15,13 +15,6 @@ public class Estudiante {
     private String carrera;
 
 
-    //Constantes para las tablas
-    public static final String ESTUDIANTE_TABLE = "estudiante";
-    public static final String CARNET = "carnet_estudiante";
-    public static final String NOMBRE = "nombre_estudiante";
-    public static final String EMAIL = "email_estudiante";
-    public static final String TELEFONO = "telefono_estudiante";
-    public static final String CARRERA = "CARRERA";
 
     public Estudiante(String carnet, String carrera, String email, String telefono, String nombre) {
         this.carnet = carnet;
@@ -71,21 +64,5 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
-    /*
-    * Con este metodo se construye el String para la creacion de la tabla
-    */
-    public static String crearTablaEstudiante(){
-        return "CREATE TABLE " + ESTUDIANTE_TABLE + " (" +
-                CARNET + " TEXT(7) NOT NULL, " +
-                NOMBRE + " TEXT(20) NOT NULL, " +
-                EMAIL  + " TEXT(25) NOT NULL, " +
-                TELEFONO + " TEXT(8), " +
-                CARRERA +  " TEXT(20), " +
-                "PRIMARY KEY(" + CARNET +") " +
-                ");";
-    }
 
-    public static String eliminarTablaEstudiante(){
-        return  "DROP TABLE IF EXISTS " + ESTUDIANTE_TABLE;
-    }
 }
