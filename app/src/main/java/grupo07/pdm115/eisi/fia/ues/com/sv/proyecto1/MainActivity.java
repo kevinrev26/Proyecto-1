@@ -13,6 +13,10 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1;
 *   Modelo: Aqui se encontraran con los POJO de cada una de las entidades y con
 *          el manejador de la base de datos.
 *
+*   DAO: En este paquete se encuentran los manejadores para cada una de las entidades
+*       de la base de datos, cada debe extender de una clase madre, para implementar
+*       algunas caracteristicas propias de cada una de las entidades.
+*
 *
 *
 *
