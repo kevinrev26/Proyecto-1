@@ -15,13 +15,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:label="@string/MainActivity"/>
-        <activity android:name=".Controladores.CoordinadorActivity"
-            android:label="@string/Tabla_Coordinador"/>
-        <activity android:name=".Controladores.EstudianteActivity"
-            android:label="@string/Tabla_Estudiante"/>
-
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/MainActivity" />
+        <activity
+            android:name=".Controladores.CoordinadorActivity"
+            android:label="@string/Tabla_Coordinador" />
+        <activity
+            android:name=".Controladores.EstudianteActivity"
+            android:label="@string/Tabla_Estudiante" />
+        <activity android:name=".Controladores.TipoDeActividadActivity"></activity>
     </application>
 
 </manifest>
