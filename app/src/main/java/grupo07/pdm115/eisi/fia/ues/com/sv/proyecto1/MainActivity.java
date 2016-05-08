@@ -22,8 +22,10 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1;
 *
 */
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -87,5 +89,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Clase temp = mAdapter.getItem(position);
         Toast.makeText(MainActivity.this, "Seleccionado: " + temp.getNombreClase(), Toast.LENGTH_SHORT).show();
+        try{
+            Class<?> clase = Class.forName("grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores." +temp.getNombreClase());
+            Intent intent = new Intent(this,clase);
+            this.startActivity(intent);
+        } catch (ClassNotFoundException e){
+            Log.i("EXE",e.toString());
+        }
     }
 }

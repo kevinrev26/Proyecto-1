@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Proyecto 1 - Grupo 07 - PDM115</string>
+    <!--Titulos para las activities-->
+    <string name="MainActivity">Menu principal del sistema</string>
+    <string name="Tabla_Coordinador"> Opciones para Coordinador </string>
+    <string name="Tabla_Estudiante">Opciones para Estudiante</string>
 
 
     <!--Nombre de la clase, con su descripcion.
