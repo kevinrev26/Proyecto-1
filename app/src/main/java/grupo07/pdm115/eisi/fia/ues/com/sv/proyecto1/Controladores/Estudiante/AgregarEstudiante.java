@@ -83,7 +83,7 @@ public class AgregarEstudiante extends AppCompatActivity implements View.OnClick
                 Toast.makeText(AgregarEstudiante.this, "El carnet debe comenzar con dos letras", Toast.LENGTH_SHORT).show();
             } else {
                 Estudiante temp = new Estudiante(mCarnetText.getText().toString(),
-                        mCarnetText.getText().toString().toUpperCase(),
+                        seleccion,
                         mCorreoText.getText().toString(),
                         mTelText.getText().toString(),
                         mNombreText.getText().toString());
