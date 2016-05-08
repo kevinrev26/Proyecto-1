@@ -2,6 +2,7 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.DatabaseManager;
 
@@ -18,13 +19,18 @@ public class MasterDAO {
     public MasterDAO(Context ctx){
         this.mContext = ctx;
         this.manager = DatabaseManager.getInstance(ctx);
+        Log.i("DAO","Constructor MasterDAO");
         abrirDB();
     }
 
-    private void abrirDB(){
+    protected void abrirDB(){
         if (manager == null){
             manager = DatabaseManager.getInstance(this.mContext);
             mDatabase = manager.getReadableDatabase();
+            Log.i("DAO","Abriendo la BD");
+        } else {
+            mDatabase = manager.getReadableDatabase();
+            Log.i("DAO","Abriendo la BD con else");
         }
     }
 

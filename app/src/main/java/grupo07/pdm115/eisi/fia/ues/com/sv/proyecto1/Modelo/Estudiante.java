@@ -64,5 +64,14 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
-
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "carnet='" + carnet + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", carrera='" + carrera + '\'' +
+                '}';
+    }
 }

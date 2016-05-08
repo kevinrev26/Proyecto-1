@@ -26,7 +26,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
     //fallos en la ejecucion
     public static synchronized DatabaseManager getInstance(Context context){
 
-        if (mInstance !=null){
+        if (mInstance ==null){
             mInstance = new DatabaseManager(context,DB_NAME,null,DB_VERSION);
         }
             return mInstance;

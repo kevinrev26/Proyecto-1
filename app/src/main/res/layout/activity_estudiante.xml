@@ -10,13 +10,48 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.EstudianteActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ACTIVITY ESTUDIANTE"
-        android:id="@+id/textView5"
+        android:text="@string/llenarBD"
+        android:id="@+id/btnLlenarDB"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CrearEstudiante"
+        android:id="@+id/btnAgregar"
+        android:layout_below="@+id/btnLlenarDB"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="96dp"/>
+        android:layout_marginTop="33dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EliminarEstudiante"
+        android:id="@+id/btnEliminar"
+        android:layout_below="@+id/btnAgregar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ActualizarEstudiante"
+        android:id="@+id/btnActualizar"
+        android:layout_below="@+id/btnEliminar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/VerEstudiantes"
+        android:id="@+id/btnSeleccionar"
+        android:layout_below="@+id/btnActualizar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"/>
+
 </RelativeLayout>

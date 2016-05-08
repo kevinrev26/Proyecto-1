@@ -16,4 +16,12 @@
         Menu para gestionar la tabla Estudiante.
     </string>
 
+    <!--Botones de las opciones para realizar el crud-->
+    <string name="llenarBD">Llenar la base de datos</string>
+    <!--Botones para EstudianteActivity-->
+    <string name="CrearEstudiante">Agregar un nuevo Estudiante</string>
+    <string name="ActualizarEstudiante">Actualizar un Estudiante existente</string>
+    <string name="EliminarEstudiante">Eliminar un estudiante de la base</string>
+    <string name="VerEstudiantes">Ver todos los estudiantes</string>
+
 </resources>

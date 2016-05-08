@@ -34,11 +34,10 @@ public class CoordinadorDAO extends MasterDAO {
 
     public static String crearTablaCoordinador(){
         return "CREATE TABLE " + COORDINADOR_TABLE + " (" +
-                IDENTIFICADOR_COORDINADOR + " INTEGER AUTOINCREMENT, " +
+                IDENTIFICADOR_COORDINADOR + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 NOM_COORDINADOR + " TEXT(10) NOT NULL, " +
                 EMAIL_COORDINADOR + " TEXT(25), " +
-                TEL_COORDINADOR + " TEXT(8) NOT NULL, " +
-                " PRIMARY KEY(" + IDENTIFICADOR_COORDINADOR + ") " +
+                TEL_COORDINADOR + " TEXT(8) NOT NULL " +
                 ");";
     }
 

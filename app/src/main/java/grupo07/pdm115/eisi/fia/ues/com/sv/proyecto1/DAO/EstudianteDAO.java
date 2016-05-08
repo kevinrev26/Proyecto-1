@@ -34,6 +34,7 @@ public class EstudianteDAO extends MasterDAO {
 
     public EstudianteDAO(Context ctx) {
         super(ctx);
+        Log.i("DAO","Dentro del constructor ESTUDIANTE DAO");
     }
 
     /*
@@ -55,6 +56,7 @@ public class EstudianteDAO extends MasterDAO {
     }
 
     public long insertarEstudiante(Estudiante estudiante){
+        //super.abrirDB();
         ContentValues contentValues = new ContentValues();
         contentValues.put(CARNET,estudiante.getCarnet());
         contentValues.put(NOMBRE,estudiante.getNombre());
@@ -65,6 +67,7 @@ public class EstudianteDAO extends MasterDAO {
     }
 
     public int actualizarEstudiante(Estudiante estudiante){
+        //super.abrirDB();
         ContentValues contentValues = new ContentValues();
         contentValues.put(CARNET,estudiante.getCarnet());
         contentValues.put(NOMBRE,estudiante.getNombre());
@@ -78,12 +81,14 @@ public class EstudianteDAO extends MasterDAO {
     }
 
     public int eliminarEstudiante(String carnet){
+       // super.abrirDB();
         String where = CARNET + "= ?";
         String[] whereArgs = {carnet};
         return mDatabase.delete(ESTUDIANTE_TABLE, where, whereArgs);
     }
 
     public ArrayList<Estudiante> getListaEstudiantes(){
+       // super.abrirDB();
         String query = "SELECT * FROM " + ESTUDIANTE_TABLE;
         Cursor cursor = mDatabase.rawQuery(query,null);
         ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
@@ -100,6 +105,7 @@ public class EstudianteDAO extends MasterDAO {
     }
 
     public Estudiante getEstudiante(String id){
+        //super.abrirDB();
         String where = CARNET + "= ?";
         String whereArgs[] = { id };
         Cursor cursor  = mDatabase.query(ESTUDIANTE_TABLE,null,where,whereArgs,null,null,null);
