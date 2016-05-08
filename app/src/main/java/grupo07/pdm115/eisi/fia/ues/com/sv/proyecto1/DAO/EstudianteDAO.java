@@ -1,9 +1,12 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO;
 
 import android.app.ActivityManager;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
+
+import java.util.ArrayList;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Coordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Estudiante;
@@ -51,6 +54,51 @@ public class EstudianteDAO extends MasterDAO {
         return  "DROP TABLE IF EXISTS " + ESTUDIANTE_TABLE;
     }
 
+    public long insertarEstudiante(Estudiante estudiante){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(CARNET,estudiante.getCarnet());
+        contentValues.put(NOMBRE,estudiante.getNombre());
+        contentValues.put(EMAIL,estudiante.getEmail());
+        contentValues.put(TELEFONO, estudiante.getTelefono());
+        contentValues.put(CARRERA, estudiante.getCarrera());
+        return mDatabase.insert(ESTUDIANTE_TABLE, null,contentValues);
+    }
+
+    public int actualizarEstudiante(Estudiante estudiante){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(CARNET,estudiante.getCarnet());
+        contentValues.put(NOMBRE,estudiante.getNombre());
+        contentValues.put(EMAIL,estudiante.getEmail());
+        contentValues.put(TELEFONO, estudiante.getTelefono());
+        contentValues.put(CARRERA, estudiante.getCarrera());
+
+        String where = CARNET + "= ?";
+        String[] whereArgs = {estudiante.getCarnet() };
+        return mDatabase.update(ESTUDIANTE_TABLE, contentValues, where, whereArgs);
+    }
+
+    public int eliminarEstudiante(String carnet){
+        String where = CARNET + "= ?";
+        String[] whereArgs = {carnet};
+        return mDatabase.delete(ESTUDIANTE_TABLE, where, whereArgs);
+    }
+
+    public ArrayList<Estudiante> getListaEstudiantes(){
+        String query = "SELECT * FROM " + ESTUDIANTE_TABLE;
+        Cursor cursor = mDatabase.rawQuery(query,null);
+        ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
+        while (cursor.moveToNext()){
+            estudiantes.add(getEstudiantePorCursor(cursor));
+        }
+
+        if (cursor!=null){
+            cursor.close();
+        }
+
+        return estudiantes;
+
+    }
+
     public Estudiante getEstudiante(String id){
         String where = CARNET + "= ?";
         String whereArgs[] = { id };
@@ -78,7 +126,7 @@ public class EstudianteDAO extends MasterDAO {
                 );
 
             } catch (Exception e){
-                Log.i("EXE_INS",e.toString());
+                Log.i("EXE",e.toString());
                 return null;
 
             }

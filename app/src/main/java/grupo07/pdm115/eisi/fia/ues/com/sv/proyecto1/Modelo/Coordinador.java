@@ -8,13 +8,13 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 public class Coordinador {
 
     //Atributos
-    private String id_coordinador;
+    private int id_coordinador;
     private String nombre;
     private String email;
     private String telefono;
 
 
-    public Coordinador(String email, String id_coordinador, String nombre, String telefono) {
+    public Coordinador(String email, int id_coordinador, String nombre, String telefono) {
         this.email = email;
         this.id_coordinador = id_coordinador;
         this.nombre = nombre;
@@ -29,11 +29,11 @@ public class Coordinador {
         this.email = email;
     }
 
-    public String getId_coordinador() {
+    public int getId_coordinador() {
         return id_coordinador;
     }
 
-    public void setId_coordinador(String id_coordinador) {
+    public void setId_coordinador(int id_coordinador) {
         this.id_coordinador = id_coordinador;
     }
 
@@ -53,10 +53,6 @@ public class Coordinador {
         this.telefono = telefono;
     }
 
-    /*
-    * El metodo crear tabla crea el string a usar en la base de datos para definir
-    * la tabla Coordinador
-    * */
 
 
 
