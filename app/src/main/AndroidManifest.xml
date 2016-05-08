@@ -27,6 +27,8 @@
         <activity android:name=".Controladores.TipoDeActividadActivity"/>
         <activity android:name=".Controladores.Estudiante.AgregarEstudiante">
         </activity>
+        <activity android:name=".Controladores.Estudiante.EliminarEstudiante">
+        </activity>
     </application>
 
 </manifest>

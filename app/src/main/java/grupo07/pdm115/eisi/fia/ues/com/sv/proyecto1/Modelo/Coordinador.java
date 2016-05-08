@@ -53,7 +53,9 @@ public class Coordinador {
         this.telefono = telefono;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre +
+                ", telefono: " + telefono;
+    }
 }

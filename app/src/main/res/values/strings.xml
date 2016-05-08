@@ -31,6 +31,7 @@
     <string name="TelEstudiante">Telefono Estudiante</string>
     <string name="CarreraEstudiante">Carrera cursante</string>
     <string name="AgregarBtn">Agregar Estudiante</string>
+    <string name="EliminarEstudianteText">Seleccione un elemento a eliminar</string>
 
     <!--Items para la activity Agregar estudiante-->
     <string-array name="carreras_array">
