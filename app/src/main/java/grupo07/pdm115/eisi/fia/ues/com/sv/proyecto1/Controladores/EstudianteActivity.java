@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.AgregarEstudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.EliminarEstudiante;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.SeleccionarEstudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.EstudianteDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Estudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
@@ -92,10 +93,10 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
             case R.id.btnSeleccionar:
                 //Cargar activity para ver todos los elementos
                 cargarEstudiantes();
-                for(Estudiante e : estudiantes){
-                    Log.i("DAO",e.toString());
-                }
-                Toast.makeText(EstudianteActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(EstudianteActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), SeleccionarEstudiante.class);
+                intent.putExtra("estudiantes",estudiantes);
+                startActivity(intent);
                 break;
 
         }

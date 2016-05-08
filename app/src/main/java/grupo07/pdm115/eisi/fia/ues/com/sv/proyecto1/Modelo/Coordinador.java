@@ -1,11 +1,13 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 
+import java.io.Serializable;
+
 /**
  * Creado por Kevin Rivera, 05-06-16.
  * Puede usar, modificar y compartir este archivo
  * Consultas y mas: kevinrev26@gmail.com
  */
-public class Coordinador {
+public class Coordinador implements Serializable {
 
     //Atributos
     private int id_coordinador;

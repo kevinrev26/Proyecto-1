@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".Controladores.Estudiante.EliminarEstudiante">
         </activity>
+        <activity android:name=".Controladores.Estudiante.SeleccionarEstudiante">
+        </activity>
     </application>
 
 </manifest>

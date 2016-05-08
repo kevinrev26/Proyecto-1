@@ -32,6 +32,7 @@
     <string name="CarreraEstudiante">Carrera cursante</string>
     <string name="AgregarBtn">Agregar Estudiante</string>
     <string name="EliminarEstudianteText">Seleccione un elemento a eliminar</string>
+    <string name="SeleccionarEstudiantes">Estudiantes en el sistema</string>
 
     <!--Items para la activity Agregar estudiante-->
     <string-array name="carreras_array">
