@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1">
+<manifest package="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -10,21 +10,23 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/MainActivity" />
+            android:label="@string/MainActivity"/>
         <activity
             android:name=".Controladores.CoordinadorActivity"
-            android:label="@string/Tabla_Coordinador" />
+            android:label="@string/Tabla_Coordinador"/>
         <activity
             android:name=".Controladores.EstudianteActivity"
-            android:label="@string/Tabla_Estudiante" />
-        <activity android:name=".Controladores.TipoDeActividadActivity"></activity>
+            android:label="@string/Tabla_Estudiante"/>
+        <activity android:name=".Controladores.TipoDeActividadActivity"/>
+        <activity android:name=".Controladores.Estudiante.AgregarEstudiante">
+        </activity>
     </application>
 
 </manifest>

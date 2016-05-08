@@ -34,7 +34,7 @@ public class EstudianteDAO extends MasterDAO {
 
     public EstudianteDAO(Context ctx) {
         super(ctx);
-        Log.i("DAO","Dentro del constructor ESTUDIANTE DAO");
+        //Log.i("DAO","Dentro del constructor ESTUDIANTE DAO");
     }
 
     /*
@@ -104,10 +104,10 @@ public class EstudianteDAO extends MasterDAO {
 
     }
 
-    public Estudiante getEstudiante(String id){
+    public Estudiante getEstudiante(String carnet){
         //super.abrirDB();
         String where = CARNET + "= ?";
-        String whereArgs[] = { id };
+        String whereArgs[] = { carnet };
         Cursor cursor  = mDatabase.query(ESTUDIANTE_TABLE,null,where,whereArgs,null,null,null);
         cursor.moveToFirst();
         Estudiante temp = getEstudiantePorCursor(cursor);

@@ -19,7 +19,7 @@ public class MasterDAO {
     public MasterDAO(Context ctx){
         this.mContext = ctx;
         this.manager = DatabaseManager.getInstance(ctx);
-        Log.i("DAO","Constructor MasterDAO");
+        //Log.i("DAO","Constructor MasterDAO");
         abrirDB();
     }
 
@@ -27,10 +27,10 @@ public class MasterDAO {
         if (manager == null){
             manager = DatabaseManager.getInstance(this.mContext);
             mDatabase = manager.getReadableDatabase();
-            Log.i("DAO","Abriendo la BD");
+           // Log.i("DAO","Abriendo la BD");
         } else {
             mDatabase = manager.getReadableDatabase();
-            Log.i("DAO","Abriendo la BD con else");
+            //Log.i("DAO","Abriendo la BD con else");
         }
     }
 

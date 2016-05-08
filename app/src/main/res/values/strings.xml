@@ -24,4 +24,24 @@
     <string name="EliminarEstudiante">Eliminar un estudiante de la base</string>
     <string name="VerEstudiantes">Ver todos los estudiantes</string>
 
+    <!--Opciones de la activity AgregarEstudiante-->
+    <string name="CarnetEstudiante">Carnet Estudiante</string>
+    <string name="NombreEstudiante">Nombre Estudiante</string>
+    <string name="EmailEstudiante">Correo Electronico</string>
+    <string name="TelEstudiante">Telefono Estudiante</string>
+    <string name="CarreraEstudiante">Carrera cursante</string>
+    <string name="AgregarBtn">Agregar Estudiante</string>
+
+    <!--Items para la activity Agregar estudiante-->
+    <string-array name="carreras_array">
+        <item>Ingenieria Civil</item>
+        <item>Ingenieria Industrial</item>
+        <item>Ingenieria Electrica</item>
+        <item>Ingenieria en Alimentos</item>
+        <item>Ingenieria Quimica</item>
+        <item>Ingenieria de Sistemas</item>
+        <item>Arquitectura</item>
+        <item>Ingenieria Mecanica</item>
+    </string-array>
+
 </resources>

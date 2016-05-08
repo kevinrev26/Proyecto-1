@@ -9,6 +9,8 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1;
 *
 *   Controladores: En este paquete se colocaran las clases que controlan
 *          las views o layouts de las activities.
+*          Ademas se incluyen sub paquetes para manejar las activities
+*          de cada opcion del CRUD
 *
 *   Modelo: Aqui se encontraran con los POJO de cada una de las entidades y con
 *          el manejador de la base de datos.
