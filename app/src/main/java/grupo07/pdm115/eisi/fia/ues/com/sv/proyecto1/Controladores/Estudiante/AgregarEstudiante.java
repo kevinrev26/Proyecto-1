@@ -2,6 +2,7 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,6 +11,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.regex.Pattern;
+
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.EstudianteDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Estudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 public class AgregarEstudiante extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
@@ -22,6 +27,9 @@ public class AgregarEstudiante extends AppCompatActivity implements View.OnClick
     //Variable para controlar la seleccion del spinner;
     private String seleccion;
 
+    //Objeto para manejar el ingreso del nuevo estudiante
+    private EstudianteDAO  mEstudianteDAO;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +40,8 @@ public class AgregarEstudiante extends AppCompatActivity implements View.OnClick
         setListeners();
         //configurando el spinner
         configurarSpinner();
+        //Referenciando el DAO
+        mEstudianteDAO = new EstudianteDAO(AgregarEstudiante.this);
     }
 
 
@@ -66,6 +76,26 @@ public class AgregarEstudiante extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
+        if (!validarVacios()){
+            Toast.makeText(AgregarEstudiante.this, "Algun campo esta vacio", Toast.LENGTH_SHORT).show();
+        } else {
+            if (validarCarnet()){
+                Toast.makeText(AgregarEstudiante.this, "El carnet debe comenzar con dos letras", Toast.LENGTH_SHORT).show();
+            } else {
+                Estudiante temp = new Estudiante(mCarnetText.getText().toString(),
+                        mCarnetText.getText().toString().toUpperCase(),
+                        mCorreoText.getText().toString(),
+                        mTelText.getText().toString(),
+                        mNombreText.getText().toString());
+                if (mEstudianteDAO.insertarEstudiante(temp)>0){
+                    Toast.makeText(AgregarEstudiante.this, "Estudiante agregado con exito", Toast.LENGTH_SHORT).show();
+                    this.finish();
+                } else {
+                    Toast.makeText(AgregarEstudiante.this, "Ocurrio algun error al agregar el nuevo estudiante", Toast.LENGTH_SHORT).show();
+                }
+            } //Else validar carnet
+
+        }//Else validar vacios
 
     }
 
@@ -79,4 +109,28 @@ public class AgregarEstudiante extends AppCompatActivity implements View.OnClick
     public void onNothingSelected(AdapterView<?> parent) {
         //Nothing
     }
+
+
+    //Validaciones
+    public boolean validarVacios(){
+        if (mCarnetText.getText().toString().equals("") ||
+                mNombreText.getText().toString().equals("") ||
+                mCorreoText.getText().toString().equals("")){
+            return false;
+
+        } else {
+            return true;
+        }
+    }
+
+    public boolean validarCarnet(){
+        if (mCarnetText.getText().toString().matches("^[A-Za-z]{2}\\d{5}$")){
+            return false;
+        } else {
+           return true;
+        }
+
+    }
 }
+
+
