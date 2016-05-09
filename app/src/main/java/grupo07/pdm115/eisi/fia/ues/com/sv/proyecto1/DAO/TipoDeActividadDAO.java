@@ -20,7 +20,7 @@ public class TipoDeActividadDAO  extends MasterDAO
     private static final int ID_COL = 0;
     private static final String NOMBRE_ACTIVIDAD = "nombre_actividad";
     private static final int NOMBRE_COL = 1;
-    private static final int HORAS = 0;
+    private static final String HORAS = "cantidad_horas";
     private static final int HORAS_COL = 2;
     private static final String DESCRIPCION = "descripcion";
     private static final int DESCRIP_COL = 3;
@@ -54,7 +54,7 @@ public class TipoDeActividadDAO  extends MasterDAO
 
         contentValues.put(ID_TIPO_ACTIVIDAD,tipoActividad.getId_tipo_actividad());
         contentValues.put(NOMBRE_ACTIVIDAD,tipoActividad.getNombre_actividad());
-        contentValues.put(String.valueOf(HORAS),tipoActividad.getCantidad_horas()); //dudas ahi ?????
+        contentValues.put(HORAS,tipoActividad.getCantidad_horas()); //dudas ahi ?????
         contentValues.put(DESCRIPCION,tipoActividad.getDescripcion());
 
         return mDatabase.insert(TIPOACTIVIDAD_TABLE,null,contentValues);
@@ -65,7 +65,7 @@ public class TipoDeActividadDAO  extends MasterDAO
 
         contentValues.put(ID_TIPO_ACTIVIDAD,tipoActividad.getId_tipo_actividad());
         contentValues.put(NOMBRE_ACTIVIDAD,tipoActividad.getNombre_actividad());
-        contentValues.put(String.valueOf(HORAS),tipoActividad.getCantidad_horas()); //dudas ahi ???????
+        contentValues.put(HORAS,tipoActividad.getCantidad_horas()); //dudas ahi ???????
         contentValues.put(DESCRIPCION,tipoActividad.getDescripcion());
 
         String where=ID_TIPO_ACTIVIDAD + "= ?";
