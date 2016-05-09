@@ -25,13 +25,17 @@
             android:name=".Controladores.EstudianteActivity"
             android:label="@string/Tabla_Estudiante"/>
         <activity android:name=".Controladores.TipoDeActividadActivity"/>
-        <activity android:name=".Controladores.Estudiante.AgregarEstudiante">
+        <activity android:name=".Controladores.Estudiante.AgregarEstudiante"
+                  android:label="@string/AgregarEstudiante">
         </activity>
-        <activity android:name=".Controladores.Estudiante.EliminarEstudiante">
+        <activity android:name=".Controladores.Estudiante.EliminarEstudiante"
+                  android:label="@string/EliminarEstudiante">
         </activity>
-        <activity android:name=".Controladores.Estudiante.SeleccionarEstudiante">
+        <activity android:name=".Controladores.Estudiante.SeleccionarEstudiante"
+                  android:label="@string/VerTodosEstudiantes">
         </activity>
-        <activity android:name=".Controladores.Estudiante.ActualizarEstudiante">
+        <activity android:name=".Controladores.Estudiante.ActualizarEstudiante"
+                  android:label="@string/ActualizarEstudiantes">
         </activity>
     </application>
 

@@ -4,7 +4,14 @@
     <string name="MainActivity">Menu principal del sistema</string>
     <string name="Tabla_Coordinador"> Opciones para Coordinador </string>
     <string name="Tabla_Estudiante">Opciones para Estudiante</string>
-
+    <string name="AgregarEstudiante">Agregar un nuevo Estudiante</string>
+    <string name="VerTodosEstudiantes">Estudiantes Registrados</string>
+    <string name="EliminarEstudiantes">Eliminar Estudiante</string>
+    <string name="ActualizarEstudiantes">Actualizar Estudiante</string>
+    <string name="AgregarCoordinador">Agregar Coordinador</string>
+    <string name="VerTodosCoordinadores">Coordinadores registrados</string>
+    <string name="EliminarCoordinador">Eliminar Coordinador</string>
+    <string name="ActualizarCoordinador">Actualizar coordinador</string>
 
     <!--Nombre de la clase, con su descripcion.
         Se implementa de esta forma para luego traducir
