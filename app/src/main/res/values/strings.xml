@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Proyecto 1 - Grupo 07 - PDM115</string>
+    <string name="AppGrupo">Grupo 07: Programacion para dispositivos Moviles</string>
+
+
     <!--Titulos para las activities-->
     <string name="MainActivity">Menu principal del sistema</string>
     <string name="Tabla_Coordinador"> Opciones para Coordinador </string>
@@ -10,8 +13,8 @@
     <string name="ActualizarEstudiantes">Actualizar Estudiante</string>
     <string name="AgregarCoordinador">Agregar Coordinador</string>
     <string name="VerTodosCoordinadores">Coordinadores registrados</string>
-    <string name="EliminarCoordinador">Eliminar Coordinador</string>
-    <string name="ActualizarCoordinador">Actualizar coordinador</string>
+    <string name="EliminarCoordinadores">Eliminar Coordinador</string>
+    <string name="ActualizarCoordinadores">Actualizar coordinador</string>
 
     <string name="Tabla_Bitacora"> Opciones para Bitacora </string>
     <string name="Tabla_TipoDeActividad">Opciones para Tipo De Actividad</string>
@@ -24,9 +27,11 @@
     <string name="EliminarBitacora">Eliminar Bitacora</string>
     <string name="ActualizarBitacora">Actualizar Bitacorar</string>
 
-    <!--Nombre de la clase, con su descripcion.
-        Se implementa de esta forma para luego traducir
-        cada descripcion-->
+    <!--
+    Nombre de la clase, con su descripcion.
+    Se implementa de esta forma para luego traducir
+    cada descripcion
+    -->
     <string name="CoordinadorActivity">
         Esta opcion lleva al menu de la tabla Coordinador.
     </string>
@@ -41,7 +46,7 @@
         Menu para gestionar la tabla Tipo De Actividad.
     </string>
 
-    <!--Botones de las opciones para realizar el crud-->
+    <!--Botones de las opciones para realizar el crud Estudiante-->
     <string name="llenarBD">Llenar la base de datos</string>
     <!--Botones para EstudianteActivity-->
     <string name="CrearEstudiante">Agregar un nuevo Estudiante</string>
@@ -54,6 +59,13 @@
     <string name="EliminarTipoDeActividad">Eliminar un Tipo De Actividad de la base</string>
     <string name="VerTipoDeActividades">Ver todos los Tipos De Actividades</string>
 
+    <!--Botones de las opciones para realizar el crud coordinador-->
+    <!--Botones para CoordinadorActivity-->
+    <string name="CrearCoordinador">Agregar un nuevo Coordinador</string>
+    <string name="ActualizarCoordinador">Actualizar un Coordinador existente</string>
+    <string name="EliminarCoordinador">Eliminar un coordinador</string>
+    <string name="VerCoordinadores">Ver todos los coordinadores</string>
+
     <!--Opciones de la activity AgregarEstudiante-->
     <string name="CarnetEstudiante">Carnet Estudiante</string>
     <string name="NombreEstudiante">Nombre Estudiante</string>
@@ -61,14 +73,11 @@
     <string name="TelEstudiante">Telefono Estudiante</string>
     <string name="CarreraEstudiante">Carrera cursante</string>
     <string name="AgregarBtn">Agregar Estudiante</string>
+    <!--Demas elementos para activities estudiante-->
     <string name="EliminarEstudianteText">Seleccione un elemento a eliminar</string>
     <string name="SeleccionarEstudiantes">Estudiantes en el sistema</string>
     <string name="ActualizarEstudianteActivity">Seleccione un estudiante a actualizar</string>
     <string name="BotonActualizarEstudiante">Actualizar Estudiante</string>
-
-
-    <string name="AppGrupo">Grupo 07: Programacion para dispositivos Moviles</string>
-
     <!--Items para la activity Agregar estudiante-->
     <string-array name="carreras_array">
         <item>Ingenieria Civil</item>
@@ -80,5 +89,11 @@
         <item>Arquitectura</item>
         <item>Ingenieria Mecanica</item>
     </string-array>
+
+    <!--Opciones para la activity AgregarCoordinador-->
+    <string name="NombrCoordinador">Nombre Coordinador</string>
+    <string name="EmailCoordinador">Correo Electronico</string>
+    <string name="TelCoordinador">Telefono Coordinador</string>
+    <!--Demas elementos para activities coordinador-->
 
 </resources>
