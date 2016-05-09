@@ -43,6 +43,9 @@
     <string name="ActualizarEstudianteActivity">Seleccione un estudiante a actualizar</string>
     <string name="BotonActualizarEstudiante">Actualizar Estudiante</string>
 
+
+    <string name="AppGrupo">Grupo 07: Programacion para dispositivos Moviles</string>
+
     <!--Items para la activity Agregar estudiante-->
     <string-array name="carreras_array">
         <item>Ingenieria Civil</item>
