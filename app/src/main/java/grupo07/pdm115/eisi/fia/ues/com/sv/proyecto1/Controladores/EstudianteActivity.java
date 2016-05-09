@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.ActualizarEstudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.AgregarEstudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.EliminarEstudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.SeleccionarEstudiante;
@@ -82,7 +83,9 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.btnActualizar:
                 //Cargar activity para actualizar
-                Toast.makeText(EstudianteActivity.this, "Proximamente Actualizar", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(EstudianteActivity.this, "Proximamente Actualizar", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), ActualizarEstudiante.class);
+                startActivity(intent);
                 break;
             case R.id.btnEliminar:
                 //Cargar activity para eliminar un elemento
@@ -107,7 +110,7 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
     * Metodo harcodeado para agregar Estudiantes, se incova al cliquear el button "Llenar BD"
     * */
     private void llenarDB(){
-        if (mEstudianteDAO.insertarEstudiante(new Estudiante("RM11014","Sistemas Informaticos",
+        if (mEstudianteDAO.insertarEstudiante(new Estudiante("RM11014","Ingenieria de Sistemas",
                                             "kevinrev26@gmail.com","7018-6743","Kevin Rivera")) > 0){
             Toast.makeText(EstudianteActivity.this, "Registro Insertado", Toast.LENGTH_SHORT).show();
         } else {

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:gravity="center_horizontal|top"
-              android:padding="20dp"
-              android:background="#ecd2e8"
-              android:elevation="25dp">
+              style="@style/my_style">
 
     <TextView
         android:layout_width="fill_parent"
@@ -15,7 +10,8 @@
         android:text="Large Text"
         android:id="@+id/textNombreLista"
         android:gravity="center"
-        android:textStyle="bold|italic"/>
+        android:textStyle="bold|italic"
+        android:textColor="#727272"/>
 
     <TextView
         android:layout_width="fill_parent"
@@ -24,7 +20,8 @@
         android:text="Medium Text"
         android:id="@+id/textCarnetLista"
         android:gravity="center"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="#727272"/>
 
     <TextView
         android:layout_width="fill_parent"
@@ -33,7 +30,8 @@
         android:text="Medium Text"
         android:id="@+id/textCorreoLista"
         android:gravity="center"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="#727272"/>
 
     <TextView
         android:layout_width="fill_parent"
@@ -41,7 +39,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
         android:id="@+id/textTelefonoLista"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textColor="#727272"/>
 
     <TextView
         android:layout_width="fill_parent"
@@ -49,6 +48,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
         android:id="@+id/textCarreraLista"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textColor="#727272"/>
 
 </LinearLayout>

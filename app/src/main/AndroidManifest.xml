@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".Controladores.Estudiante.SeleccionarEstudiante">
         </activity>
+        <activity android:name=".Controladores.Estudiante.ActualizarEstudiante">
+        </activity>
     </application>
 
 </manifest>

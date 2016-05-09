@@ -33,6 +33,8 @@
     <string name="AgregarBtn">Agregar Estudiante</string>
     <string name="EliminarEstudianteText">Seleccione un elemento a eliminar</string>
     <string name="SeleccionarEstudiantes">Estudiantes en el sistema</string>
+    <string name="ActualizarEstudianteActivity">Seleccione un estudiante a actualizar</string>
+    <string name="BotonActualizarEstudiante">Actualizar Estudiante</string>
 
     <!--Items para la activity Agregar estudiante-->
     <string-array name="carreras_array">
