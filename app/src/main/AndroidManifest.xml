@@ -37,6 +37,9 @@
         <activity android:name=".Controladores.Estudiante.ActualizarEstudiante"
                   android:label="@string/ActualizarEstudiantes">
         </activity>
+
+
+
     </application>
 
 </manifest>

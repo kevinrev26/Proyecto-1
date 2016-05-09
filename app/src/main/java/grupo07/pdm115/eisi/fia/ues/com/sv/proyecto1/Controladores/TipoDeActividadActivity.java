@@ -64,9 +64,10 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
         Intent intent=null;
         switch (v.getId()){
             case R.id.btnLlenarDB:
-               // llenarDB();
+                //llenarDB();
                 break;
-            //case R.id.
+            case R.id.btnAgregarTipoDeActividad:
+                //intent=new Intent(this.getApplicationContext(),A)
         }
     }
 
