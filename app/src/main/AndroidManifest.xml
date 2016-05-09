@@ -38,7 +38,12 @@
                   android:label="@string/ActualizarEstudiantes">
         </activity>
 
-
+        <activity
+            android:name=".Controladores.TipoDeActividadActivity"
+            android:label="@string/Tabla_TipoDeActividad"/>
+        <activity
+            android:name=".Controladores.BitacoraActivity"
+            android:label="@string/Tabla_Bitacora"/>
 
     </application>
 
