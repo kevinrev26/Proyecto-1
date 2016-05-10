@@ -54,6 +54,7 @@
     <string name="EliminarEstudiante">Eliminar un estudiante de la base</string>
     <string name="VerEstudiantes">Ver todos los estudiantes</string>
 
+    <!--Botones para TipoDeActividadActivity-->
     <string name="CrearTipoDeActividad">Agregar un nuevo Tipo De Actividad</string>
     <string name="ActualizarTipoDeActividad">Actualizar un Tipo De Actividad existente</string>
     <string name="EliminarTipoDeActividad">Eliminar un Tipo De Actividad de la base</string>
@@ -66,6 +67,13 @@
     <string name="EliminarCoordinador">Eliminar un coordinador</string>
     <string name="VerCoordinadores">Ver todos los coordinadores</string>
 
+    <!--Botones de las opciones para realizar el crud de bitacora-->
+    <!--Botones para BitacoraActivity-->
+    <string name="CrearBitacora">Agregar una nueva Bitacora </string>
+    <string name="Actualizarbitacora">Actualizar una Bitacora existente</string>
+    <string name="EliminaBitacora">Eliminar una Bitacora</string>
+    <string name="VerBitacora">Ver todas las bitacoras</string>
+
     <!--Opciones de la activity AgregarEstudiante-->
     <string name="CarnetEstudiante">Carnet Estudiante</string>
     <string name="NombreEstudiante">Nombre Estudiante</string>
@@ -73,11 +81,26 @@
     <string name="TelEstudiante">Telefono Estudiante</string>
     <string name="CarreraEstudiante">Carrera cursante</string>
     <string name="AgregarBtn">Agregar Estudiante</string>
+
+    <!--Opciones de la activity AgregarTipoDeActividad-->
+    <string name="IdTipoActividad">Id Tipo De Actividad</string>
+    <string name="NomActividad">Nombre de la Actividad</string>
+    <string name="CantHoras">Cantidad de Horas</string>
+    <string name="DescActividad">Descripcion de Tipo De Actividad</string>
+    <string name="AgregBtn">Agregar Tipo De Actividad</string>
+
     <!--Demas elementos para activities estudiante-->
     <string name="EliminarEstudianteText">Seleccione un elemento a eliminar</string>
     <string name="SeleccionarEstudiantes">Estudiantes en el sistema</string>
     <string name="ActualizarEstudianteActivity">Seleccione un estudiante a actualizar</string>
     <string name="BotonActualizarEstudiante">Actualizar Estudiante</string>
+
+    <!--Otros elementos para activities tipo de actividad-->
+    <string name="EliminarTipoDeActividadText">Seleccione el Elemento a Eliminar</string>
+    <string name="SeleccionarTipoActividad">Tipos de Actividades en el Sistema</string>
+    <string name="ActualizarTipoActividadActivity">Seleccione un tipo de actividad a actualizar</string>
+    <string name="BotonActualizarTipoActividad">Actualizar Tipo de Actividad</string>
+
     <!--Items para la activity Agregar estudiante-->
     <string-array name="carreras_array">
         <item>Ingenieria Civil</item>

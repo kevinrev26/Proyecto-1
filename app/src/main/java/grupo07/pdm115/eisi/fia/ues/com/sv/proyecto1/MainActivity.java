@@ -35,8 +35,11 @@ import android.widget.Toast;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.Adapter;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.Clase;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.BitacoraActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.CoordinadorActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.EstudianteActivity;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividadActivity;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.TipoDeActividad;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -85,6 +88,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mAdapter.addClase(temp);
         temp = new Clase(getResources().getString(R.string.EstudianteActivity),EstudianteActivity.TAG);
         mAdapter.addClase(temp);
+        temp = new Clase(getResources().getString(R.string.BitacoraActivity), BitacoraActivity.TAG);
+        mAdapter.addClase(temp);
+        temp = new Clase(getResources().getString(R.string.TipoDeActividadActivity), TipoDeActividadActivity.TAG);
+        mAdapter.addClase(temp);
+
     }
 
     @Override

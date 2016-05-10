@@ -133,7 +133,7 @@ public class ActualizarEstudiante extends AppCompatActivity implements View.OnCl
                 .setTitle("Actualizar estudiante")
                 .setMessage("Se actualizara: " + e.getNombre() + ", ¿Esta seguro?")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
+                        public void onClick(DialogInterface dialog, int which) {
                         e.setNombre(editNombre.getText().toString());
                         e.setCarrera(seleccion);
                         e.setEmail(editCorreo.getText().toString());

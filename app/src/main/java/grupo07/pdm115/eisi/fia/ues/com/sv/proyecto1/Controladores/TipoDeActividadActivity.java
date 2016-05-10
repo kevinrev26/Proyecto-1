@@ -11,7 +11,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividad.ActualizarTipoDeActividad;
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividad.AgregrarTipoDeActividad;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividad.AgregarTipoDeActividad;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividad.EliminarTipoDeActividad;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividad.SeleccionarTipoDeActividad;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.TipoDeActividadDAO;
@@ -38,20 +38,20 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
         Log.i("DAO", "Metodo on Create");
 
         //EnlazarWidgets
-        enlazarWidgets();
+        anclarWidgets();
         //Establecer los listeners
-        setListeners();
+        setListener();
     }
 
-    private void enlazarWidgets() {
+    private void anclarWidgets() {
         btnLlenarBD = (Button) findViewById(R.id.btnLlenarDB);
         btnActualizar = (Button) findViewById(R.id.btnActualizar);
-        //btnAgregar = (Button) findViewById(R.id.btnAgregarTipoActividad);
+        btnAgregar = (Button) findViewById(R.id.btnAgregarTipoDeActividad);
         btnEliminar = (Button) findViewById(R.id.btnEliminar);
         btnLeer = (Button) findViewById(R.id.btnSeleccionar);
     }
 
-    private void setListeners() {
+    private void setListener() {
         btnLeer.setOnClickListener(this);
         btnEliminar.setOnClickListener(this);
         btnAgregar.setOnClickListener(this);
@@ -71,7 +71,7 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
                 llenarDB();
                 break;
             case R.id.btnAgregarTipoDeActividad:
-                intent = new Intent(this.getApplicationContext(), AgregrarTipoDeActividad.class);
+                intent = new Intent(this.getApplicationContext(), AgregarTipoDeActividad.class);
                 startActivity(intent);
                 break;
             case R.id.btnActualizar:

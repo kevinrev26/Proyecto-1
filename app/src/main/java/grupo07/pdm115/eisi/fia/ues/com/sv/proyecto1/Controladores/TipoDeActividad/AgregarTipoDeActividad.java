@@ -7,11 +7,13 @@ import android.widget.AdapterView;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
-public class EliminarTipoDeActividad extends AppCompatActivity {
+public class AgregarTipoDeActividad extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eliminar_tipo_de_actividad);
+        setContentView(R.layout.activity_agregar_tipo_de_actividad);
     }
+
+
 }
