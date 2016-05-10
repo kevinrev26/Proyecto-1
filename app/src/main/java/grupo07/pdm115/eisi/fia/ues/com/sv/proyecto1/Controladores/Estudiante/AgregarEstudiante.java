@@ -82,17 +82,21 @@ public class AgregarEstudiante extends AppCompatActivity implements View.OnClick
             if (validarCarnet()){
                 Toast.makeText(AgregarEstudiante.this, "El carnet debe comenzar con dos letras", Toast.LENGTH_SHORT).show();
             } else {
-                Estudiante temp = new Estudiante(mCarnetText.getText().toString().toUpperCase(),
-                        seleccion,
-                        mCorreoText.getText().toString(),
-                        mTelText.getText().toString(),
-                        mNombreText.getText().toString());
-                if (mEstudianteDAO.insertarEstudiante(temp)>0){
-                    Toast.makeText(AgregarEstudiante.this, "Estudiante agregado con exito", Toast.LENGTH_SHORT).show();
-                    this.finish();
+                if (validarTelefono()){
+                    Toast.makeText(AgregarEstudiante.this, "El telefono no es valido", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(AgregarEstudiante.this, "Ocurrio algun error al agregar el nuevo estudiante", Toast.LENGTH_SHORT).show();
-                }
+                    Estudiante temp = new Estudiante(mCarnetText.getText().toString().toUpperCase(),
+                            seleccion,
+                            mCorreoText.getText().toString(),
+                            mTelText.getText().toString(),
+                            mNombreText.getText().toString());
+                    if (mEstudianteDAO.insertarEstudiante(temp)>0){
+                        Toast.makeText(AgregarEstudiante.this, "Estudiante agregado con exito", Toast.LENGTH_SHORT).show();
+                        this.finish();
+                    } else {
+                        Toast.makeText(AgregarEstudiante.this, "Ocurrio algun error al agregar el nuevo estudiante", Toast.LENGTH_SHORT).show();
+                    }
+                }//Validar telefono
             } //Else validar carnet
 
         }//Else validar vacios
@@ -130,6 +134,15 @@ public class AgregarEstudiante extends AppCompatActivity implements View.OnClick
            return true;
         }
 
+    }
+
+
+    public boolean validarTelefono(){
+        if (mTelText.getText().length() < 8 ){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 

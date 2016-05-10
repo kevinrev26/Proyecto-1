@@ -48,6 +48,8 @@
             android:label="@string/Tabla_Bitacora"/>
         <activity android:name=".Controladores.Coordinador.EliminarCoordinador">
         </activity>
+        <activity android:name=".Controladores.Coordinador.AgregarCoordinador">
+        </activity>
     </application>
 
 </manifest>

@@ -94,6 +94,7 @@
     <string name="NombreCoordinador">Nombre Coordinador</string>
     <string name="EmailCoordinador">Correo Electronico</string>
     <string name="TelCoordinador">Telefono Coordinador</string>
+    <string name="BotonAgregarCoordinador">Agregar nuevo</string>
     <!--Demas elementos para activities coordinador-->
     <string name="EliminarCoordinadorText">Seleccione un coordinador a eliminar</string>
 
