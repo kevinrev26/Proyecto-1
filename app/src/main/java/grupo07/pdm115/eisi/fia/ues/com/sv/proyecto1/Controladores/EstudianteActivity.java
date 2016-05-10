@@ -36,7 +36,7 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_estudiante);
         //Instanciando el DAO
         mEstudianteDAO = new EstudianteDAO(EstudianteActivity.this);
-        Log.i("DAO", "Metodo on Create");
+       // Log.i("DAO", "Metodo on Create");
 
         //EnlazarWidgets
         enlazarWidgets();
@@ -111,7 +111,7 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
     * */
     private void llenarDB(){
         if (mEstudianteDAO.insertarEstudiante(new Estudiante("RM11014","Ingenieria de Sistemas",
-                                            "kevinrev26@gmail.com","7018-6743","Kevin Rivera")) > 0){
+                                            "kevinrev26@gmail.com","70186743","Kevin Rivera")) > 0){
             Toast.makeText(EstudianteActivity.this, "Registro Insertado", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(EstudianteActivity.this, "Error al insertar ", Toast.LENGTH_SHORT).show();

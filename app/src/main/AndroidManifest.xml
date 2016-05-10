@@ -24,7 +24,7 @@
         <activity
             android:name=".Controladores.EstudianteActivity"
             android:label="@string/Tabla_Estudiante"/>
-        <activity android:name=".Controladores.TipoDeActividadActivity"/>
+
         <activity android:name=".Controladores.Estudiante.AgregarEstudiante"
                   android:label="@string/AgregarEstudiante">
         </activity>

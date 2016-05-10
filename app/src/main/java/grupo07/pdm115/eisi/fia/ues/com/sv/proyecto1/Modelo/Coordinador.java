@@ -16,6 +16,10 @@ public class Coordinador implements Serializable {
     private String telefono;
 
 
+    public Coordinador(){
+        //Constructor vacio para la insercion sin especificar el id.
+    }
+
     public Coordinador(String email, int id_coordinador, String nombre, String telefono) {
         this.email = email;
         this.id_coordinador = id_coordinador;
