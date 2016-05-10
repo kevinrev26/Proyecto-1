@@ -91,9 +91,10 @@
     </string-array>
 
     <!--Opciones para la activity AgregarCoordinador-->
-    <string name="NombrCoordinador">Nombre Coordinador</string>
+    <string name="NombreCoordinador">Nombre Coordinador</string>
     <string name="EmailCoordinador">Correo Electronico</string>
     <string name="TelCoordinador">Telefono Coordinador</string>
     <!--Demas elementos para activities coordinador-->
+    <string name="EliminarCoordinadorText">Seleccione un coordinador a eliminar</string>
 
 </resources>

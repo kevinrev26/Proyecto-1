@@ -1,5 +1,6 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.EliminarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.CoordinadorDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Coordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
@@ -62,6 +64,7 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()){
             case R.id.btnLlenarBase:
 
@@ -75,7 +78,9 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
                 Toast.makeText(CoordinadorActivity.this, "Activity actualizar coordinador", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btnEliminarCoordinador:
-                Toast.makeText(CoordinadorActivity.this, "Activity eliminar coordinador", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CoordinadorActivity.this, "Activity eliminar coordinador", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), EliminarCoordinador.class);
+                startActivity(intent);
                 break;
             case R.id.btnVerCoordinadores:
                 cargarCoordinadores();
