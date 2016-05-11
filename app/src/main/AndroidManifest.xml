@@ -36,17 +36,25 @@
         <activity
             android:name=".Controladores.Estudiante.ActualizarEstudiante"
             android:label="@string/ActualizarEstudiantes" />
+
         <activity
             android:name=".Controladores.TipoDeActividadActivity"
             android:label="@string/Tabla_TipoDeActividad" />
         <activity
             android:name=".Controladores.BitacoraActivity"
             android:label="@string/Tabla_Bitacora" />
+
         <activity android:name=".Controladores.Coordinador.EliminarCoordinador" />
         <activity android:name=".Controladores.Coordinador.AgregarCoordinador" />
-        <activity android:name=".Controladores.TipoDeActividad.ActualizarTipoDeActividad" />
+
+        <activity android:name=".Controladores.TipoDeActividad.ActualizarTipoDeActividad"
+                  android:label="@string/ActualizarTipoDeActividad"/>
+
         <activity android:name=".Controladores.TipoDeActividad.AgregarTipoDeActividad" />
-        <activity android:name=".Controladores.TipoDeActividad.EliminarTipoDeActividad" />
+
+        <activity android:name=".Controladores.TipoDeActividad.EliminarTipoDeActividad"
+                  android:label="@string/EliminarTipoDeActividad"/>
+
         <activity android:name=".Controladores.TipoDeActividad.SeleccionarTipoDeActividad" />
         <activity android:name=".Controladores.Bitacora.ActualizarBitacora" />
         <activity android:name=".Controladores.Bitacora.AgregarBitacora" />

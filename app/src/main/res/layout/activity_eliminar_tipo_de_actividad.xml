@@ -13,7 +13,7 @@
     <Spinner
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinnerEliminar"
+        android:id="@+id/spinnerEliminarTD"
         android:layout_marginTop="177dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"

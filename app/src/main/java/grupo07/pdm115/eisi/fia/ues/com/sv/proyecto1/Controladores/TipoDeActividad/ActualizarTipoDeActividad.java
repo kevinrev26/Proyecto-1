@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.HashMap;
-import java.util.Map;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.TipoDeActividadDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.TipoDeActividad;
@@ -86,6 +84,7 @@ public class ActualizarTipoDeActividad extends AppCompatActivity implements View
         });
     }
 
+    @Override
     public void onClick(View v){
         AlertDialog show=new AlertDialog.Builder(this)
                 .setTitle("Actualizar Tipo de Actividad")
@@ -103,8 +102,8 @@ public class ActualizarTipoDeActividad extends AppCompatActivity implements View
                 })
                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int which) {
-                    // do nothing
-                  }
+                       // do nothing
+                   }
                })
                .setIcon(android.R.drawable.ic_dialog_alert)
                .show();

@@ -25,7 +25,7 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
     private ArrayList<TipoDeActividad> tipoActividad = null;
 
     //Botones para controlar la app
-    private Button btnLlenarBD, btnAgregar, btnActualizar, btnEliminar, btnLeer;
+    private Button BtnLlenarBD, BtnAgregar, BtnActualizar, BtnEliminar, BtnLeer;
     private TipoDeActividadDAO mTipoDeActividadDAO;
 
     @Override
@@ -35,7 +35,7 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
 
         //Intanciando el DAO
         mTipoDeActividadDAO = new TipoDeActividadDAO(TipoDeActividadActivity.this);
-        Log.i("DAO", "Metodo on Create");
+        //Log.i("DAO", "Metodo on Create");
 
         //EnlazarWidgets
         anclarWidgets();
@@ -44,19 +44,19 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
     }
 
     private void anclarWidgets() {
-        btnLlenarBD = (Button) findViewById(R.id.btnLlenarDB);
-        btnActualizar = (Button) findViewById(R.id.btnActualizar);
-        btnAgregar = (Button) findViewById(R.id.btnAgregarTipoDeActividad);
-        btnEliminar = (Button) findViewById(R.id.btnEliminar);
-        btnLeer = (Button) findViewById(R.id.btnSeleccionar);
+        BtnLlenarBD = (Button) findViewById(R.id.btnLlenarDB);
+        BtnActualizar = (Button) findViewById(R.id.btnActualizar);
+        BtnAgregar = (Button) findViewById(R.id.btnAgregarTipoDeActividad);
+        BtnEliminar = (Button) findViewById(R.id.btnEliminar);
+        BtnLeer = (Button) findViewById(R.id.btnSeleccionar);
     }
 
     private void setListener() {
-        btnLeer.setOnClickListener(this);
-        btnEliminar.setOnClickListener(this);
-        btnAgregar.setOnClickListener(this);
-        btnActualizar.setOnClickListener(this);
-        btnLlenarBD.setOnClickListener(this);
+        BtnLeer.setOnClickListener(this);
+        BtnEliminar.setOnClickListener(this);
+        BtnAgregar.setOnClickListener(this);
+        BtnActualizar.setOnClickListener(this);
+        BtnLlenarBD.setOnClickListener(this);
     }
 
     private void cargarTipoActividad() {

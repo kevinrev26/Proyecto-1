@@ -29,7 +29,7 @@ public class TipoDeActividadDAO  extends MasterDAO
     public TipoDeActividadDAO(Context ctx)
     {
         super(ctx);
-        Log.i("DAO", "Dentro del constructor TipoDeActividad DAO");
+        //Log.i("DAO", "Dentro del constructor TipoDeActividad DAO");
     }
 
     /** Con este metodo se construye el String para la creacion de la tabla*/
@@ -84,7 +84,7 @@ public class TipoDeActividadDAO  extends MasterDAO
         String query = "SELECT * FROM " + TIPOACTIVIDAD_TABLE;
         Cursor cursor = mDatabase.rawQuery(query,null);
 
-        ArrayList<TipoDeActividad> tiposActividades = new ArrayList<>();
+        ArrayList<TipoDeActividad> tiposActividades = new ArrayList<TipoDeActividad>();
         while (cursor.moveToNext()){
             tiposActividades.add(getTiposActividadesPorCursor(cursor));
         }
