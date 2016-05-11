@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/text2"
+            android:id="@+id/desctext"
             android:layout_column="7"
             android:maxLength="8"/>
     </TableRow>
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/AgregBtn"
-            android:id="@+id/btnAgregarNuevoTipoActividad"
+            android:id="@+id/btnAgregarUnNuevoTipoActividad"
             android:layout_column="4"/>
     </TableRow>
 

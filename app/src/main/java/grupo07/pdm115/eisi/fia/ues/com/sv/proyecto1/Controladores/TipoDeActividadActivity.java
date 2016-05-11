@@ -92,10 +92,10 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
     }
 
     private void llenarDB() {
-        if (mTipoDeActividadDAO.insertarTipoActividad(new TipoDeActividad("ABCDE", "Mantenimiento", 100, "mantenimiento de pc")) > 0) {
+        if (mTipoDeActividadDAO.insertarTipoActividad(new TipoDeActividad("ABCDf", "Limpieza", 400, "Limpieza Impresora")) > 0) {
             Toast.makeText(TipoDeActividadActivity.this, "Registro Isertado con Exito", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(TipoDeActividadActivity.this, "Error al inserta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(TipoDeActividadActivity.this, "Error al insertar", Toast.LENGTH_SHORT).show();
         }
     }
 }
