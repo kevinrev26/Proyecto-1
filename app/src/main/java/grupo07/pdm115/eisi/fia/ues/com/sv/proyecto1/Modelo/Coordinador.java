@@ -1,11 +1,13 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 
+import java.io.Serializable;
+
 /**
  * Creado por Kevin Rivera, 05-06-16.
  * Puede usar, modificar y compartir este archivo
  * Consultas y mas: kevinrev26@gmail.com
  */
-public class Coordinador {
+public class Coordinador implements Serializable {
 
     //Atributos
     private int id_coordinador;
@@ -13,6 +15,10 @@ public class Coordinador {
     private String email;
     private String telefono;
 
+
+    public Coordinador(){
+        //Constructor vacio para la insercion sin especificar el id.
+    }
 
     public Coordinador(String email, int id_coordinador, String nombre, String telefono) {
         this.email = email;
@@ -53,7 +59,9 @@ public class Coordinador {
         this.telefono = telefono;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre +
+                ", telefono: " + telefono;
+    }
 }

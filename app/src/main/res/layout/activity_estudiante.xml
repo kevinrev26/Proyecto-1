@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/CrearEstudiante"
-        android:id="@+id/btnAgregar"
+        android:id="@+id/btnAgregarEstudiante"
         android:layout_below="@+id/btnLlenarDB"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"/>
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:text="@string/EliminarEstudiante"
         android:id="@+id/btnEliminar"
-        android:layout_below="@+id/btnAgregar"
+        android:layout_below="@+id/btnAgregarEstudiante"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"/>
 

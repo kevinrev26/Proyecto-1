@@ -1,11 +1,15 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
 /**
  * Creado por Kevin Rivera, 05-06-16.
  * Puede usar, modificar y compartir este archivo
  * Consultas y mas: kevinrev26@gmail.com
  */
-public class Estudiante {
+public class Estudiante implements Serializable{
 
     //Atributos
     private String carnet;
@@ -66,12 +70,6 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Estudiante{" +
-                "carnet='" + carnet + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", email='" + email + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", carrera='" + carrera + '\'' +
-                '}';
+        return "Carnet: " + this.carnet +" ," + " Nombre: " + this.nombre;
     }
 }

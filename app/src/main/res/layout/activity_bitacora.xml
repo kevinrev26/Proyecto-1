@@ -9,4 +9,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.BitacoraActivity">
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/llenarBD"
+        android:id="@+id/btnLlenarBase"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CrearBitacora"
+        android:id="@+id/btnAgregarBitacora"
+        android:layout_below="@+id/btnLlenarBase"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Actualizarbitacora"
+        android:id="@+id/btnActualizarBitacora"
+        android:layout_below="@+id/btnAgregarBitacora"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EliminaBitacora"
+        android:id="@+id/btnEliminarBitacora"
+        android:layout_below="@+id/btnActualizarBitacora"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/VerBitacora"
+        android:id="@+id/btnVerBitacoras"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/btnEliminarBitacora"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>
+
+
+

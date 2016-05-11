@@ -9,27 +9,23 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.MainActivity"
-    >
+    android:gravity="fill_horizontal">
 
-    <TextView
-        android:layout_width="fill_parent"
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Aqui deberia aparecer una imagen"
-        android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        />
+        android:src="@drawable/minerva"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Otro texto para identificar al grupo bla bla"
+        android:layout_below="@+id/imageView"
+        android:text="@string/AppGrupo"
         android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
         android:gravity="center"/>
@@ -41,4 +37,5 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="25dp"/>
+
 </RelativeLayout>

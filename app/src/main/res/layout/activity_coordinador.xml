@@ -8,15 +8,51 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.CoordinadorActivity">
+    tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.CoordinadorActivity"
+    >
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ACTIVITY COORDINADOR"
-        android:id="@+id/textView6"
+        android:text="@string/llenarBD"
+        android:id="@+id/btnLlenarBase"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CrearCoordinador"
+        android:id="@+id/btnAgregarCoordinador"
+        android:layout_below="@+id/btnLlenarBase"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="136dp"/>
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ActualizarCoordinador"
+        android:id="@+id/btnActualizarCoordinador"
+        android:layout_below="@+id/btnAgregarCoordinador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EliminarCoordinador"
+        android:id="@+id/btnEliminarCoordinador"
+        android:layout_below="@+id/btnActualizarCoordinador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/VerCoordinadores"
+        android:id="@+id/btnVerCoordinadores"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/btnEliminarCoordinador"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

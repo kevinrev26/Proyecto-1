@@ -1,9 +1,11 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 
+import java.io.Serializable;
+
 /**
  * Created by Gabriel on 07/05/2016.
  */
-public class TipoDeActividad
+public class TipoDeActividad implements Serializable
 {
     private String id_tipo_actividad;
     private String nombre_actividad;

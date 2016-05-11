@@ -15,9 +15,6 @@
     <string name="EstudianteActivity">
         Menu para gestionar la tabla Estudiante.
     </string>
-    <string name="InstitucionActivity">
-        Menu para gestionar la tabla Institucion.
-    </string>
 
     <!--Botones de las opciones para realizar el crud-->
     <string name="llenarBD">Llenar la base de datos</string>
@@ -26,21 +23,5 @@
     <string name="ActualizarEstudiante">Actualizar un Estudiante existente</string>
     <string name="EliminarEstudiante">Eliminar un estudiante de la base</string>
     <string name="VerEstudiantes">Ver todos los estudiantes</string>
-
-    <!--Botones de las opciones para realizar el crud de institucion-->
-    <string name="llenarBDIns">Llenar la base de datos Institucion</string>
-    <!--Botones para InstitucionActivity-->
-    <string name="CrearInstitucion">Agregar una nueva Institucion</string>
-    <string name="ActualizarInstitucion">Actualizar una Institucion existente</string>
-    <string name="EliminarInstitucion">Eliminar una Institucion de la base</string>
-    <string name="VerInstituciones">Ver todos las Instituciones</string>
-
-    <!--Botones de las opciones para realizar el crud de servicio social-->
-    <string name="llenarBDSV">Llenar la base de datos Servicio Social</string>
-    <!--Botones para InstitucionActivity-->
-    <string name="CrearServicioSocial">Agregar una nuevo Servicio Social</string>
-    <string name="ActualizarServicioSocial">Actualizar un Servicio Social existente</string>
-    <string name="EliminarServicioSocial">Eliminar un Servicio Social de la base</string>
-    <string name="VerServiciosSociales">Ver todos los Servicios Sociales</string>
 
 </resources>
