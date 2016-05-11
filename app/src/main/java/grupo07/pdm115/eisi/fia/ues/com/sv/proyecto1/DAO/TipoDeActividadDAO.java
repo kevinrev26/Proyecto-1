@@ -36,11 +36,11 @@ public class TipoDeActividadDAO  extends MasterDAO
 
     public static  String crearTablaTipoDeActividad()
     {
-        return "CREATE TABLE" + TIPOACTIVIDAD_TABLE + "(" +
-                ID_TIPO_ACTIVIDAD + "TEXT(5) NOT NULL, " +
-                NOMBRE_ACTIVIDAD + "TEXT (10) NOT NULL, " +
-                HORAS + "INTEGER(2) NOT NULL, " +
-                DESCRIPCION + "TEXT(5) , " +
+        return "CREATE TABLE " + TIPOACTIVIDAD_TABLE + " (" +
+                ID_TIPO_ACTIVIDAD + " TEXT(5) NOT NULL, " +
+                NOMBRE_ACTIVIDAD + " TEXT (10) NOT NULL, " +
+                HORAS + " INTEGER(2) NOT NULL, " +
+                DESCRIPCION + " TEXT(5), " +
                 "PRIMARY KEY(" +ID_TIPO_ACTIVIDAD +") " +
                 ");" ;
     }
