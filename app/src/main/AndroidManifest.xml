@@ -31,6 +31,42 @@
             android:name=".Controladores.ServicioSocialActivity"
             android:label="@string/Tabla_Servicio_Social" />
         <activity android:name=".Controladores.TipoDeActividadActivity"></activity>
+
+        <activity
+            android:name=".Controladores.Estudiante.AgregarEstudiante"
+            android:label="@string/AgregarEstudiante" />
+        <activity
+            android:name=".Controladores.Estudiante.EliminarEstudiante"
+            android:label="@string/EliminarEstudiante" />
+        <activity
+            android:name=".Controladores.Estudiante.SeleccionarEstudiante"
+            android:label="@string/VerTodosEstudiantes" />
+        <activity
+            android:name=".Controladores.Estudiante.ActualizarEstudiante"
+            android:label="@string/ActualizarEstudiantes" />
+
+        <activity
+            android:name=".Controladores.BitacoraActivity"
+            android:label="@string/Tabla_Bitacora" />
+
+        <activity android:name=".Controladores.Coordinador.EliminarCoordinador" />
+        <activity android:name=".Controladores.Coordinador.AgregarCoordinador" />
+
+        <activity android:name=".Controladores.TipoDeActividad.ActualizarTipoDeActividad"
+                  android:label="@string/ActualizarTipoDeActividad"/>
+
+        <activity android:name=".Controladores.TipoDeActividad.AgregarTipoDeActividad" />
+
+        <activity android:name=".Controladores.TipoDeActividad.EliminarTipoDeActividad"
+                  android:label="@string/EliminarTipoDeActividad"/>
+
+        <activity android:name=".Controladores.TipoDeActividad.SeleccionarTipoDeActividad" />
+        <activity android:name=".Controladores.Bitacora.ActualizarBitacora" />
+        <activity android:name=".Controladores.Bitacora.AgregarBitacora" />
+        <activity android:name=".Controladores.Bitacora.EliminarBitacora" />
+        <activity android:name=".Controladores.Bitacora.SeleccionarBitacora"></activity>
+
+
     </application>
 
 </manifest>

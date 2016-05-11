@@ -1,11 +1,31 @@
 <resources>
     <string name="app_name">Proyecto 1 - Grupo 07 - PDM115</string>
+    <string name="AppGrupo">Grupo 07: Programacion para dispositivos Moviles</string>
     <!--Titulos para las activities-->
     <string name="MainActivity">Menu principal del sistema</string>
     <string name="Tabla_Coordinador"> Opciones para Coordinador </string>
     <string name="Tabla_Estudiante">Opciones para Estudiante</string>
+    <string name="AgregarEstudiante">Agregar un nuevo Estudiante</string>
+    <string name="VerTodosEstudiantes">Estudiantes Registrados</string>
+    <string name="EliminarEstudiantes">Eliminar Estudiante</string>
+    <string name="ActualizarEstudiantes">Actualizar Estudiante</string>
+    <string name="AgregarCoordinador">Agregar Coordinador</string>
+    <string name="VerTodosCoordinadores">Coordinadores registrados</string>
+    <string name="EliminarCoordinadores">Eliminar Coordinador</string>
+    <string name="ActualizarCoordinadores">Actualizar coordinador</string>
     <string name="Tabla_Institucion">Opciones para Institucion</string>
     <string name="Tabla_Servicio_Social">Opciones para Servicio Social</string>
+
+    <string name="Tabla_Bitacora"> Opciones para Bitacora </string>
+    <string name="Tabla_TipoDeActividad">Opciones para Tipo De Actividad</string>
+    <string name="AgregarTipoDeActividad">Agregar un nuevo Tipo de Actividad</string>
+    <string name="VerTodosTiposDeActividad">Tipos de Actividades Registradas</string>
+    <string name="EliminarTipoDeActividades">Eliminar Tipo De Actividad</string>
+    <string name="ActualizarTiposDeActividades">Actualizar Tipo De Actividad</string>
+    <string name="AgregarBitacora">Agregar Bitacora</string>
+    <string name="VerTodasBitacoras">Bitacoras registrados</string>
+    <string name="EliminarBitacora">Eliminar Bitacora</string>
+    <string name="ActualizarBitacora">Actualizar Bitacorar</string>
 
     <!--Nombre de la clase, con su descripcion.
         Se implementa de esta forma para luego traducir
@@ -16,6 +36,12 @@
     <string name="EstudianteActivity">
         Menu para gestionar la tabla Estudiante.
     </string>
+        <string name="BitacoraActivity">
+        Esta opcion lleva al menu de la tabla Bitacora.
+    </string>
+    <string name="TipoDeActividadActivity">
+        Menu para gestionar la tabla Tipo De Actividad.
+    </string>
     <string name="InstitucionActivity">
         Menu para gestionar la tabla Institucion.
     </string>
@@ -23,13 +49,84 @@
         Menu para gestionar la tabla Servicio Social.
     </string>
 
-    <!--Botones de las opciones para realizar el crud-->
+    <!--Botones de las opciones para realizar el crud Estudiante-->
     <string name="llenarBD">Llenar la base de datos</string>
     <!--Botones para EstudianteActivity-->
     <string name="CrearEstudiante">Agregar un nuevo Estudiante</string>
     <string name="ActualizarEstudiante">Actualizar un Estudiante existente</string>
     <string name="EliminarEstudiante">Eliminar un estudiante de la base</string>
     <string name="VerEstudiantes">Ver todos los estudiantes</string>
+
+    <!--Botones para TipoDeActividadActivity-->
+    <string name="CrearTipoDeActividad">Agregar un nuevo Tipo De Actividad</string>
+    <string name="ActualizarTipoDeActividad">Actualizar un Tipo De Actividad existente</string>
+    <string name="EliminarTipoDeActividad">Eliminar un Tipo De Actividad de la base</string>
+    <string name="VerTipoDeActividades">Ver todos los Tipos De Actividades</string>
+
+    <!--Botones de las opciones para realizar el crud coordinador-->
+    <!--Botones para CoordinadorActivity-->
+    <string name="CrearCoordinador">Agregar un nuevo Coordinador</string>
+    <string name="ActualizarCoordinador">Actualizar un Coordinador existente</string>
+    <string name="EliminarCoordinador">Eliminar un coordinador</string>
+    <string name="VerCoordinadores">Ver todos los coordinadores</string>
+
+
+    <!--Botones de las opciones para realizar el crud de bitacora-->
+    <!--Botones para BitacoraActivity-->
+    <string name="CrearBitacora">Agregar una nueva Bitacora </string>
+    <string name="Actualizarbitacora">Actualizar una Bitacora existente</string>
+    <string name="EliminaBitacora">Eliminar una Bitacora</string>
+    <string name="VerBitacora">Ver todas las bitacoras</string>
+
+    <!--Opciones de la activity AgregarEstudiante-->
+    <string name="CarnetEstudiante">Carnet Estudiante</string>
+    <string name="NombreEstudiante">Nombre Estudiante</string>
+    <string name="EmailEstudiante">Correo Electronico</string>
+    <string name="TelEstudiante">Telefono Estudiante</string>
+    <string name="CarreraEstudiante">Carrera cursante</string>
+    <string name="AgregarBtn">Agregar Estudiante</string>
+
+    <!--Opciones de la activity AgregarTipoDeActividad-->
+    <string name="IdTipoActividad">Id Tipo De Actividad</string>
+    <string name="NomActividad">Nombre de la Actividad</string>
+    <string name="CantHoras">Cantidad de Horas</string>
+    <string name="DescActividad">Descripcion de Tipo De Actividad</string>
+    <string name="AgregBtn">Agregar Tipo De Actividad</string>
+
+
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarEstudianteText">Seleccione un elemento a eliminar</string>
+    <string name="SeleccionarEstudiantes">Estudiantes en el sistema</string>
+    <string name="ActualizarEstudianteActivity">Seleccione un estudiante a actualizar</string>
+    <string name="BotonActualizarEstudiante">Actualizar Estudiante</string>
+
+
+    <!--Otros elementos para activities tipo de actividad-->
+    <string name="EliminarTipoDeActividadText">Seleccione el Elemento a Eliminar</string>
+    <string name="SeleccionarTipoActividad">Tipos de Actividades en el Sistema</string>
+    <string name="ActualizarTipoActividadActivity">Seleccione un tipo de actividad a actualizar</string>
+    <string name="BotonActualizarTipoActividad">Actualizar Tipo de Actividad</string>
+
+    <!--Items para la activity Agregar estudiante-->
+    <string-array name="carreras_array">
+        <item>Ingenieria Civil</item>
+        <item>Ingenieria Industrial</item>
+        <item>Ingenieria Electrica</item>
+        <item>Ingenieria en Alimentos</item>
+        <item>Ingenieria Quimica</item>
+        <item>Ingenieria de Sistemas</item>
+        <item>Arquitectura</item>
+        <item>Ingenieria Mecanica</item>
+    </string-array>
+
+
+    <!--Opciones para la activity AgregarCoordinador-->
+    <string name="NombreCoordinador">Nombre Coordinador</string>
+    <string name="EmailCoordinador">Correo Electronico</string>
+    <string name="TelCoordinador">Telefono Coordinador</string>
+    <string name="BotonAgregarCoordinador">Agregar nuevo</string>
+    <!--Demas elementos para activities coordinador-->
+    <string name="EliminarCoordinadorText">Seleccione un coordinador a eliminar</string>
 
     <!--Botones de las opciones para realizar el crud-->
     <string name="llenarBDIns">Llenar la base de datos Institucion</string>
