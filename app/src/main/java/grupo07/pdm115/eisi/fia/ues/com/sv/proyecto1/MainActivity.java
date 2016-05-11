@@ -35,6 +35,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.Adapter;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.Clase;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.CoordinadorActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.EstudianteActivity;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.InstitucionActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         temp = new Clase(getResources().getString(R.string.CoordinadorActivity), CoordinadorActivity.TAG);
         mAdapter.addClase(temp);
         temp = new Clase(getResources().getString(R.string.EstudianteActivity),EstudianteActivity.TAG);
+        mAdapter.addClase(temp);
+        temp = new Clase(getResources().getString(R.string.InstitucionActivity),InstitucionActivity.TAG);
         mAdapter.addClase(temp);
     }
 
