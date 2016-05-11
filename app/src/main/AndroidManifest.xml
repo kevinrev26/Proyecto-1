@@ -24,6 +24,12 @@
         <activity
             android:name=".Controladores.EstudianteActivity"
             android:label="@string/Tabla_Estudiante" />
+        <activity
+            android:name=".Controladores.InstitucionActivity"
+            android:label="@string/Tabla_Institucion" />
+        <activity
+            android:name=".Controladores.ServicioSocialActivity"
+            android:label="@string/Tabla_Servicio_Social" />
         <activity android:name=".Controladores.TipoDeActividadActivity"></activity>
     </application>
 

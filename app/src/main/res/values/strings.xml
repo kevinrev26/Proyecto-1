@@ -4,7 +4,8 @@
     <string name="MainActivity">Menu principal del sistema</string>
     <string name="Tabla_Coordinador"> Opciones para Coordinador </string>
     <string name="Tabla_Estudiante">Opciones para Estudiante</string>
-
+    <string name="Tabla_Institucion">Opciones para Institucion</string>
+    <string name="Tabla_Servicio_Social">Opciones para Servicio Social</string>
 
     <!--Nombre de la clase, con su descripcion.
         Se implementa de esta forma para luego traducir
@@ -15,6 +16,12 @@
     <string name="EstudianteActivity">
         Menu para gestionar la tabla Estudiante.
     </string>
+    <string name="InstitucionActivity">
+        Menu para gestionar la tabla Institucion.
+    </string>
+    <string name="ServicioSocialeActivity">
+        Menu para gestionar la tabla Servicio Social.
+    </string>
 
     <!--Botones de las opciones para realizar el crud-->
     <string name="llenarBD">Llenar la base de datos</string>
@@ -24,4 +31,19 @@
     <string name="EliminarEstudiante">Eliminar un estudiante de la base</string>
     <string name="VerEstudiantes">Ver todos los estudiantes</string>
 
+    <!--Botones de las opciones para realizar el crud-->
+    <string name="llenarBDIns">Llenar la base de datos Institucion</string>
+    <!--Botones para InstitucionActivity-->
+    <string name="CrearInstitucion">Agregar una nueva Institucion</string>
+    <string name="ActualizarInstitucion">Actualizar una Institucion existente</string>
+    <string name="EliminarInstitucion">Eliminar una Institucion de la base</string>
+    <string name="VerInstitucion">Ver todas las Instituciones</string>
+
+    <!--Botones de las opciones para realizar el crud-->
+    <string name="llenarBDSV">Llenar la base de datos Servicio Social</string>
+    <!--Botones para ServicioSocialActivity-->
+    <string name="CrearServicioSocial">Agregar un nuevo Servicio Social</string>
+    <string name="ActualizarServicioSocial">Actualizar un Servicio Social existente</string>
+    <string name="EliminarServicioSocial">Eliminar un Servicio Social de la base</string>
+    <string name="VerServiciosSociales">Ver todos los Servicios Sociales</string>
 </resources>
