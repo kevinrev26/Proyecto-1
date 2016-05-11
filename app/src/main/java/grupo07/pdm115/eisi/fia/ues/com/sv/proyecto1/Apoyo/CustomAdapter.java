@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Estudiante;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.TipoDeActividad;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 /**
@@ -20,14 +21,20 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 public class CustomAdapter extends BaseAdapter {
 
 
-    private Context ctx;
+    private Context ctx, CTX;
     private ArrayList<Estudiante> lista;
+    private ArrayList<TipoDeActividad> list;
 
 
     public CustomAdapter(Context ctx, ArrayList<Estudiante> lista) {
         this.ctx = ctx;
         this.lista = lista;
     }
+
+   /* public CustomAdapter(Context CTX, ArrayList<TipoDeActividad> list) {
+        this.CTX = CTX;
+        this.list = list;
+    }*/
 
     @Override
     public int getCount() {
