@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.EliminarEstudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.CoordinadorDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Coordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
@@ -41,7 +40,7 @@ public class EliminarCoordinador extends AppCompatActivity implements AdapterVie
     }
 
     private void enlazarWidgets(){
-        mSpinner = (Spinner) findViewById(R.id.spinnerEliminarCoordinador);
+        mSpinner = (Spinner) findViewById(R.id.spinnerActualizarCoordinador);
 
     }
 

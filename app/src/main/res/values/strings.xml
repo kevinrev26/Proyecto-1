@@ -101,6 +101,8 @@
     <string name="BotonActualizarEstudiante">Actualizar Estudiante</string>
 
 
+
+
     <!--Otros elementos para activities tipo de actividad-->
     <string name="EliminarTipoDeActividadText">Seleccione el Elemento a Eliminar</string>
     <string name="SeleccionarTipoActividad">Tipos de Actividades en el Sistema</string>
@@ -127,6 +129,9 @@
     <string name="BotonAgregarCoordinador">Agregar nuevo</string>
     <!--Demas elementos para activities coordinador-->
     <string name="EliminarCoordinadorText">Seleccione un coordinador a eliminar</string>
+    <string name="SeleccionarCoordinadores">Estudiantes en el sistema</string>
+    <string name="ActualizarCoordinadorActivity">Seleccione un coordinador a actualizar</string>
+    <string name="BotonActualizarCoordinador">Actualizar Coordinador</string>
 
     <!--Botones de las opciones para realizar el crud-->
     <string name="llenarBDIns">Llenar la base de datos Institucion</string>

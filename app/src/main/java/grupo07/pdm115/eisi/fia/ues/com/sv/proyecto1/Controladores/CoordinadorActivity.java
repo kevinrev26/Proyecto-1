@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.ActualizarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.AgregarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.EliminarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.CoordinadorDAO;
@@ -78,7 +79,9 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
                 startActivity(intent);
                 break;
             case R.id.btnActualizarCoordinador:
-                Toast.makeText(CoordinadorActivity.this, "Activity actualizar coordinador", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), ActualizarCoordinador.class);
+                startActivity(intent);
+                //Toast.makeText(CoordinadorActivity.this, "Activity actualizar coordinador", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btnEliminarCoordinador:
                 //Toast.makeText(CoordinadorActivity.this, "Activity eliminar coordinador", Toast.LENGTH_SHORT).show();
