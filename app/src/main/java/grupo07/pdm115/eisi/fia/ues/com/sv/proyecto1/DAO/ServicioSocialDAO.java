@@ -29,7 +29,7 @@ public class ServicioSocialDAO extends MasterDAO {
     private static final int DISPONIBLE_COL = 6;
     private static final String COORDINADOR_APROBADO = "coordinador_aprobado";
     private static final int COORDINADOR_APROBADO_COL = 7;
-    private static final Tutor tutor = new Tutor();
+    //private static final Tutor tutor = new Tutor();
     private static final Institucion institucion = new Institucion();
 
 

@@ -14,47 +14,6 @@
     <string name="EliminarCoordinadores">Eliminar Coordinador</string>
     <string name="ActualizarCoordinadores">Actualizar coordinador</string>
 
-    <string name="Tabla_Institucion">Opciones para Institucion</string>
-    <string name="AgregarInstitucion">Agregar una nueva Institucion</string>
-    <string name="VerTodasInstituciones">Instituciones Registradas</string>
-    <string name="EliminarInstituciones">Eliminar Institucion</string>
-    <string name="ActualizarInstituciones">Actualizar Institucion</string>
-    <!--Opciones de la activity AgregarInstitucion-->
-    <string name="IdInstitucion">Identificador Institucion</string>
-    <string name="NombreInstitucion">Nombre Institucion</string>
-    <string name="EmailInstitucion">Correo Institucion</string>
-    <string name="NombreEncargado">Nombre Encargado</string>
-    <string name="Telefono1">Telefono1</string>
-    <string name="Telefono2">Telefono2</string>
-    <string name="AgregarIns">Agregar Institucion</string>
-    <!--Demas elementos para activities estudiante-->
-    <string name="EliminarInstitucionText">Seleccione un elemento a eliminar</string>
-    <string name="SeleccionarInstituciones">Instituciones en el sistema</string>
-    <string name="ActualizarInstitucionActivity">Seleccione una Institucion a actualizar</string>
-    <string name="BotonActualizarInstitucion">Actualizar Institucion</string>
-
-    <string name="Tabla_Servicio_Social">Opciones para Servicio Social</string>
-    <string name="AgregarServicioSocial">Agregar Servicio Social</string>
-    <string name="VerTodosServiciosSociales">Servicios Sociales registrados</string>
-    <string name="EliminarServiciosSociales">Eliminar Servicio Social</string>
-    <string name="ActualizarServiciosSociales">Actualizar Servicio Social</string>
-    <!--Opciones de la activity AgregarEstudiante-->
-    <string name="IdServicio">Identificador Servicio Social</string>
-    <string name="Titulo">Titulo</string>
-    <string name="Descripcion">Descripcion</string>
-    <string name="Disponible">Disponibilidad</string>
-    <string name="IdentificadorInstitucion">Id Institucion</string>
-    <string name="IdentificadorModalidad">Id Modalidad</string>
-    <string name="IdentificadorTutor">Id Tutor</string>
-    <string name="CoordinadorAprobado">Coordinador Aprobado</string>
-    <string name="AgregarSS">Agregar Servicio Social</string>
-    <!--Demas elementos para activities estudiante-->
-    <string name="EliminarServicioSocialText">Seleccione un Servicio Social a eliminar</string>
-    <string name="SeleccionarServicioSocial">Servicios Sociales en el sistema</string>
-    <string name="ActualizarServicioSocialActivity">Seleccione un Servicio Social a actualizar</string>
-    <string name="BotonActualizarServicioSocial">Actualizar Servicio Social</string>
-
-
     <string name="Tabla_Bitacora"> Opciones para Bitacora </string>
     <string name="Tabla_TipoDeActividad">Opciones para Tipo De Actividad</string>
     <string name="AgregarTipoDeActividad">Agregar un nuevo Tipo de Actividad</string>
@@ -109,7 +68,6 @@
     <string name="EliminarCoordinador">Eliminar un coordinador</string>
     <string name="VerCoordinadores">Ver todos los coordinadores</string>
 
-
     <!--Botones de las opciones para realizar el crud de bitacora-->
     <!--Botones para BitacoraActivity-->
     <string name="CrearBitacora">Agregar una nueva Bitacora </string>
@@ -140,6 +98,8 @@
     <string name="BotonActualizarEstudiante">Actualizar Estudiante</string>
 
 
+
+
     <!--Otros elementos para activities tipo de actividad-->
     <string name="EliminarTipoDeActividadText">Seleccione el Elemento a Eliminar</string>
     <string name="SeleccionarTipoActividad">Tipos de Actividades en el Sistema</string>
@@ -166,6 +126,9 @@
     <string name="BotonAgregarCoordinador">Agregar nuevo</string>
     <!--Demas elementos para activities coordinador-->
     <string name="EliminarCoordinadorText">Seleccione un coordinador a eliminar</string>
+    <string name="SeleccionarCoordinadores">Estudiantes en el sistema</string>
+    <string name="ActualizarCoordinadorActivity">Seleccione un coordinador a actualizar</string>
+    <string name="BotonActualizarCoordinador">Actualizar Coordinador</string>
 
     <!--Botones de las opciones para realizar el crud-->
     <string name="llenarBDIns">Llenar la base de datos Institucion</string>
@@ -182,4 +145,45 @@
     <string name="ActualizarServicioSocial">Actualizar un Servicio Social existente</string>
     <string name="EliminarServicioSocial">Eliminar un Servicio Social de la base</string>
     <string name="VerServiciosSociales">Ver todos los Servicios Sociales</string>
+
+    <string name="Tabla_Institucion">Opciones para Institucion</string>
+    <string name="AgregarInstitucion">Agregar una nueva Institucion</string>
+    <string name="VerTodasInstituciones">Instituciones Registradas</string>
+    <string name="EliminarInstituciones">Eliminar Institucion</string>
+    <string name="ActualizarInstituciones">Actualizar Institucion</string>
+    <!--Opciones de la activity AgregarInstitucion-->
+    <string name="IdInstitucion">Identificador Institucion</string>
+    <string name="NombreInstitucion">Nombre Institucion</string>
+    <string name="EmailInstitucion">Correo Institucion</string>
+    <string name="NombreEncargado">Nombre Encargado</string>
+    <string name="Telefono1">Telefono1</string>
+    <string name="Telefono2">Telefono2</string>
+    <string name="AgregarIns">Agregar Institucion</string>
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarInstitucionText">Seleccione un elemento a eliminar</string>
+    <string name="SeleccionarInstituciones">Instituciones en el sistema</string>
+    <string name="ActualizarInstitucionActivity">Seleccione una Institucion a actualizar</string>
+    <string name="BotonActualizarInstitucion">Actualizar Institucion</string>
+
+    <string name="Tabla_Servicio_Social">Opciones para Servicio Social</string>
+    <string name="AgregarServicioSocial">Agregar Servicio Social</string>
+    <string name="VerTodosServiciosSociales">Servicios Sociales registrados</string>
+    <string name="EliminarServiciosSociales">Eliminar Servicio Social</string>
+    <string name="ActualizarServiciosSociales">Actualizar Servicio Social</string>
+    <!--Opciones de la activity AgregarEstudiante-->
+    <string name="IdServicio">Identificador Servicio Social</string>
+    <string name="Titulo">Titulo</string>
+    <string name="Descripcion">Descripcion</string>
+    <string name="Disponible">Disponibilidad</string>
+    <string name="IdentificadorInstitucion">Id Institucion</string>
+    <string name="IdentificadorModalidad">Id Modalidad</string>
+    <string name="IdentificadorTutor">Id Tutor</string>
+    <string name="CoordinadorAprobado">Coordinador Aprobado</string>
+    <string name="AgregarSS">Agregar Servicio Social</string>
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarServicioSocialText">Seleccione un Servicio Social a eliminar</string>
+    <string name="SeleccionarServicioSocial">Servicios Sociales en el sistema</string>
+    <string name="ActualizarServicioSocialActivity">Seleccione un Servicio Social a actualizar</string>
+    <string name="BotonActualizarServicioSocial">Actualizar Servicio Social</string>
+
 </resources>
