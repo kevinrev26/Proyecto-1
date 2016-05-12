@@ -44,9 +44,9 @@ public class BitacoraDAO extends MasterDAO {
                 REVI_TUTOR + " TEXT(5) NOT NULL " +
                 ID_TIPO_ACTIVIDAD + " TEXT(5) NOT NULL " +
                 "PRIMARY KEY(" + ID_BITACORA_COL +") " +
-                /*"FOREIGN KEY(" + REVI_COORDINADOR +") REFERENCES "+ COORDINADOR_TABLE +" (" + IDENTIFICADOR_COORDINADOR +"), " +
-                "FOREIGN KEY (" + REVI_TUTOR +") REFERENCES "+ TUTOR_TABLE +" (" + IDENTIFICADOR_TUTOR +") , " +
-                "FOREIGN KEY (" + ID_TIPO_ACTIVIDAD +") REFERENCES "+ TIPOACTIVIDAD_TABLE +" (" +IDENTIFICADOR_TIPOACTIVIDAD +") " +*/
+                "FOREIGN KEY(" + REVI_COORDINADOR +") REFERENCES "+ CoordinadorDAO.COORDINADOR_TABLE +" (" + CoordinadorDAO.IDENTIFICADOR_COORDINADOR +"), " +
+                "FOREIGN KEY (" + REVI_TUTOR +") REFERENCES "+ TutorDAO.TUTOR_TABLE +" (" + TutorDAO.IDENTIFICADOR_TUTOR +") , " +
+                "FOREIGN KEY (" + ID_TIPO_ACTIVIDAD +") REFERENCES "+ TipoDeActividadDAO.TIPOACTIVIDAD_TABLE +" (" + TipoDeActividadDAO.ID_TIPO_ACTIVIDAD +") " +
                 ");";
     }
 

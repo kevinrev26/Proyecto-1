@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.BitacoraDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.CoordinadorDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.EstudianteDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.OpcionDAO;
@@ -59,10 +60,11 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(CoordinadorDAO.crearTablaCoordinador());
         db.execSQL(EstudianteDAO.crearTablaEstudiante());
         db.execSQL(TipoDeActividadDAO.crearTablaTipoDeActividad());
-
         db.execSQL(UsuarioDAO.crearTablaUsuario());
         db.execSQL(OpcionDAO.crearTablaOpcion());
         db.execSQL(PermisoDAO.crearTablaPermiso());
+        db.execSQL(BitacoraDAO.crearTablaBitacora());
+
     }
 
 
@@ -95,10 +97,11 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(CoordinadorDAO.eliminarTablaCoordinador());
         db.execSQL(EstudianteDAO.eliminarTablaEstudiante());
         db.execSQL(TipoDeActividadDAO.eliminarTablaDeActividad());
-
         db.execSQL(UsuarioDAO.eliminarTablaUsuario());
         db.execSQL(OpcionDAO.eliminarTablaOpcion());
         db.execSQL(PermisoDAO.eliminarTablaPermiso());
+        db.execSQL(BitacoraDAO.eliminarTablaBitacora());
+
         //Luego se manda a llamar el metodo para crear la base
         onCreate(db);
 
