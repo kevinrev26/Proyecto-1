@@ -20,17 +20,17 @@ public class EstudianteDAO extends MasterDAO {
 
 
     //Constantes para las tablas
-    private static final String ESTUDIANTE_TABLE = "estudiante";
-    private static final String CARNET = "carnet_estudiante";
-    private static final int CARNET_COL = 0;
-    private static final String NOMBRE = "nombre_estudiante";
-    private static final int NOMBRE_COL = 1;
-    private static final String EMAIL = "email_estudiante";
-    private static final int EMAIL_COL = 2;
-    private static final String TELEFONO = "telefono_estudiante";
-    private static final int TEL_COL = 3;
-    private static final String CARRERA = "CARRERA";
-    private static final int CARRERA_COL = 4;
+    public static final String ESTUDIANTE_TABLE = "estudiante";
+    public static final String CARNET = "carnet_estudiante";
+    public static final int CARNET_COL = 0;
+    public static final String NOMBRE = "nombre_estudiante";
+    public static final int NOMBRE_COL = 1;
+    public static final String EMAIL = "email_estudiante";
+    public static final int EMAIL_COL = 2;
+    public static final String TELEFONO = "telefono_estudiante";
+    public static final int TEL_COL = 3;
+    public static final String CARRERA = "CARRERA";
+    public static final int CARRERA_COL = 4;
 
     public EstudianteDAO(Context ctx) {
         super(ctx);

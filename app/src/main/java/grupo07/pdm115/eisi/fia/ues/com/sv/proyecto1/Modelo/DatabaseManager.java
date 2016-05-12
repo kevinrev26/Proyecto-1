@@ -6,7 +6,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.CoordinadorDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.EstudianteDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.OpcionDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.PermisoDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.TipoDeActividadDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.UsuarioDAO;
 
 /**
  * Creado por Kevin Rivera, 05-07-16.
@@ -17,7 +20,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
 
     //Constantes para la base de datos
     private static final String DB_NAME = "grupo07_pdm.db";
-    private static final int DB_VERSION = 2;
+    private static final int DB_VERSION = 3;
     private static final String LLAVE_FORANEA = "PRAGMA foreign_keys=ON;";
 
     //Clase con una instancia en si misma, para controlar la creacion de objetos
@@ -56,6 +59,10 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(CoordinadorDAO.crearTablaCoordinador());
         db.execSQL(EstudianteDAO.crearTablaEstudiante());
         db.execSQL(TipoDeActividadDAO.crearTablaTipoDeActividad());
+
+        db.execSQL(UsuarioDAO.crearTablaUsuario());
+        db.execSQL(OpcionDAO.crearTablaOpcion());
+        db.execSQL(PermisoDAO.crearTablaPermiso());
     }
 
 
@@ -88,6 +95,10 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(CoordinadorDAO.eliminarTablaCoordinador());
         db.execSQL(EstudianteDAO.eliminarTablaEstudiante());
         db.execSQL(TipoDeActividadDAO.eliminarTablaDeActividad());
+
+        db.execSQL(UsuarioDAO.eliminarTablaUsuario());
+        db.execSQL(OpcionDAO.eliminarTablaOpcion());
+        db.execSQL(PermisoDAO.eliminarTablaPermiso());
         //Luego se manda a llamar el metodo para crear la base
         onCreate(db);
 
