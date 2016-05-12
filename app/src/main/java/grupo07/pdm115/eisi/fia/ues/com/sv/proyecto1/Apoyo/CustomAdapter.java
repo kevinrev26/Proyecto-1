@@ -31,10 +31,6 @@ public class CustomAdapter extends BaseAdapter {
         this.lista = lista;
     }
 
-   /* public CustomAdapter(Context CTX, ArrayList<TipoDeActividad> list) {
-        this.CTX = CTX;
-        this.list = list;
-    }*/
 
     @Override
     public int getCount() {
