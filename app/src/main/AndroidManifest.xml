@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -46,9 +46,11 @@
         <activity
             android:name=".Controladores.BitacoraActivity"
             android:label="@string/Tabla_Bitacora"/>
-        <activity android:name=".Controladores.Coordinador.EliminarCoordinador"
+        <activity
+            android:name=".Controladores.Coordinador.EliminarCoordinador"
             android:label="@string/EliminarCoordinadores"/>
-        <activity android:name=".Controladores.Coordinador.AgregarCoordinador"
+        <activity
+            android:name=".Controladores.Coordinador.AgregarCoordinador"
             android:label="@string/AgregarCoordinador"/>
         <activity
             android:name=".Controladores.TipoDeActividad.ActualizarTipoDeActividad"
@@ -70,6 +72,9 @@
                   android:label="@string/VerBitacora"/>
 
         <activity android:name=".Controladores.Coordinador.ActualizarCoordinador">
+        </activity>
+        <activity android:name=".Controladores.Coordinador.SeleccionarCoordinador"
+            android:label="@string/VerTodosCoordinadores">
         </activity>
     </application>
 

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.ActualizarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.AgregarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.EliminarCoordinador;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.SeleccionarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.CoordinadorDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Coordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
@@ -90,10 +91,12 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btnVerCoordinadores:
                 cargarCoordinadores();
-                for (Coordinador c : coordinadores){
-                    Log.i(TAG,c.toString());
-                }
-                Toast.makeText(CoordinadorActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), SeleccionarCoordinador.class);
+                intent.putExtra("coordinadores",coordinadores);
+                startActivity(intent);
+
+
+                //Toast.makeText(CoordinadorActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
                 break;
 
         }
