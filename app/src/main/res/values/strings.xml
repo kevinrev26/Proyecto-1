@@ -35,7 +35,7 @@
         Menu para gestionar la tabla Estudiante.
     </string>
     <string name="BitacoraActivity">
-        Esta opcion lleva al menu de la tabla Bitacora.
+        Menu para gestionar la tabla Bitacora.
     </string>
     <string name="TipoDeActividadActivity">
         Menu para gestionar la tabla Tipo De Actividad.
@@ -118,6 +118,14 @@
         <item>Ingenieria Mecanica</item>
     </string-array>
 
+    <!--Opciones para la activity AgregarBitacora-->
+    <string name="IdentidicadorBitacora">Identificador de la Bitacora</string>
+    <string name="FechaInicioBitacora">Fecha de Inicio Bitacora</string>
+    <string name="FechaFinBitacota">Fecha Final de Bitacora</string>
+    <string name="RevisionCoordinador">Revision Coordinador</string>
+    <string name="RevisonTutor">Revision Tutor</string>
+    <string name="IdentificadorTipActividad">Identificador de TipoActividad</string>
+    <string name="BotonAgregarBitacora">Agregar nuevo</string>
 
     <!--Opciones para la activity AgregarCoordinador-->
     <string name="NombreCoordinador">Nombre Coordinador</string>

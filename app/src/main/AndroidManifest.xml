@@ -57,11 +57,18 @@
         <activity
             android:name=".Controladores.TipoDeActividad.EliminarTipoDeActividad"
             android:label="@string/EliminarTipoDeActividad"/>
-        <activity android:name=".Controladores.TipoDeActividad.SeleccionarTipoDeActividad"/>
-        <activity android:name=".Controladores.Bitacora.ActualizarBitacora"/>
-        <activity android:name=".Controladores.Bitacora.AgregarBitacora"/>
-        <activity android:name=".Controladores.Bitacora.EliminarBitacora"/>
-        <activity android:name=".Controladores.Bitacora.SeleccionarBitacora"/>
+        <activity android:name=".Controladores.TipoDeActividad.SeleccionarTipoDeActividad"
+                  android:label="@string/SeleccionarTipoActividad"/>
+
+        <activity android:name=".Controladores.Bitacora.ActualizarBitacora"
+                  android:label="@string/Actualizarbitacora"/>
+        <activity android:name=".Controladores.Bitacora.AgregarBitacora"
+                  android:label="@string/CrearBitacora"/>
+        <activity android:name=".Controladores.Bitacora.EliminarBitacora"
+                  android:label="@string/EliminaBitacora"/>
+        <activity android:name=".Controladores.Bitacora.SeleccionarBitacora"
+                  android:label="@string/VerBitacora"/>
+
         <activity android:name=".Controladores.Coordinador.ActualizarCoordinador">
         </activity>
     </application>

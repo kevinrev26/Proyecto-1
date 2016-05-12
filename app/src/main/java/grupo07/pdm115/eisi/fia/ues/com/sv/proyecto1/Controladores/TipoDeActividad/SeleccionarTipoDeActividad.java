@@ -9,14 +9,14 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.CustomAdapter;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.TipoActividadCustomAdapter;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.TipoDeActividad;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 public class SeleccionarTipoDeActividad extends AppCompatActivity {
 
     private ListView mLista;
-
-    private CustomAdapter nCustomAdapter;
+    private TipoActividadCustomAdapter nCustomAdapter;
 
 
     @Override
@@ -36,7 +36,7 @@ public class SeleccionarTipoDeActividad extends AppCompatActivity {
     private void configurarAdapter(){
         Intent i = getIntent();
         ArrayList<TipoDeActividad> list = (ArrayList<TipoDeActividad>)i.getSerializableExtra("TiposDeActividades");
-       // mLista.setAdapter(nCustomAdapter = new CustomAdapter(this.getApplicationContext(),list);
+        mLista.setAdapter(nCustomAdapter = new TipoActividadCustomAdapter(this.getApplicationContext(),list));
 
     }
 }

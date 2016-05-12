@@ -20,7 +20,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 public class BitacoraActivity extends AppCompatActivity implements View.OnClickListener{
 
     //TAG de la clase
-    public static final String TAG = "BitacorActivity";
+    public static final String TAG = "BitacoraActivity";
     //Widgets
     private Button BTNAgregar, BTNActualizar, BTNLlenar, BTNEliminar, BTNVer;
     //Referencia al DAO

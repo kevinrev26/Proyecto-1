@@ -15,8 +15,8 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.TipoDeActividad;
 public class TipoDeActividadDAO  extends MasterDAO
 {
     //Constantes para las tablas
-    private static final String TIPOACTIVIDAD_TABLE = "tipo_actividad";
-    private static final String ID_TIPO_ACTIVIDAD = "id_tipo_actividad";
+    static final String TIPOACTIVIDAD_TABLE = "tipo_actividad";
+    static final String ID_TIPO_ACTIVIDAD = "id_tipo_actividad";
     private static final int ID_COL = 0;
     private static final String NOMBRE_ACTIVIDAD = "nombre_actividad";
     private static final int NOMBRE_COL = 1;
