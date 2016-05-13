@@ -71,7 +71,7 @@ public class ModalidadDAO extends MasterDAO {
         } else {
             try {
                 return new Modalidad(
-                        cursor.getString(ID_MODALIDAD_COL),
+                        cursor.getInt(ID_MODALIDAD_COL),
                         cursor.getString(NOM_MODALIDAD_COL)
                         );
 

@@ -76,7 +76,6 @@ public class ActualizarModalidad extends AppCompatActivity implements View.OnCli
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             m.setNombre(editActualizarNombreModalidad.getText().toString());
-                            m.setIdModalidad(editActualizarIdentificadorModalidad.getText().toString());
 
                             if (ModDAO.actualizarModalidad(m) == 1) {
                                 Toast.makeText(ActualizarModalidad.this, "Modalidad actualizada", Toast.LENGTH_SHORT).show();

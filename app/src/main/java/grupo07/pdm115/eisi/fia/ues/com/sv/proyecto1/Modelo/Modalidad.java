@@ -5,19 +5,22 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
  */
 public class Modalidad {
 
-    private String idModalidad;
+    private int idModalidad;
     private String nombre;
 
-    public Modalidad(String idModalidad, String nombre) {
+    public Modalidad() {
+    }
+
+    public Modalidad(int idModalidad, String nombre) {
         this.idModalidad = idModalidad;
         this.nombre = nombre;
     }
 
-    public String getIdModalidad() {
+    public int getIdModalidad() {
         return idModalidad;
     }
 
-    public void setIdModalidad(String idModalidad) {
+    public void setIdModalidad(int idModalidad) {
         this.idModalidad = idModalidad;
     }
 
