@@ -12,9 +12,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.ModalidadDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Modalidad;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;

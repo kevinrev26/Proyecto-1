@@ -49,11 +49,11 @@ public class ModalidadDAO extends MasterDAO {
 
     public int actualizarModalidad(Modalidad modalidad){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(IDENTIFICADOR_MODALIDAD,modalidad.getId_modalidad());
+        contentValues.put(IDENTIFICADOR_MODALIDAD,modalidad.getIdModalidad());
         contentValues.put(NOM_MODALIDAD,modalidad.getNombre());
 
         String where = IDENTIFICADOR_MODALIDAD + "= ?";
-        String[] whereArgs = {String.valueOf(modalidad.getId_modalidad())};
+        String[] whereArgs = {String.valueOf(modalidad.getIdModalidad())};
         return mDatabase.update(MODALIDAD_TABLE, contentValues, where, whereArgs);
 
     }
@@ -71,7 +71,7 @@ public class ModalidadDAO extends MasterDAO {
         } else {
             try {
                 return new Modalidad(
-                        cursor.getInt(ID_MODALIDAD_COL),
+                        cursor.getString(ID_MODALIDAD_COL),
                         cursor.getString(NOM_MODALIDAD_COL)
                         );
 
