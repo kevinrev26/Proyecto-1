@@ -36,18 +36,18 @@ public class BitacoraDAO extends MasterDAO {
     }
 
     public static String crearTablaBitacora(){
-        return "CREATE TABLE " + BITACORA_TABLE + " (" +
-                IDENTIFICADOR_BITACORA + " TEXT(5) NOT NULL, " +
-                FECHA_INICIO + " TEXT(10) NOT NULL, " +
-                FECHA_FIN + " TEXT(10) NOT NULL, " +
-                REVI_COORDINADOR + " TEXT(5) NOT NULL " +
-                REVI_TUTOR + " TEXT(5) NOT NULL " +
-                ID_TIPO_ACTIVIDAD + " TEXT(5) NOT NULL " +
-                "PRIMARY KEY(" + ID_BITACORA_COL +") " +
-                "FOREIGN KEY(" + REVI_COORDINADOR +") REFERENCES "+ CoordinadorDAO.COORDINADOR_TABLE +" (" + CoordinadorDAO.IDENTIFICADOR_COORDINADOR +"), " +
-                "FOREIGN KEY (" + REVI_TUTOR +") REFERENCES "+ TutorDAO.TUTOR_TABLE +" (" + TutorDAO.IDENTIFICADOR_TUTOR +") , " +
-                "FOREIGN KEY (" + ID_TIPO_ACTIVIDAD +") REFERENCES "+ TipoDeActividadDAO.TIPOACTIVIDAD_TABLE +" (" + TipoDeActividadDAO.ID_TIPO_ACTIVIDAD +") " +
-                ");";
+        return "CREATE TABLE" + BITACORA_TABLE + " (" +
+                        IDENTIFICADOR_BITACORA + " TEXT(5) NOT NULL, " +
+                        FECHA_INICIO + " TEXT(10) NOT NULL, " +
+                        FECHA_FIN + " TEXT(10) NOT NULL, " +
+                        REVI_COORDINADOR + " TEXT(5) NOT NULL, " +
+                        REVI_TUTOR + " TEXT(5) NOT NULL, " +
+                        ID_TIPO_ACTIVIDAD + " TEXT(5) NOT NULL, " +
+                        "PRIMARY KEY (" + IDENTIFICADOR_BITACORA + "), CONSTRAINT " +
+                        "fk_bitacora_coordinador FOREIGN KEY (" + REVI_COORDINADOR + ")" +
+                        "REFERENCES coordinador (IDENTIFICADOR_COORDINADOR) ON DELETE CASCADE ON UPDATE CASCADE, " +
+                        "CONSTRAINT fk_bitacora_tutor FOREIGN KEY (" + REVI_TUTOR + ") REFERENCES tutor (IDENTIFICADOR_TUTOR) ON DELETE CASCADE ON UPDATE CASCADE, " +
+                        "CONSTRAINT fk_bitacora_actividad FOREIGN KEY (" + ID_TIPO_ACTIVIDAD + ") REFERENCES tipo_actividad (ID_TIPO_ACTIVIDAD) ON DELETE CASCADE ON UPDATE CASCADE );";
     }
 
     public static String eliminarTablaBitacora(){
@@ -84,9 +84,10 @@ public class BitacoraDAO extends MasterDAO {
 
     }
 
-    public int eliminarBitacora(int id){
+    public int eliminarBitacora(String id_tipo_actividad){
         String where = IDENTIFICADOR_BITACORA + "= ?";
-        String[] whereArgs = {String.valueOf(id)};
+        String[] whereArgs={id_tipo_actividad};
+
         return mDatabase.delete(BITACORA_TABLE, where, whereArgs);
     }
 
@@ -113,9 +114,9 @@ public class BitacoraDAO extends MasterDAO {
     }
 
 
-    public Bitacora getBitacora(int id){
+    public Bitacora getBitacora(String id){
         String where = IDENTIFICADOR_BITACORA + "= ?";
-        String[] whereArgs = {String.valueOf(id)};
+        String[] whereArgs = {id};
         Cursor cursor = mDatabase.query(BITACORA_TABLE,null,where,whereArgs,null,null,null);
         cursor.moveToFirst();
         Bitacora temp = getBitacoraPorCursor(cursor);

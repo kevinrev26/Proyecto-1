@@ -13,19 +13,18 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.TipoDeActividad;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 /**
- * Created by Gabriel on 11/05/2016.
+ * Created by Marvin on 12/05/2016.
  */
-public class TipoActividadCustomAdapter extends BaseAdapter{
+public class CustomAdapterTipoActividad extends  BaseAdapter {
 
-    private Context ctx;
+    private Context context;
     private ArrayList<TipoDeActividad> lista;
 
 
-    public TipoActividadCustomAdapter(Context ctx, ArrayList<TipoDeActividad> lista) {
-        this.ctx = ctx;
+    public CustomAdapterTipoActividad(Context context, ArrayList<TipoDeActividad> lista) {
+        this.context = context;
         this.lista = lista;
     }
-
 
     @Override
     public int getCount() {
@@ -42,28 +41,32 @@ public class TipoActividadCustomAdapter extends BaseAdapter{
         return position;
     }
 
+
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null){
             LayoutInflater layoutInflater = (LayoutInflater)
-                    ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.tp_list_select_row,parent,false);
         }
 
-        //TextView textNombre = (TextView) convertView.findViewById(R.id.textNombreLista);
-        TextView textId = (TextView) convertView.findViewById(R.id.textIdLista);
-        TextView textNomb = (TextView) convertView.findViewById(R.id.textNombre);
-        TextView textCantH = (TextView) convertView.findViewById(R.id.textHoras);
-        TextView textDescrip = (TextView) convertView.findViewById(R.id.textDesc);
+        TextView textId=(TextView) convertView.findViewById(R.id.textIdLista);
+        TextView textNombre = (TextView) convertView.findViewById(R.id.textNombre);
+        TextView textHoras = (TextView) convertView.findViewById(R.id.textHoras);
+        TextView textDesc = (TextView) convertView.findViewById(R.id.textDesc);
 
         TipoDeActividad temp = lista.get(position);
 
         textId.setText(temp.getId_tipo_actividad());
-        //textNombre.setText(temp.getNombre());
-        textNomb.setText(temp.getNombre_actividad());
-        textCantH.setText(temp.getCantidad_horas());
-        textDescrip.setText(temp.getDescripcion());
+        textNombre.setText(temp.getNombre_actividad());
+        textHoras.setText(temp.getCantidad_horas());
+        textDesc.setText(temp.getDescripcion());
 
         return convertView;
     }
+
+
 }
+
+

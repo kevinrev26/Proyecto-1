@@ -61,7 +61,7 @@ public class BitacoraActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()){
-            case R.id.btnLlenarBase:
+            case R.id.btnLlenarBaseBitacora:
 
                 llenarBitacoras();
                 Toast.makeText(BitacoraActivity.this, "llenado de la base de datos, verificar...", Toast.LENGTH_SHORT).show();
@@ -98,28 +98,14 @@ public class BitacoraActivity extends AppCompatActivity implements View.OnClickL
 
 
     private void llenarBitacoras(){
-        Bitacora temp;
-        int validador;
-        temp = new Bitacora();
-        temp.setId_bitacora("AZXC");
-        temp.setFecha_inicio("10-02-2003");
-        temp.setFecha_fin("11/03/2003");
-        temp.setRevision_coordinador("az");
-        temp.setRevision_tutor("edft");
-        temp.setIdentificador_actividad("qwe45");
-        validador = (int) mBitacoraDAO.insertarBitacora(temp);
-        temp.setId_bitacora("AZXz");
-        temp.setFecha_inicio("10-02-2003");
-        temp.setFecha_fin("12/03/2003");
-        temp.setRevision_coordinador("azx");
-        temp.setRevision_tutor("edfts");
-        temp.setIdentificador_actividad("qwe451");
-        validador += (int) mBitacoraDAO.insertarBitacora(temp);
-
-        if (validador>0){
-            Toast.makeText(BitacoraActivity.this, "Se ingresaron los registros", Toast.LENGTH_SHORT).show();
+        if (mBitacoraDAO.insertarBitacora(new Bitacora("AZXC", "10-02-2003", "11/03/2003", "az", "edft", "qwe45")) > 0){
+            Toast.makeText(BitacoraActivity.this, "Registro Insertado", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(BitacoraActivity.this, "Error al insertar ", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }
 
 

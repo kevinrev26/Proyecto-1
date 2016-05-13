@@ -19,62 +19,64 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 public class ActualizarTipoDeActividad extends AppCompatActivity implements View.OnClickListener {
 
-    //Wdigets
-    private EditText editNombAct, editCantH, editDesc;
-    private Spinner mSpinnerTipoActividad;
-    private Button mButtonActualizar;
+    //Widgets
+    private EditText editNombreTP, editCantidadH, editDescripcion;
+    private Spinner mSpinner;
+    private Button  btnActualizarTipAct;
 
-    //Referencia de identificador
-    private String seleccion;
+    //referencia a coordinador
+    TipoDeActividad c;
 
-    //Referencia de tipo de actividad
-    private TipoDeActividad x;
 
-    //Referencia al TipoDeActividadDAO
-    private TipoDeActividadDAO mActividadDAO;
+    //DAO
+    private TipoDeActividadDAO mTActividadDAO;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizar_tipo_de_actividad);
-        //Enlazar widgets
-        anclarWidgets();
+        mTActividadDAO = new TipoDeActividadDAO(ActualizarTipoDeActividad.this);
+        //EnlazarWidgets
+        enlazarWidgets();
 
-        mActividadDAO = new TipoDeActividadDAO(ActualizarTipoDeActividad.this);
+        //configurar spinner
+        configurarSpinner();
 
-        //configurandoSpinnerActividades
-        configurarSpinnerTiposActividades();
-        //setListener
-        setListener();
+        //setListeners
+        setListeners();
+
+
     }
 
-    private void anclarWidgets() {
-        editNombAct = (EditText) findViewById(R.id.nombEditText);
-        editCantH = (EditText) findViewById(R.id.numEditText);
-        editDesc = (EditText) findViewById(R.id.txtDesc);
-        mSpinnerTipoActividad = (Spinner) findViewById(R.id.spinnerTiposActividades);
-        mButtonActualizar = (Button) findViewById(R.id.btnActualizar);
+    private void enlazarWidgets(){
+
+        editNombreTP = (EditText) findViewById(R.id.editTextActutalizarNombreActividad);
+        editCantidadH = (EditText) findViewById(R.id.editTextActutalizarCantidadHoras);
+        editDescripcion = (EditText) findViewById(R.id.editTextActutalizarDescripcionActividad);
+
+        mSpinner = (Spinner) findViewById(R.id.spinnerTiposActividades);
+        btnActualizarTipAct = (Button) findViewById(R.id.btnActualizarTipoDeActividad);
     }
 
-    private void configurarSpinnerTiposActividades() {
-        ArrayAdapter<TipoDeActividad> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, mActividadDAO.getListaTiposActividad());
+    private void configurarSpinner(){
+        ArrayAdapter<TipoDeActividad> adapter = new ArrayAdapter<TipoDeActividad>(this,android.R.layout.simple_spinner_item,
+                mTActividadDAO.getListaTiposActividad());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpinnerTipoActividad.setAdapter(adapter);
+        mSpinner.setAdapter(adapter);
     }
 
-    private void setListener() {
-        mButtonActualizar.setOnClickListener(this);
+    private void setListeners(){
+        mSpinner.setOnClickListener(this);
 
-        //TiposDeActividades
-        mSpinnerTipoActividad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        //Tipos Actividades
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                x = (TipoDeActividad) parent.getItemAtPosition(position);
-
-                editNombAct.setText(x.getNombre_actividad());
-                editCantH.setText(x.getCantidad_horas());
-                editDesc.setText(x.getDescripcion());
+                c = (TipoDeActividad) parent.getItemAtPosition(position);
+                editNombreTP.setText(c.getNombre_actividad());
+                editCantidadH.setText(c.getCantidad_horas());
+                editDescripcion.setText(c.getDescripcion());
             }
 
             @Override
@@ -83,32 +85,30 @@ public class ActualizarTipoDeActividad extends AppCompatActivity implements View
             }
         });
     }
-
+    //TODO Validar los campos.
     @Override
-    public void onClick(View v){
-        AlertDialog show=new AlertDialog.Builder(this)
-                .setTitle("Actualizar Tipo de Actividad")
-                .setMessage("Se Actualizara: " + x.getNombre_actividad() + ", Estas seguro?")
+    public void onClick(View v) {
+        AlertDialog show = new AlertDialog.Builder(this)
+                .setTitle("Actualizar Tipo Actividad")
+                .setMessage("Se actualizara: " + c.getNombre_actividad() + ", ¿Esta seguro?")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        x.setNombre_actividad(editNombAct.getText().toString());
-                        x.setCantidad_horas(Integer.parseInt(editCantH.getText().toString()));
-                        x.setDescripcion(editDesc.getText().toString());
-                        if (mActividadDAO.actualizarTipoActividad(x)==1){
-                            Toast.makeText(ActualizarTipoDeActividad.this, "Tipo De Actividad Actualizada", Toast.LENGTH_SHORT).show();
+                        c.setNombre_actividad(editNombreTP.getText().toString());
+                        c.setCantidad_horas(Integer.parseInt(editCantidadH.getText().toString()));
+                        c.setDescripcion(editDescripcion.getText().toString());
+                        if (mTActividadDAO.actualizarTipoActividad(c) == 1) {
+                            Toast.makeText(ActualizarTipoDeActividad.this, "Tipo De Actualidad Actualizada", Toast.LENGTH_SHORT).show();
                             ActualizarTipoDeActividad.this.finish();
                         }
                     }
                 })
-               .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int which) {
-                       // do nothing
-                   }
-               })
-               .setIcon(android.R.drawable.ic_dialog_alert)
-               .show();
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+
     }
 }
-
-
-

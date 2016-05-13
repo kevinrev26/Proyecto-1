@@ -55,6 +55,9 @@
     <string name="EliminarEstudiante">Eliminar un estudiante de la base</string>
     <string name="VerEstudiantes">Ver todos los estudiantes</string>
 
+
+    <!--Botones de las opciones para realizar el crud bITACORA-->
+    <string name="LLENARBD">Llenar la base de datos</string>
     <!--Botones para TipoDeActividadActivity-->
     <string name="CrearTipoDeActividad">Agregar un nuevo Tipo De Actividad</string>
     <string name="ActualizarTipoDeActividad">Actualizar un Tipo De Actividad existente</string>
@@ -117,13 +120,18 @@
     </string-array>
 
     <!--Opciones para la activity AgregarBitacora-->
-    <string name="IdentidicadorBitacora">Identificador de la Bitacora</string>
-    <string name="FechaInicioBitacora">Fecha de Inicio Bitacora</string>
+    <string name="IdentidicadorBitacora">Id Bitacora</string>
+    <string name="FechaInicioBitacora">Fecha Inicio Bitacora</string>
     <string name="FechaFinBitacota">Fecha Final de Bitacora</string>
     <string name="RevisionCoordinador">Revision Coordinador</string>
     <string name="RevisonTutor">Revision Tutor</string>
-    <string name="IdentificadorTipActividad">Identificador de TipoActividad</string>
+    <string name="IdentificadorTipActividad">Id TipoActividad</string>
     <string name="BotonAgregarBitacora">Agregar nuevo</string>
+    <!--Demas elementos para activities coordinador-->
+    <string name="EliminarBitacoraText">Seleccione una Bitacora a eliminar</string>
+    <string name="SeleccionarBitacoras">Bitacora en el sistema</string>
+    <string name="ActualizarBitacoraActivity">Seleccione una Bitacora a actualizar</string>
+    <string name="BotonActualizarBitacora">Actualizar Bitacora</string>
 
     <!--Opciones para la activity AgregarCoordinador-->
     <string name="NombreCoordinador">Nombre Coordinador</string>
