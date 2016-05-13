@@ -57,13 +57,13 @@ public class TutorDAO extends MasterDAO {
 
     public int actualizarTutor(Tutor tutor){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(IDENTIFICADOR_TUTOR, tutor.getId_tutor());
+        contentValues.put(IDENTIFICADOR_TUTOR, tutor.getIdTutor());
         contentValues.put(NOM_TUTOR, tutor.getNombre());
         contentValues.put(EMAIL_TUTOR, tutor.getEmail());
         contentValues.put(TEL_TUTOR, tutor.getTelefono());
 
         String where = IDENTIFICADOR_TUTOR + "= ?";
-        String[] whereArgs = {String.valueOf(tutor.getId_tutor())};
+        String[] whereArgs = {String.valueOf(tutor.getIdTutor())};
         return mDatabase.update(TUTOR_TABLE, contentValues, where, whereArgs);
 
     }

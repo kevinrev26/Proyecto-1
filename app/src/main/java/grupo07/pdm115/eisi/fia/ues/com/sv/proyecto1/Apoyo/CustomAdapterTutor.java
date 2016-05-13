@@ -9,25 +9,25 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Modalidad;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Tutor;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 /**
- * Created by Diego on 12/05/2016.
+ * Created by Diego on 13/05/2016.
  */
-public class CustomAdapterModalidad extends BaseAdapter {
+public class CustomAdapterTutor extends BaseAdapter {
 
 
-    private ArrayList<Modalidad> lista;
+    private ArrayList<Tutor> lista;
     private Context context;
 
-    public CustomAdapterModalidad(Context context, ArrayList<Modalidad> lista) {
+    public CustomAdapterTutor(Context context, ArrayList<Tutor> lista) {
         this.context = context;
         this.lista = lista;
     }
 
     @Override
-    public Modalidad getItem(int position) {
+    public Tutor getItem(int position) {
         return lista.get(position);
     }
 
@@ -39,9 +39,11 @@ public class CustomAdapterModalidad extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.list_select_row,parent,false);
         }
 
-        TextView textNombre = (TextView) convertView.findViewById(R.id.editTextNombreModalidad);
+        TextView textNombre = (TextView) convertView.findViewById(R.id.editTextNombreTutor);
+        TextView textEmail = (TextView) convertView.findViewById(R.id.editTextCorreoTutor);
+        TextView textTelefono = (TextView) convertView.findViewById(R.id.editTextTelefonoTutor);
 
-        Modalidad temp = lista.get(position);
+        Tutor temp = lista.get(position);
 
         textNombre.setText(temp.getNombre());
         return convertView;

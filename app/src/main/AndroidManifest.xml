@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1">
 
     <application
         android:allowBackup="true"
@@ -10,72 +10,78 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/MainActivity"/>
+            android:label="@string/MainActivity" />
         <activity
             android:name=".Controladores.CoordinadorActivity"
-            android:label="@string/Tabla_Coordinador"/>
+            android:label="@string/Tabla_Coordinador" />
         <activity
             android:name=".Controladores.EstudianteActivity"
-            android:label="@string/Tabla_Estudiante"/>
+            android:label="@string/Tabla_Estudiante" />
         <activity
             android:name=".Controladores.InstitucionActivity"
-            android:label="@string/Tabla_Institucion"/>
+            android:label="@string/Tabla_Institucion" />
         <activity
             android:name=".Controladores.ServicioSocialActivity"
-            android:label="@string/Tabla_Servicio_Social"/>
-        <activity android:name=".Controladores.TipoDeActividadActivity"/>
+            android:label="@string/Tabla_Servicio_Social" />
+        <activity android:name=".Controladores.TipoDeActividadActivity" />
         <activity
             android:name=".Controladores.Estudiante.AgregarEstudiante"
-            android:label="@string/AgregarEstudiante"/>
+            android:label="@string/AgregarEstudiante" />
         <activity
             android:name=".Controladores.Estudiante.EliminarEstudiante"
-            android:label="@string/EliminarEstudiante"/>
+            android:label="@string/EliminarEstudiante" />
         <activity
             android:name=".Controladores.Estudiante.SeleccionarEstudiante"
-            android:label="@string/VerTodosEstudiantes"/>
+            android:label="@string/VerTodosEstudiantes" />
         <activity
             android:name=".Controladores.Estudiante.ActualizarEstudiante"
-            android:label="@string/ActualizarEstudiantes"/>
+            android:label="@string/ActualizarEstudiantes" />
         <activity
             android:name=".Controladores.BitacoraActivity"
-            android:label="@string/Tabla_Bitacora"/>
+            android:label="@string/Tabla_Bitacora" />
         <activity
             android:name=".Controladores.Coordinador.EliminarCoordinador"
-            android:label="@string/EliminarCoordinadores"/>
+            android:label="@string/EliminarCoordinadores" />
         <activity
             android:name=".Controladores.Coordinador.AgregarCoordinador"
-            android:label="@string/AgregarCoordinador"/>
+            android:label="@string/AgregarCoordinador" />
         <activity
             android:name=".Controladores.TipoDeActividad.ActualizarTipoDeActividad"
-            android:label="@string/ActualizarTipoDeActividad"/>
-        <activity android:name=".Controladores.TipoDeActividad.AgregarTipoDeActividad"/>
+            android:label="@string/ActualizarTipoDeActividad" />
+        <activity android:name=".Controladores.TipoDeActividad.AgregarTipoDeActividad" />
         <activity
             android:name=".Controladores.TipoDeActividad.EliminarTipoDeActividad"
-            android:label="@string/EliminarTipoDeActividad"/>
-        <activity android:name=".Controladores.TipoDeActividad.SeleccionarTipoDeActividad"
-                  android:label="@string/SeleccionarTipoActividad"/>
-
-        <activity android:name=".Controladores.Bitacora.ActualizarBitacora"
-                  android:label="@string/Actualizarbitacora"/>
-        <activity android:name=".Controladores.Bitacora.AgregarBitacora"
-                  android:label="@string/CrearBitacora"/>
-        <activity android:name=".Controladores.Bitacora.EliminarBitacora"
-                  android:label="@string/EliminaBitacora"/>
-        <activity android:name=".Controladores.Bitacora.SeleccionarBitacora"
-                  android:label="@string/VerBitacora"/>
-
-        <activity android:name=".Controladores.Coordinador.ActualizarCoordinador">
-        </activity>
-        <activity android:name=".Controladores.Coordinador.SeleccionarCoordinador"
-            android:label="@string/VerTodosCoordinadores">
-        </activity>
+            android:label="@string/EliminarTipoDeActividad" />
+        <activity
+            android:name=".Controladores.TipoDeActividad.SeleccionarTipoDeActividad"
+            android:label="@string/SeleccionarTipoActividad" />
+        <activity
+            android:name=".Controladores.Bitacora.ActualizarBitacora"
+            android:label="@string/Actualizarbitacora" />
+        <activity
+            android:name=".Controladores.Bitacora.AgregarBitacora"
+            android:label="@string/CrearBitacora" />
+        <activity
+            android:name=".Controladores.Bitacora.EliminarBitacora"
+            android:label="@string/EliminaBitacora" />
+        <activity
+            android:name=".Controladores.Bitacora.SeleccionarBitacora"
+            android:label="@string/VerBitacora" />
+        <activity android:name=".Controladores.Coordinador.ActualizarCoordinador" />
+        <activity
+            android:name=".Controladores.Coordinador.SeleccionarCoordinador"
+            android:label="@string/VerTodosCoordinadores" />
+        <activity android:name=".Controladores.Tutor.ActualizarTutor" />
+        <activity android:name=".Controladores.Tutor.AgregarTutor" />
+        <activity android:name=".Controladores.Tutor.EliminarTutor" />
+        <activity android:name=".Controladores.Tutor.SeleccionarTutor"></activity>
     </application>
 
 </manifest>

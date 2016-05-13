@@ -4,24 +4,27 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
  * Created by Marvin on 07/05/2016.
  */
 public class Tutor {
-    private int id_tutor;
+    private int idTutor;
     private String nombre;
     private String email;
     private String telefono;
 
-    public Tutor(int id_tutor, String nombre, String email, String telefono) {
-        this.id_tutor = id_tutor;
+    public Tutor(){
+    }
+
+    public Tutor(int idTutor, String nombre, String email, String telefono) {
+        this.idTutor = idTutor;
         this.nombre = nombre;
         this.email = email;
         this.telefono = telefono;
     }
 
-    public int getId_tutor() {
-        return id_tutor;
+    public int getIdTutor() {
+        return idTutor;
     }
 
     public void setId_tutor(int id_tutor) {
-        this.id_tutor = id_tutor;
+        this.idTutor = idTutor;
     }
 
     public String getNombre() {
