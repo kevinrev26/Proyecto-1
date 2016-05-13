@@ -9,13 +9,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TutorActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ACTIVITY TUTOR"
-        android:id="@+id/textView8"
+        android:text="LLENAR LA BASE DE DATOS DE TUTORES"
+        android:id="@+id/btnLlenarBaseTutor"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp" />
+        android:layout_marginTop="42dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AGREGAR UN NUEVO TUTOR"
+        android:id="@+id/btnAgregarTutor"
+        android:layout_below="@+id/btnLlenarBaseTutor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MODIFICAR TUTOR EXISTENTE"
+        android:id="@+id/btnModificarTutor"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ELIMINAR TUTOR"
+        android:id="@+id/btnEliminarTutor"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/btnModificarTutor"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VER TODOS LOS TUTORES"
+        android:id="@+id/btnTodosTutores"
+        android:layout_below="@+id/btnEliminarTutor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
 </RelativeLayout>

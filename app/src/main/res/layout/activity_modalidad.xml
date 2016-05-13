@@ -9,13 +9,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ModalidadActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ACTIVITY MODALIDAD"
-        android:id="@+id/textView7"
+        android:text="LLENAR LA BASE DE DATOS MODALIDAD"
+        android:id="@+id/btnLlenarBaseModalidad"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="89dp" />
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AGREGAR NUEVA MODALIDAD"
+        android:id="@+id/btnAgregarModalidad"
+        android:layout_below="@+id/btnLlenarBaseModalidad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MODIFICAR MODADLIDAD EXISTENTE"
+        android:id="@+id/btnModificarModalidad"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ELIMINAR MODALIDAD"
+        android:id="@+id/btnEliminarModalidad"
+        android:layout_below="@+id/btnModificarModalidad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VER TODAS LAS MODALIDADES"
+        android:id="@+id/btnTodasModalidades"
+        android:layout_below="@+id/btnEliminarModalidad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
 </RelativeLayout>
