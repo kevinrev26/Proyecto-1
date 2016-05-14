@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.ActualizarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.AgregarInstitucion;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.EliminarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.InstitucionDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
@@ -76,7 +77,8 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
                 startActivity(intent);
             case R.id.btnEliminarIns:
                 //Cargar activity para eliminar un elemento
-                Toast.makeText(InstitucionActivity.this, "Proximamente eliminar", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), EliminarInstitucion.class);
+                startActivity(intent);
                 break;
             case R.id.btnSeleccionarIns:
                 //Cargar activity para ver todos los elementos
