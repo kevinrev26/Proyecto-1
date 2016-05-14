@@ -24,6 +24,8 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1;
 *
 */
 import android.content.Intent;
+import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,6 +44,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ModalidadActiv
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocialActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividadActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TutorActivity;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.MasterDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.TipoDeActividad;
 
@@ -66,6 +69,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setListeners();
         //Creando las opciones del menu
         crearClases();
+        MasterDAO master = new MasterDAO(this.getApplicationContext());
+        SharedPreferences settings = getSharedPreferences("preferencias",0);
+        boolean dialogo = settings.getBoolean("dialogShow",false);
+        if(!dialogo) {
+            crearAlerta(master.versionDB());
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean("dialogShow",true);
+            editor.commit();
+        }
 
 
     }
@@ -107,6 +119,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mAdapter.addClase(temp);
         temp = new Clase(getResources().getString(R.string.TutorActivity), TutorActivity.TAG);
         mAdapter.addClase(temp);
+
+    }
+
+    private void crearAlerta(String version){
+
+            AlertDialog.Builder show = new AlertDialog.Builder(MainActivity.this);
+            show.setTitle("Version de la base de datos");
+            show.setMessage(getResources().getString(R.string.AlertaBaseDeDatos)+ "\n"+
+            getResources().getString(R.string.Version) + " " + version);
+            show.show();
 
     }
 

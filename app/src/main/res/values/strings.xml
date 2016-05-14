@@ -63,6 +63,10 @@
         Menu para gestionar la tabla Tutor.
     </string>
 
+    <!--Valores para el dialogo de la version de la base de datos-->
+    <string name="AlertaBaseDeDatos">Para versiones de la base menores a 3.6, la aplicacion no funcionara correctamente.</string>
+    <string name="Version">Version actual del dispositivo: </string>
+
 
     <!--Botones de las opciones para realizar el crud Estudiante-->
     <string name="llenarBD">Llenar la base de datos</string>
