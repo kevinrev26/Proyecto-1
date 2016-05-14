@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.ActualizarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.AgregarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.EliminarInstitucion;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.SeleccionarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.InstitucionDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
@@ -22,6 +23,7 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
     //TAG de la clase
     public static final String TAG = "InstitucionActivity";
 
+    private ArrayList<Institucion> instituciones = null;
     //Botones para controlar la app
     private Button btnLlenarBD, btnAgregar, btnActualizar,
             btnEliminar, btnLeer;
@@ -58,6 +60,10 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
         btnLlenarBD.setOnClickListener(this);
     }
 
+    private void cargarInstituciones(){
+        instituciones = mInstitucionDAO.getListaInstitucion();
+    }
+
     @Override
     public void onClick(View v) {
         Intent intent=null;
@@ -82,13 +88,11 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btnSeleccionarIns:
                 //Cargar activity para ver todos los elementos
-                ArrayList<Institucion> instituciones = mInstitucionDAO.getListaInstitucion();
-                for(Institucion i : instituciones){
-                    Log.i("DAO",i.toString());
-                }
-                Toast.makeText(InstitucionActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
-                break;
-
+                cargarInstituciones();
+                //Toast.makeText(EstudianteActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), SeleccionarInstitucion.class);
+                intent.putExtra("instituciones",instituciones);
+                startActivity(intent);
         }
     }
 

@@ -81,7 +81,7 @@
         <activity android:name=".Controladores.Tutor.ActualizarTutor" />
         <activity android:name=".Controladores.Tutor.AgregarTutor" />
         <activity android:name=".Controladores.Tutor.EliminarTutor" />
-        <activity android:name=".Controladores.Tutor.SeleccionarTutor"></activity>
+        <activity android:name=".Controladores.Tutor.SeleccionarTutor" />
         <activity
             android:name=".Controladores.ModalidadActivity"
             android:label="@string/Tabla_Modalidad" />
@@ -90,6 +90,7 @@
             android:label="@string/Tabla_Tutor" />
         <activity android:name=".Controladores.Institucion.ActualizarInstitucion" />
         <activity android:name=".Controladores.Institucion.EliminarInstitucion" />
+        <activity android:name=".Controladores.Institucion.SeleccionarInstitucion"></activity>
     </application>
 
 </manifest>

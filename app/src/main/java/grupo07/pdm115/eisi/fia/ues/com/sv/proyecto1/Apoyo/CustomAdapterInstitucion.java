@@ -1,8 +1,6 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +12,9 @@ import java.util.ArrayList;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
+/**
+ * Created by Usuario on 14/05/2016.
+ */
 public class CustomAdapterInstitucion extends BaseAdapter {
 
 
