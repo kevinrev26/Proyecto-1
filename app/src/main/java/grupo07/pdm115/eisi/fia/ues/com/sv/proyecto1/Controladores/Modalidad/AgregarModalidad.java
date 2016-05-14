@@ -23,7 +23,7 @@ public class AgregarModalidad extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agregar_coordinador);
+        setContentView(R.layout.activity_agregar_modalidad);
         ModDAO = new ModalidadDAO(AgregarModalidad.this);
         //EnlazarWidgets
         enlazarWidgets();
@@ -35,9 +35,9 @@ public class AgregarModalidad extends AppCompatActivity implements View.OnClickL
 
     private void enlazarWidgets(){
         editTextIdentificador = (EditText) findViewById(R.id.editTextIdentificadorModalidad);
-        editTextNombre = (EditText) findViewById(R.id.editTextNombreCoordinador);
+        editTextNombre = (EditText) findViewById(R.id.editTextNombreModalidad);
 
-        btnAgregar = (Button) findViewById(R.id.btnAgregarModalidad);
+        btnAgregar = (Button) findViewById(R.id.btnAgregarNuevaModalidad);
     }
 
 

@@ -49,7 +49,7 @@ public class ModalidadActivity extends AppCompatActivity implements View.OnClick
 
     private void enlazarWdigets(){
         btnAgregar = (Button) findViewById(R.id.btnAgregarModalidad);
-        btnActualizar = (Button) findViewById(R.id.btnActualizarModalidad);
+        btnActualizar = (Button) findViewById(R.id.btnModificarModalidad);
         btnLlenar = (Button) findViewById(R.id.btnLlenarBaseModalidad);
         btnEliminar = (Button) findViewById(R.id.btnEliminarModalidad);
         btnVer = (Button) findViewById(R.id.btnTodasModalidades);
@@ -78,7 +78,7 @@ public class ModalidadActivity extends AppCompatActivity implements View.OnClick
                 intent = new Intent(this.getApplicationContext(), AgregarModalidad.class);
                 startActivity(intent);
                 break;
-            case R.id.btnActualizarModalidad:
+            case R.id.btnModificarModalidad:
                 intent = new Intent(this.getApplicationContext(), ActualizarModalidad.class);
                 startActivity(intent);
                 //Toast.makeText(ModalidadActivity.this, "Activity actualizar modalidad", Toast.LENGTH_SHORT).show();

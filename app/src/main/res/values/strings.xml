@@ -219,10 +219,34 @@
     <string name="BotonActualizarServicioSocial">Actualizar Servicio Social</string>
 
     <!--Botones de las opciones para realizar el crud Tutor-->
-    <string name="llenarBDTut">Llenar la base de datos</string>
+    <string name="llenarBDTutor">Llenar la base de datos</string>
     <!--Botones para TutorActivity-->
-    <string name="CrearTut">Agregar un nuevo Tutor</string>
-    <string name="ActualizarTut">Actualizar un Tutor existente</string>
-    <string name="EliminarTut">Eliminar un Tutor de la base</string>
-    <string name="VerTutores">Ver todos los estudiantes</string>
+    <string name="CrearTutor">Agregar un nuevo Tutor</string>
+    <string name="ActualizarTutorActivity">Actualizar un Tutor existente</string>
+    <string name="EliminarTutorActivity">Eliminar un Tutor de la base</string>
+    <string name="VerTutores">Ver todos los tutores</string>
+    <!--Opciones para la activity AgregarTutor-->
+    <string name="NombreTutor">Nombre Tutor</string>
+    <string name="EmailTutor">Correo Electronico</string>
+    <string name="TelTutor">Telefono Tutor</string>
+    <string name="BotonAgregarTutor">Agregar nuevo</string>
+    <!--Demas elementos para activities modalidad-->
+    <string name="EliminarTutorText">Seleccione un tutor a eliminar</string>
+    <string name="SeleccionarTutores">Tutores en el sistema</string>
+    <string name="BotonActualizarTutor">Actualizar Tutor</string>
+
+    <!--Botones de las opciones para realizar el crud Modalidad-->
+    <string name="llenarBDModalidad">Llenar la base de datos</string>
+    <!--Botones para ModalidadActivity-->
+    <string name="CrearModalidad">Agregar una nueva modalidad</string>
+    <string name="ActualizarModalidadActivity">Actualizar una Modalidad existente</string>
+    <string name="EliminarModalidadActivity">Eliminar una Modalidad de la base</string>
+    <string name="VerModalidades">Ver todos las modalidades</string>
+    <!--Opciones para la activity AgregarModalidad-->
+    <string name="NombreModalidad">Nombre Modalidad</string>
+    <string name="BotonAgregarModalidad">Agregar nueva</string>
+    <!--Demas elementos para activities modalidad-->
+    <string name="EliminarModalidadText">Seleccione una modalidad a eliminar</string>
+    <string name="SeleccionarModalidades">Modalidades en el sistema</string>
+    <string name="BotonActualizarModalidades">Actualizar Modalidad</string>
 </resources>

@@ -78,16 +78,37 @@
         <activity
             android:name=".Controladores.Coordinador.SeleccionarCoordinador"
             android:label="@string/VerTodosCoordinadores" />
-        <activity android:name=".Controladores.Tutor.ActualizarTutor" />
-        <activity android:name=".Controladores.Tutor.AgregarTutor" />
-        <activity android:name=".Controladores.Tutor.EliminarTutor" />
-        <activity android:name=".Controladores.Tutor.SeleccionarTutor" />
         <activity
             android:name=".Controladores.ModalidadActivity"
             android:label="@string/Tabla_Modalidad" />
         <activity
             android:name=".Controladores.TutorActivity"
             android:label="@string/Tabla_Tutor" />
+        <activity
+            android:name=".Controladores.Tutor.AgregarTutor"
+            android:label="@string/AgregarTutor" />
+        <activity
+            android:name=".Controladores.Tutor.EliminarTutor"
+            android:label="@string/EliminarTutor" />
+        <activity
+            android:name=".Controladores.Tutor.SeleccionarTutor"
+            android:label="@string/VerTodosTutores" />
+        <activity
+            android:name=".Controladores.Tutor.ActualizarTutor"
+            android:label="@string/ActualizarTutor" />
+        <activity
+            android:name=".Controladores.Modalidad.AgregarModalidad"
+            android:label="@string/AgregarModalidad" />
+        <activity
+            android:name=".Controladores.Modalidad.EliminarModalidad"
+            android:label="@string/EliminarModalidad" />
+        <activity
+            android:name=".Controladores.Modalidad.SeleccionarModalidad"
+            android:label="@string/VerTodosModalidades" />
+        <activity
+            android:name=".Controladores.Modalidad.ActualizarModalidad"
+            android:label="@string/ActualizarModalidad" />
+
         <activity android:name=".Controladores.Institucion.ActualizarInstitucion" />
         <activity android:name=".Controladores.Institucion.EliminarInstitucion" />
         <activity android:name=".Controladores.Institucion.SeleccionarInstitucion"></activity>

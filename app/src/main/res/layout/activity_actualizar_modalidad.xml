@@ -12,7 +12,7 @@
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinnerActualizarModalidad"
+        android:id="@+id/spinnerActualizarModalidadExistente"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="63dp" />
@@ -29,7 +29,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/spinnerActualizarModalidad"
+        android:layout_below="@+id/spinnerActualizarModalidadExistente"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -84,7 +84,7 @@
 
             <Button
                 android:text="Boton Actualizar Modalidad"
-                android:id="@+id/btnActualizarModalidad"
+                android:id="@+id/btnActualizarModalidadExistente"
                 android:layout_column="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

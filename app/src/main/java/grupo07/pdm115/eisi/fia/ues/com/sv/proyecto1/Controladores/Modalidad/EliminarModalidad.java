@@ -40,7 +40,7 @@ public class EliminarModalidad extends AppCompatActivity implements AdapterView.
     }
 
     private void enlazarWidgets(){
-        mSpinner = (Spinner) findViewById(R.id.spinnerActualizarModalidad);
+        mSpinner = (Spinner) findViewById(R.id.spinnerActualizarModalidadExistente);
 
     }
 

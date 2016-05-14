@@ -23,7 +23,7 @@ public class AgregarTutor extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agregar_coordinador);
+        setContentView(R.layout.activity_agregar_tutor);
         mTutorDAO = new TutorDAO(AgregarTutor.this);
         //EnlazarWidgets
         enlazarWidgets();

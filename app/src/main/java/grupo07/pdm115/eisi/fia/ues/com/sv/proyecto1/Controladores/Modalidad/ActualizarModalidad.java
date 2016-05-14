@@ -19,7 +19,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 public class ActualizarModalidad extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 
         //Widgets
-        private EditText editActualizarNombreModalidad, editActualizarIdentificadorModalidad;
+        private EditText editActualizarNombreModalidad;
         private Spinner mSpinner;
         private Button  btnActualizarModalidad;
 
@@ -49,11 +49,10 @@ public class ActualizarModalidad extends AppCompatActivity implements View.OnCli
         }
 
         private void enlazarWidgets(){
-            editActualizarIdentificadorModalidad = (EditText) findViewById(R.id.editTextActualizarIdentificadorModalidad);
             editActualizarNombreModalidad = (EditText) findViewById(R.id.editTextActualizarNombreModalidad);
 
-            mSpinner = (Spinner) findViewById(R.id.spinnerActualizarModalidad);
-            btnActualizarModalidad = (Button) findViewById(R.id.btnActualizarModalidad);
+            mSpinner = (Spinner) findViewById(R.id.spinnerActualizarModalidadExistente);
+            btnActualizarModalidad = (Button) findViewById(R.id.btnActualizarModalidadExistente);
         }
 
         private void configurarSpinner(){
@@ -96,7 +95,6 @@ public class ActualizarModalidad extends AppCompatActivity implements View.OnCli
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             m = (Modalidad) parent.getItemAtPosition(position);
-            editActualizarIdentificadorModalidad.setText(m.getIdModalidad());
             editActualizarNombreModalidad.setText(m.getNombre());
         }
 

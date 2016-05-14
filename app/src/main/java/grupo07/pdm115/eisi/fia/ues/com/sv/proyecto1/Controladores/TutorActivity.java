@@ -3,6 +3,7 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -37,19 +38,19 @@ public class TutorActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coordinador);
+        setContentView(R.layout.activity_tutor);
         mTutorDAO = new TutorDAO(TutorActivity.this);
         //EnlazandoWidgets
         enlazarWdigets();
         //SetListeners
         setListeners();
-
+        Log.i(this.TAG, "Valor del objeto mTutorDAO: " + mTutorDAO);
 
     }
 
     private void enlazarWdigets(){
         btnAgregar = (Button) findViewById(R.id.btnAgregarTutor);
-        btnActualizar = (Button) findViewById(R.id.btnActualizarTutor);
+        btnActualizar = (Button) findViewById(R.id.btnModificarTutor);
         btnLlenar = (Button) findViewById(R.id.btnLlenarBaseTutor);
         btnEliminar = (Button) findViewById(R.id.btnEliminarTutor);
         btnVer = (Button) findViewById(R.id.btnTodosTutores);
@@ -78,7 +79,7 @@ public class TutorActivity extends AppCompatActivity implements View.OnClickList
                 intent = new Intent(this.getApplicationContext(), AgregarTutor.class);
                 startActivity(intent);
                 break;
-            case R.id.btnActualizarTutor:
+            case R.id.btnModificarTutor:
                 intent = new Intent(this.getApplicationContext(), ActualizarTutor.class);
                 startActivity(intent);
                 //Toast.makeText(TutorActivity.this, "Activity actualizar tutor", Toast.LENGTH_SHORT).show();

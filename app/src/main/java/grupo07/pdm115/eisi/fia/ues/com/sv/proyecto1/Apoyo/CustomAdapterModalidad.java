@@ -36,7 +36,7 @@ public class CustomAdapterModalidad extends BaseAdapter {
         if (convertView == null){
             LayoutInflater layoutInflater = (LayoutInflater)
                     context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.list_select_row,parent,false);
+            convertView = layoutInflater.inflate(R.layout.listview_row_modalidad,parent,false);
         }
 
         TextView textNombre = (TextView) convertView.findViewById(R.id.editTextNombreModalidad);

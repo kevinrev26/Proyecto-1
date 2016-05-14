@@ -50,4 +50,14 @@ public class Tutor {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+    @Override
+    public String toString() {
+        return "Tutor{" +
+                "idTutor=" + idTutor +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                '}';
+    }
 }

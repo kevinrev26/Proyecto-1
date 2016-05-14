@@ -36,7 +36,7 @@ public class CustomAdapterTutor extends BaseAdapter {
         if (convertView == null){
             LayoutInflater layoutInflater = (LayoutInflater)
                     context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.list_select_row,parent,false);
+            convertView = layoutInflater.inflate(R.layout.listview_row_tutor,parent,false);
         }
 
         TextView textNombre = (TextView) convertView.findViewById(R.id.editTextNombreTutor);
@@ -46,6 +46,8 @@ public class CustomAdapterTutor extends BaseAdapter {
         Tutor temp = lista.get(position);
 
         textNombre.setText(temp.getNombre());
+        textEmail.setText(temp.getEmail());
+        textTelefono.setText(temp.getTelefono());
         return convertView;
     }
 
