@@ -25,6 +25,16 @@
     <string name="EliminarBitacora">Eliminar Bitacora</string>
     <string name="ActualizarBitacora">Actualizar Bitacorar</string>
 
+    <string name="Tabla_Modalidad"> Opciones para Modalidad </string>
+    <string name="Tabla_Tutor">Opciones para Tutor</string>
+    <string name="AgregarTutor">Agregar un nuevo Tutor</string>
+    <string name="VerTodosTutores">Tutores Registrados</string>
+    <string name="EliminarTutor">Eliminar Tutor</string>
+    <string name="ActualizarTutor">Actualizar Tutor</string>
+    <string name="AgregarModalidad">Agregar Modalidad</string>
+    <string name="VerTodosModalidades">Modalidades registrados</string>
+    <string name="EliminarModalidad">Eliminar Modalidad</string>
+    <string name="ActualizarModalidad">Actualizar Modalidad</string>
     <!--Nombre de la clase, con su descripcion.
         Se implementa de esta forma para luego traducir
         cada descripcion-->
@@ -46,6 +56,13 @@
     <string name="ServicioSocialActivity">
         Menu para gestionar la tabla Servicio Social.
     </string>
+    <string name="ModalidadActivity">
+        Menu para gestionar la tabla Modalidad.
+    </string>
+    <string name="TutorActivity">
+        Menu para gestionar la tabla Tutor.
+    </string>
+
 
     <!--Botones de las opciones para realizar el crud Estudiante-->
     <string name="llenarBD">Llenar la base de datos</string>
@@ -200,4 +217,11 @@
     <string name="ActualizarServicioSocialActivity">Seleccione un Servicio Social a actualizar</string>
     <string name="BotonActualizarServicioSocial">Actualizar Servicio Social</string>
 
+    <!--Botones de las opciones para realizar el crud Tutor-->
+    <string name="llenarBDTut">Llenar la base de datos</string>
+    <!--Botones para TutorActivity-->
+    <string name="CrearTut">Agregar un nuevo Tutor</string>
+    <string name="ActualizarTut">Actualizar un Tutor existente</string>
+    <string name="EliminarTut">Eliminar un Tutor de la base</string>
+    <string name="VerTutores">Ver todos los estudiantes</string>
 </resources>

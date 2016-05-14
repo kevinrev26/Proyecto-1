@@ -82,6 +82,12 @@
         <activity android:name=".Controladores.Tutor.AgregarTutor" />
         <activity android:name=".Controladores.Tutor.EliminarTutor" />
         <activity android:name=".Controladores.Tutor.SeleccionarTutor"></activity>
+        <activity
+            android:name=".Controladores.ModalidadActivity"
+            android:label="@string/Tabla_Modalidad" />
+        <activity
+            android:name=".Controladores.TutorActivity"
+            android:label="@string/Tabla_Tutor" />
     </application>
 
 </manifest>

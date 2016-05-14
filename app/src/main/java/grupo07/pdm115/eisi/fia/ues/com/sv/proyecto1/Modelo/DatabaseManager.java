@@ -11,6 +11,9 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.OpcionDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.PermisoDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.TipoDeActividadDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.UsuarioDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.TutorDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.ModalidadDAO;
+
 
 /**
  * Creado por Kevin Rivera, 05-07-16.
@@ -64,6 +67,8 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(OpcionDAO.crearTablaOpcion());
         db.execSQL(PermisoDAO.crearTablaPermiso());
         db.execSQL(BitacoraDAO.crearTablaBitacora());
+        db.execSQL(TutorDAO.crearTablaTutor());
+        db.execSQL(ModalidadDAO.crearTablaModalidad());
 
     }
 
@@ -101,6 +106,8 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(OpcionDAO.eliminarTablaOpcion());
         db.execSQL(PermisoDAO.eliminarTablaPermiso());
         db.execSQL(BitacoraDAO.eliminarTablaBitacora());
+        db.execSQL(TutorDAO.eliminarTablaTutor());
+        db.execSQL(ModalidadDAO.eliminarTablaModalidad());
 
         //Luego se manda a llamar el metodo para crear la base
         onCreate(db);
