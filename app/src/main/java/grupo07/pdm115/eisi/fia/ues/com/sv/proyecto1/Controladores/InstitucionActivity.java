@@ -1,5 +1,6 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.ActualizarInstitucion;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.AgregarInstitucion;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.EliminarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.InstitucionDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
@@ -56,6 +60,7 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
+        Intent intent=null;
         switch (v.getId()){
             case R.id.btnLlenarDBIns:
                 //Llenar base de datos
@@ -63,15 +68,17 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btnAgregarIns:
                 //Cargar activity para el formulario
-                Toast.makeText(InstitucionActivity.this, "Proximamente Agregar", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), AgregarInstitucion.class);
+                startActivity(intent);
                 break;
             case R.id.btnActualizarIns:
                 //Cargar activity para actualizar
-                Toast.makeText(InstitucionActivity.this, "Proximamente Actualizar", Toast.LENGTH_SHORT).show();
-                break;
+                intent = new Intent(this.getApplicationContext(), ActualizarInstitucion.class);
+                startActivity(intent);
             case R.id.btnEliminarIns:
                 //Cargar activity para eliminar un elemento
-                Toast.makeText(InstitucionActivity.this, "Proximamente eliminar", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), EliminarInstitucion.class);
+                startActivity(intent);
                 break;
             case R.id.btnSeleccionarIns:
                 //Cargar activity para ver todos los elementos
