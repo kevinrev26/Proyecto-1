@@ -90,7 +90,6 @@
             android:label="@string/Tabla_Tutor" />
         <activity android:name=".Controladores.Institucion.ActualizarInstitucion" />
         <activity android:name=".Controladores.Institucion.EliminarInstitucion" />
-        <activity android:name=".Controladores.Institucion.SeleccionarInstitucion"></activity>
     </application>
 
 </manifest>
