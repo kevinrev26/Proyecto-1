@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/SeleccionarTipoActividad"
-        android:id="@+id/textView12"
+        android:id="@+id/textView13"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"/>
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listViewTiposActividades"
-        android:layout_below="@+id/textView12"
+        android:layout_below="@+id/textView13"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"/>
 </RelativeLayout>

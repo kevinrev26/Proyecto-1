@@ -16,7 +16,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Tutor;
  */
 public class BitacoraDAO extends MasterDAO {
 
-    public static final String BITACORA_TABLE = "bitacora";
+    public static final String TABLA_BITACORA = "bitacora";
     public static final String IDENTIFICADOR_BITACORA = "id_bitacora";
     public static final int ID_BITACORA_COL = 0;
     public static final String FECHA_INICIO = "fecha_inicio";
@@ -36,22 +36,22 @@ public class BitacoraDAO extends MasterDAO {
     }
 
     public static String crearTablaBitacora(){
-        return "CREATE TABLE" + BITACORA_TABLE + " (" +
-                        IDENTIFICADOR_BITACORA + " TEXT(5) NOT NULL, " +
-                        FECHA_INICIO + " TEXT(10) NOT NULL, " +
-                        FECHA_FIN + " TEXT(10) NOT NULL, " +
-                        REVI_COORDINADOR + " TEXT(5) NOT NULL, " +
-                        REVI_TUTOR + " TEXT(5) NOT NULL, " +
-                        ID_TIPO_ACTIVIDAD + " TEXT(5) NOT NULL, " +
-                        "PRIMARY KEY (" + IDENTIFICADOR_BITACORA + "), CONSTRAINT " +
-                        "fk_bitacora_coordinador FOREIGN KEY (" + REVI_COORDINADOR + ")" +
-                        "REFERENCES coordinador (IDENTIFICADOR_COORDINADOR) ON DELETE CASCADE ON UPDATE CASCADE, " +
-                        "CONSTRAINT fk_bitacora_tutor FOREIGN KEY (" + REVI_TUTOR + ") REFERENCES tutor (IDENTIFICADOR_TUTOR) ON DELETE CASCADE ON UPDATE CASCADE, " +
-                        "CONSTRAINT fk_bitacora_actividad FOREIGN KEY (" + ID_TIPO_ACTIVIDAD + ") REFERENCES tipo_actividad (ID_TIPO_ACTIVIDAD) ON DELETE CASCADE ON UPDATE CASCADE );";
+        return "CREATE TABLE " + TABLA_BITACORA + " (" +
+                IDENTIFICADOR_BITACORA + " TEXT(5) NOT NULL, " +
+                FECHA_INICIO + " TEXT(10) NOT NULL, " +
+                FECHA_FIN + " TEXT(10) NOT NULL, " +
+                REVI_COORDINADOR + " TEXT(5) NOT NULL " +
+                REVI_TUTOR + " TEXT(5) NOT NULL " +
+                ID_TIPO_ACTIVIDAD + " TEXT(5) NOT NULL " +
+                "PRIMARY KEY (" + IDENTIFICADOR_BITACORA + "), CONSTRAINT " +
+                "fk_bitacora_coordinador FOREIGN KEY (" + REVI_COORDINADOR + ")" +
+                "REFERENCES coordinador (IDENTIFICADOR_COORDINADOR) ON DELETE CASCADE ON UPDATE CASCADE, " +
+                "CONSTRAINT fk_bitacora_tutor FOREIGN KEY (" + REVI_TUTOR + ") REFERENCES tutor (IDENTIFICADOR_TUTOR) ON DELETE CASCADE ON UPDATE CASCADE, " +
+                "CONSTRAINT fk_bitacora_actividad FOREIGN KEY (" + ID_TIPO_ACTIVIDAD + ") REFERENCES tipo_actividad (ID_TIPO_ACTIVIDAD) ON DELETE CASCADE ON UPDATE CASCADE );";
     }
 
     public static String eliminarTablaBitacora(){
-        return "DROP TABLE IF EXISTS " + BITACORA_TABLE;
+        return "DROP TABLE IF EXISTS " + TABLA_BITACORA;
     }
 
     public long insertarBitacora(Bitacora bitacora){
@@ -62,8 +62,7 @@ public class BitacoraDAO extends MasterDAO {
         contentValues.put(REVI_COORDINADOR,bitacora.getRevision_coordinador());
         contentValues.put(REVI_TUTOR, bitacora.getRevision_tutor());
         contentValues.put(ID_TIPO_ACTIVIDAD, bitacora.getIdentificador_actividad());
-
-        return mDatabase.insert(BITACORA_TABLE,null,contentValues);
+        return mDatabase.insert(TABLA_BITACORA,null,contentValues);
 
     }
 
@@ -80,7 +79,7 @@ public class BitacoraDAO extends MasterDAO {
         String where = IDENTIFICADOR_BITACORA + "= ?";
         String[] whereArgs = {String.valueOf(bitacora.getId_bitacora())};
 
-        return mDatabase.update(BITACORA_TABLE, contentValues, where, whereArgs);
+        return mDatabase.update(TABLA_BITACORA, contentValues, where, whereArgs);
 
     }
 
@@ -88,7 +87,7 @@ public class BitacoraDAO extends MasterDAO {
         String where = IDENTIFICADOR_BITACORA + "= ?";
         String[] whereArgs={id_tipo_actividad};
 
-        return mDatabase.delete(BITACORA_TABLE, where, whereArgs);
+        return mDatabase.delete(TABLA_BITACORA, where, whereArgs);
     }
 
 
@@ -117,7 +116,7 @@ public class BitacoraDAO extends MasterDAO {
     public Bitacora getBitacora(String id){
         String where = IDENTIFICADOR_BITACORA + "= ?";
         String[] whereArgs = {id};
-        Cursor cursor = mDatabase.query(BITACORA_TABLE,null,where,whereArgs,null,null,null);
+        Cursor cursor = mDatabase.query(TABLA_BITACORA,null,where,whereArgs,null,null,null);
         cursor.moveToFirst();
         Bitacora temp = getBitacoraPorCursor(cursor);
         if (cursor!=null){
@@ -128,7 +127,7 @@ public class BitacoraDAO extends MasterDAO {
     }
 
     public ArrayList<Bitacora> getListaBitacoras(){
-        String query = "SELECT * FROM " + BITACORA_TABLE;
+        String query = "SELECT * FROM " + TABLA_BITACORA;
         Cursor cursor = mDatabase.rawQuery(query,null);
         ArrayList<Bitacora> bitacoras = new ArrayList<Bitacora>();
         while(cursor.moveToNext()){

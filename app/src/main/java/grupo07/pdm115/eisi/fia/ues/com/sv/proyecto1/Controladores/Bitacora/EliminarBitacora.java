@@ -29,24 +29,12 @@ public class EliminarBitacora extends AppCompatActivity implements AdapterView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eliminar_bitacora);
+        mSpinner=(Spinner) findViewById(R.id.spinnerEliminarBitacora);
+        mSpinner.setOnItemSelectedListener(this);
         mBitacoraDAO = new BitacoraDAO(EliminarBitacora.this);
-        //Enlazar
-        enlazarWidgets();
-        //SetListeners
-        setListeners();
-        //Configurando el spinner
+
         configurarSpinner();
 
-    }
-
-    private void enlazarWidgets(){
-        mSpinner = (Spinner) findViewById(R.id.spinnerActualizarBitacora);
-
-    }
-
-
-    private void setListeners(){
-        mSpinner.setOnItemSelectedListener(this);
     }
 
 

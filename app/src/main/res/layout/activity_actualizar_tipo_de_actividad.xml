@@ -11,6 +11,7 @@
     tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividad.ActualizarTipoDeActividad"
     >
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +28,7 @@
         android:id="@+id/spinnerTiposActividades"
         android:layout_below="@+id/textView12"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"/>
+        android:layout_marginTop="100dp"/>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -70,8 +71,8 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
+
+
                 android:id="@+id/editTextActutalizarCantidadHoras"
                 android:layout_column="14"/>
         </TableRow>
@@ -91,7 +92,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="phone"
+                android:inputType="text"
                 android:ems="10"
                 android:id="@+id/editTextActutalizarDescripcionActividad"
                 android:layout_column="14"
@@ -101,11 +102,19 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/BotonActualizarTipoActividad"
                 android:id="@+id/btnActualizarTipoDeActividad"
-                android:layout_column="0"/>
+                android:layout_column="4"/>
         </TableRow>
     </TableLayout>
+
 </RelativeLayout>

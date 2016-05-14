@@ -41,10 +41,10 @@ public class BitacoraActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void anclarWdigets(){
-        BTNAgregar = (Button) findViewById(R.id.btnAgregarBitacora);
-        BTNActualizar = (Button) findViewById(R.id.btnActualizarBitacora);
-        BTNLlenar = (Button) findViewById(R.id.btnLlenarBase);
-        BTNEliminar = (Button) findViewById(R.id.btnEliminarBitacora);
+        BTNAgregar = (Button) findViewById(R.id.btnAgregarBitacoraAc);
+        BTNActualizar = (Button) findViewById(R.id.btnActualizarBitacoraAc);
+        BTNLlenar = (Button) findViewById(R.id.btnLlenarBaseBitacoraAc);
+        BTNEliminar = (Button) findViewById(R.id.btnEliminarBitacoraAc);
         BTNVer = (Button) findViewById(R.id.btnVerBitacoras);
     }
 
@@ -61,22 +61,22 @@ public class BitacoraActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()){
-            case R.id.btnLlenarBaseBitacora:
+            case R.id.btnLlenarBaseBitacoraAc:
 
                 llenarBitacoras();
                 Toast.makeText(BitacoraActivity.this, "llenado de la base de datos, verificar...", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.btnAgregarBitacora:
+            case R.id.btnAgregarBitacoraAc:
                 //Toast.makeText(CoordinadorActivity.this, "Activity agregar coordinador", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this.getApplicationContext(), AgregarBitacora.class);
                 startActivity(intent);
                 break;
-            case R.id.btnActualizarBitacora:
+            case R.id.btnActualizarBitacoraAc:
                 intent = new Intent(this.getApplicationContext(), ActualizarBitacora.class);
                 startActivity(intent);
                 //Toast.makeText(CoordinadorActivity.this, "Activity actualizar coordinador", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.btnEliminarBitacora:
+            case R.id.btnEliminarBitacoraAc:
                 //Toast.makeText(CoordinadorActivity.this, "Activity eliminar coordinador", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this.getApplicationContext(), EliminarBitacora.class);
                 startActivity(intent);

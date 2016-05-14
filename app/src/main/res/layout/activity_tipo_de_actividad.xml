@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/llenarBD"
-        android:id="@+id/btnLlenarDB"
+        android:id="@+id/btnLlenarTipAcDB"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="@string/CrearTipoDeActividad"
         android:id="@+id/btnAgregarTipoDeActividad"
-        android:layout_below="@+id/btnLlenarDB"
+        android:layout_below="@+id/btnLlenarTipAcDB"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"/>
 
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/EliminarTipoDeActividad"
-        android:id="@+id/btnEliminar"
+        android:id="@+id/btnEliminarTP"
         android:layout_below="@+id/btnAgregarTipoDeActividad"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"/>
@@ -39,8 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ActualizarTipoDeActividad"
-        android:id="@+id/btnActualizar"
-        android:layout_below="@+id/btnEliminar"
+        android:id="@+id/btnActualizarTipoActividad"
+        android:layout_below="@+id/btnEliminarTP"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"/>
 
@@ -48,9 +48,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/VerTipoDeActividades"
-        android:id="@+id/btnSeleccionar"
-        android:layout_below="@+id/btnActualizar"
+        android:id="@+id/btnSeleccionarTP"
+        android:layout_below="@+id/btnActualizarTipoActividad"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"/>
+
+
 
 </RelativeLayout>

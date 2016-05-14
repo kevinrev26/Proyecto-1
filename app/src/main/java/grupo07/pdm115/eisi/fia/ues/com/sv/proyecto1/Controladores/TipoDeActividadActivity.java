@@ -44,11 +44,11 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
     }
 
     private void anclarWidgets() {
-        BtnLlenarBD = (Button) findViewById(R.id.btnLlenarDB);
-        BtnActualizar = (Button) findViewById(R.id.btnActualizar);
+        BtnLlenarBD = (Button) findViewById(R.id.btnLlenarTipAcDB);
+        BtnActualizar = (Button) findViewById(R.id.btnActualizarTipoActividad);
         BtnAgregar = (Button) findViewById(R.id.btnAgregarTipoDeActividad);
-        BtnEliminar = (Button) findViewById(R.id.btnEliminar);
-        BtnLeer = (Button) findViewById(R.id.btnSeleccionar);
+        BtnEliminar = (Button) findViewById(R.id.btnEliminarTP);
+        BtnLeer = (Button) findViewById(R.id.btnSeleccionarTP);
     }
 
     private void setListener() {
@@ -67,22 +67,22 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
-            case R.id.btnLlenarDB:
+            case R.id.btnLlenarTipAcDB:
                 llenarDB();
                 break;
             case R.id.btnAgregarTipoDeActividad:
                 intent = new Intent(this.getApplicationContext(), AgregarTipoDeActividad.class);
                 startActivity(intent);
                 break;
-            case R.id.btnActualizar:
+            case R.id.btnActualizarTipoActividad:
                 intent = new Intent(this.getApplicationContext(), ActualizarTipoDeActividad.class);
                 startActivity(intent);
                 break;
-            case R.id.btnEliminar:
+            case R.id.btnEliminarTP:
                 intent = new Intent(this.getApplicationContext(), EliminarTipoDeActividad.class);
                 startActivity(intent);
                 break;
-            case R.id.btnSeleccionar:
+            case R.id.btnSeleccionarTP:
                 cargarTipoActividad();
                 intent = new Intent(this.getApplicationContext(), SeleccionarTipoDeActividad.class);
                 intent.putExtra("tipos de actividades", tipoActividad);

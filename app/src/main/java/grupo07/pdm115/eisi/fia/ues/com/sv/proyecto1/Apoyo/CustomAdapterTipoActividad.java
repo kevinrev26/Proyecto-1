@@ -18,22 +18,22 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 public class CustomAdapterTipoActividad extends  BaseAdapter {
 
     private Context context;
-    private ArrayList<TipoDeActividad> lista;
+    private ArrayList<TipoDeActividad> listaTP;
 
 
-    public CustomAdapterTipoActividad(Context context, ArrayList<TipoDeActividad> lista) {
+    public CustomAdapterTipoActividad(Context context, ArrayList<TipoDeActividad> listaAc) {
         this.context = context;
-        this.lista = lista;
+        this.listaTP = listaAc;
     }
 
     @Override
     public int getCount() {
-        return lista.size();
+        return listaTP.size();
     }
 
     @Override
     public TipoDeActividad getItem(int position) {
-        return lista.get(position);
+        return listaTP.get(position);
     }
 
     @Override
@@ -51,12 +51,12 @@ public class CustomAdapterTipoActividad extends  BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.tp_list_select_row,parent,false);
         }
 
-        TextView textId=(TextView) convertView.findViewById(R.id.textIdLista);
-        TextView textNombre = (TextView) convertView.findViewById(R.id.textNombre);
-        TextView textHoras = (TextView) convertView.findViewById(R.id.textHoras);
-        TextView textDesc = (TextView) convertView.findViewById(R.id.textDesc);
+        TextView textId=(TextView) convertView.findViewById(R.id.textIdListaTP);
+        TextView textNombre = (TextView) convertView.findViewById(R.id.textNombreTP);
+        TextView textHoras = (TextView) convertView.findViewById(R.id.textHorasTP);
+        TextView textDesc = (TextView) convertView.findViewById(R.id.textDescTP);
 
-        TipoDeActividad temp = lista.get(position);
+        TipoDeActividad temp = listaTP.get(position);
 
         textId.setText(temp.getId_tipo_actividad());
         textNombre.setText(temp.getNombre_actividad());

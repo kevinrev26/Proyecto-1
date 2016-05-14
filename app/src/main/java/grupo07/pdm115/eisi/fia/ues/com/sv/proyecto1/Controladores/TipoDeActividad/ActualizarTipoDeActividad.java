@@ -21,8 +21,8 @@ public class ActualizarTipoDeActividad extends AppCompatActivity implements View
 
     //Widgets
     private EditText editNombreTP, editCantidadH, editDescripcion;
-    private Spinner mSpinner;
-    private Button  btnActualizarTipAct;
+    private Spinner mTPSpinner;
+    private Button  mbtnActualizarTipAct;
 
     //referencia a coordinador
     TipoDeActividad c;
@@ -55,27 +55,27 @@ public class ActualizarTipoDeActividad extends AppCompatActivity implements View
         editCantidadH = (EditText) findViewById(R.id.editTextActutalizarCantidadHoras);
         editDescripcion = (EditText) findViewById(R.id.editTextActutalizarDescripcionActividad);
 
-        mSpinner = (Spinner) findViewById(R.id.spinnerTiposActividades);
-        btnActualizarTipAct = (Button) findViewById(R.id.btnActualizarTipoDeActividad);
+        mTPSpinner = (Spinner) findViewById(R.id.spinnerTiposActividades);
+        mbtnActualizarTipAct = (Button) findViewById(R.id.btnActualizarTipoDeActividad);
     }
 
     private void configurarSpinner(){
         ArrayAdapter<TipoDeActividad> adapter = new ArrayAdapter<TipoDeActividad>(this,android.R.layout.simple_spinner_item,
                 mTActividadDAO.getListaTiposActividad());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpinner.setAdapter(adapter);
+        mTPSpinner.setAdapter(adapter);
     }
 
     private void setListeners(){
-        mSpinner.setOnClickListener(this);
+        mbtnActualizarTipAct.setOnClickListener(this);
 
         //Tipos Actividades
-        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        mTPSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 c = (TipoDeActividad) parent.getItemAtPosition(position);
                 editNombreTP.setText(c.getNombre_actividad());
-                editCantidadH.setText(c.getCantidad_horas());
+                editCantidadH.setText(String.valueOf(c.getCantidad_horas()));
                 editDescripcion.setText(c.getDescripcion());
             }
 

@@ -32,8 +32,7 @@ public class CustomAdapter extends BaseAdapter {
 
 
     @Override
-    public int getCount() {
-        return lista.size();
+    public int getCount() { return lista.size();
     }
 
     @Override
