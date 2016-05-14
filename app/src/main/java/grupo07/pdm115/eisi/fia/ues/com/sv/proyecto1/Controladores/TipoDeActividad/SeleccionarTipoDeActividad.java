@@ -13,7 +13,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 public class SeleccionarTipoDeActividad extends AppCompatActivity {
 
-    private ListView mList;
+    private ListView mLista;
     private CustomAdapterTipoActividad nCustomAdapterTp;
 
 
@@ -28,13 +28,13 @@ public class SeleccionarTipoDeActividad extends AppCompatActivity {
     }
 
     private void enlazarWidgets(){
-        mList = (ListView) findViewById(R.id.listViewTiposActividades);
+        mLista = (ListView) findViewById(R.id.listViewTiposActividades);
     }
 
     private void configurarAdapter(){
         Intent i = getIntent();
-        ArrayList<TipoDeActividad> list = (ArrayList<TipoDeActividad>)i.getSerializableExtra("TiposDeActividades");
-        mList.setAdapter(nCustomAdapterTp = new CustomAdapterTipoActividad(this.getApplicationContext(),list));
+        ArrayList<TipoDeActividad> lista = (ArrayList<TipoDeActividad>)i.getSerializableExtra("TiposDeActividades");
+        mLista.setAdapter(nCustomAdapterTp = new CustomAdapterTipoActividad(this.getApplicationContext(),lista));
 
     }
 }

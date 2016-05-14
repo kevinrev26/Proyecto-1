@@ -8,23 +8,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividad.SeleccionarTipoDeActividad">
+    tools:context="grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.EliminarInstitucion">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/SeleccionarTipoActividad"
-        android:id="@+id/textView13"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"/>
-
-    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listViewTiposActividades"
-        android:layout_below="@+id/textView13"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/EliminarInstitucionText"
+        android:id="@+id/textView25"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="66dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerEliminarIns"
+        android:layout_below="@+id/textView25"
+        android:layout_alignLeft="@+id/textView25"
+        android:layout_alignStart="@+id/textView25"
+        android:layout_marginTop="61dp" />
+
 </RelativeLayout>

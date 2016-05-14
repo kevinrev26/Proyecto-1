@@ -66,6 +66,7 @@
 
     <!--Botones de las opciones para realizar el crud Estudiante-->
     <string name="llenarBD">Llenar la base de datos</string>
+    <string name="llenarBDBitacora">Llenar Base de datos</string>
     <!--Botones para EstudianteActivity-->
     <string name="CrearEstudiante">Agregar un nuevo Estudiante</string>
     <string name="ActualizarEstudiante">Actualizar un Estudiante existente</string>

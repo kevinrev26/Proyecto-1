@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
-        android:id="@+id/textIdLista"
+        android:id="@+id/textIdListaTP"
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="#727272"/>
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
-        android:id="@+id/textNombre"
+        android:id="@+id/textNombreTP"
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="#727272"/>
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
-        android:id="@+id/textHoras"
+        android:id="@+id/textHorasTP"
         android:gravity="center"
         android:textColor="#727272"/>
 
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
-        android:id="@+id/textDesc"
+        android:id="@+id/textDescTP"
         android:gravity="center"
         android:textColor="#727272"/>
 

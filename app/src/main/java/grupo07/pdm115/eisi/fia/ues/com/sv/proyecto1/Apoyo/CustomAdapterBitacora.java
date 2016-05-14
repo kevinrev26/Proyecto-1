@@ -35,7 +35,7 @@ public class CustomAdapterBitacora extends BaseAdapter{
         if (convertView == null){
             LayoutInflater layoutInflater = (LayoutInflater)
                     context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.listview_row_coordinador,parent,false);
+            convertView = layoutInflater.inflate(R.layout.listview_row_bitacora,parent,false);
         }
 
         TextView textId = (TextView) convertView.findViewById(R.id.textViewIdentificador);

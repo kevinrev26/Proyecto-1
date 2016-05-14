@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mAdapter.addClase(temp);
         temp = new Clase(getResources().getString(R.string.TutorActivity), TutorActivity.TAG);
         mAdapter.addClase(temp);
+
     }
 
     @Override

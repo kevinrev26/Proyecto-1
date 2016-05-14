@@ -34,7 +34,7 @@ public class ActualizarBitacora extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actualizar_coordinador);
+        setContentView(R.layout.activity_actualizar_bitacora);
         mBitacoraDAO = new BitacoraDAO(ActualizarBitacora.this);
         //EnlazarWidgets
         enlazarWidgets();
@@ -69,7 +69,23 @@ public class ActualizarBitacora extends AppCompatActivity implements View.OnClic
 
     private void setListeners(){
         btnActualizarBitacora.setOnClickListener(this);
-        mSpinner.setOnItemSelectedListener(this);
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                c = (Bitacora) parent.getItemAtPosition(position);
+                editIdentificador.setText(c.getId_bitacora());
+                editFechaInicio.setText(c.getFecha_inicio());
+                editFechaFin.setText(c.getFecha_fin());
+                editRevisionCoor.setText(c.getRevision_coordinador());
+                editRevTutor.setText(c.getRevision_tutor());
+                editIdTipoAct.setText(c.getIdentificador_actividad());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
     //TODO validar campos bitacora
     @Override

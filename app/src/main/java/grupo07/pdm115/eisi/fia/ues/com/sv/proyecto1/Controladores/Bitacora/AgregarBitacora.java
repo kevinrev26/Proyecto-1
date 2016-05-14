@@ -41,7 +41,7 @@ public class AgregarBitacora extends AppCompatActivity  implements View.OnClickL
         editTextRevTut = (EditText) findViewById(R.id.editTextRevisionTutor);
         editTextIdTipA = (EditText) findViewById(R.id.editTextIdTipoActividad);
 
-        BTNAgregar = (Button) findViewById(R.id.btnAgregarBitacora);
+        BTNAgregar = (Button) findViewById(R.id.btnAgregarNuevaBitacora);
     }
 
 

@@ -1,4 +1,4 @@
-package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Bitacora;
+package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,41 +10,39 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.BitacoraDAO;
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Bitacora;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.InstitucionDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
-public class EliminarBitacora extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class EliminarInstitucion extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+
 
     //Widgets
     private Spinner mSpinner;
 
     //DAO
-    private BitacoraDAO  mBitacoraDAO;
+    private InstitucionDAO mInstitucionDAO;
 
-    //Bandera para spinner
-    private boolean bandera= true;
+    //Bandera para controlar el spinner
+    private boolean bandera = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eliminar_bitacora);
-        mSpinner=(Spinner) findViewById(R.id.spinnerEliminarBitacora);
+        setContentView(R.layout.activity_eliminar_institucion);
+        mSpinner = (Spinner) findViewById(R.id.spinnerEliminarIns);
         mSpinner.setOnItemSelectedListener(this);
-        mBitacoraDAO = new BitacoraDAO(EliminarBitacora.this);
-
+        mInstitucionDAO = new InstitucionDAO(EliminarInstitucion.this);
+        //Configurar
         configurarSpinner();
-
     }
 
-
     public void configurarSpinner(){
-        ArrayAdapter<Bitacora> adapter = new ArrayAdapter<Bitacora>(this,android.R.layout.simple_spinner_item,
-                mBitacoraDAO.getListaBitacoras());
+        ArrayAdapter<Institucion> adapter = new ArrayAdapter<Institucion>(this,android.R.layout.simple_spinner_item,
+                mInstitucionDAO.getListaInstitucion());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
     }
-
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -52,17 +50,16 @@ public class EliminarBitacora extends AppCompatActivity implements AdapterView.O
             bandera = false;
         } else {
 
-            final Bitacora e = (Bitacora) parent.getItemAtPosition(position);
+            final Institucion ins = (Institucion) parent.getItemAtPosition(position);
 
-            //Toast.makeText(EliminarEstudiante.this, "Seleccionado: "+e.getCarnet(), Toast.LENGTH_SHORT).show();
             final AlertDialog show = new AlertDialog.Builder(this)
-                    .setTitle("Eliminar Bitacora")
-                    .setMessage("Se eliminara a: " + e.getId_bitacora() + ", ¿Esta seguro?")
+                    .setTitle("Eliminar Institucion")
+                    .setMessage("Se eliminara a: " + ins.getNombreInstitucion() + ", ¿Esta seguro?")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            if (mBitacoraDAO.eliminarBitacora(e.getId_bitacora()) == 1) {
-                                Toast.makeText(EliminarBitacora.this, "Bitacora Eliminada", Toast.LENGTH_SHORT).show();
-                                EliminarBitacora.this.finish();
+                            if (mInstitucionDAO.eliminarInstiucion(ins.getIdInstitucion()) == 1) {
+                                Toast.makeText(EliminarInstitucion.this, "Institucion Eliminada", Toast.LENGTH_SHORT).show();
+                                EliminarInstitucion.this.finish();
                             }
                         }
                     })
@@ -78,7 +75,7 @@ public class EliminarBitacora extends AppCompatActivity implements AdapterView.O
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
+        //Do nothing
 
     }
 }
