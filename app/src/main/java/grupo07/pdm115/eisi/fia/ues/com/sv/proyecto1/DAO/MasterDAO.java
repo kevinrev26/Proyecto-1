@@ -1,6 +1,7 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
@@ -24,7 +25,7 @@ public class MasterDAO {
         Log.i("MasterDAO","Constructor MasterDAO: "+mDatabase);
     }
 
-    protected void abrirDB(){
+    private  void abrirDB(){
         if (manager == null){
             manager = DatabaseManager.getInstance(this.mContext);
             mDatabase = manager.getWritableDatabase();
@@ -33,6 +34,18 @@ public class MasterDAO {
             mDatabase = manager.getWritableDatabase();
             //Log.i("DAO","Abriendo la BD con else");
         }
+    }
+
+    public String versionDB(){
+        abrirDB();
+        Cursor cursor  = mDatabase.openOrCreateDatabase(":memory:",null)
+                .rawQuery("SELECT sqlite_version() AS sqlite_version",null);
+        String sqliteVersion = "";
+        while (cursor.moveToNext()){
+            sqliteVersion += cursor.getString(0);
+        }
+
+        return sqliteVersion;
     }
 
 }
