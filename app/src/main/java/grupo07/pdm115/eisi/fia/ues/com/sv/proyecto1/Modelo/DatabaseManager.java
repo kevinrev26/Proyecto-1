@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.BitacoraDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.CoordinadorDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.EstudianteDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.InstitucionDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.OpcionDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.PermisoDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.TipoDeActividadDAO;
@@ -21,7 +22,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
 
     //Constantes para la base de datos
     private static final String DB_NAME = "grupo07_pdm.db";
-    private static final int DB_VERSION = 3;
+    private static final int DB_VERSION = 4;
     private static final String LLAVE_FORANEA = "PRAGMA foreign_keys=ON;";
 
     //Clase con una instancia en si misma, para controlar la creacion de objetos
@@ -64,7 +65,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(OpcionDAO.crearTablaOpcion());
         db.execSQL(PermisoDAO.crearTablaPermiso());
         db.execSQL(BitacoraDAO.crearTablaBitacora());
-
+        db.execSQL(InstitucionDAO.crearTablaInstitucion());
     }
 
 
@@ -101,6 +102,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(OpcionDAO.eliminarTablaOpcion());
         db.execSQL(PermisoDAO.eliminarTablaPermiso());
         db.execSQL(BitacoraDAO.eliminarTablaBitacora());
+        db.execSQL(InstitucionDAO.eliminarTablaInstitucion());
 
         //Luego se manda a llamar el metodo para crear la base
         onCreate(db);

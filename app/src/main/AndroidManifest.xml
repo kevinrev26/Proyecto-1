@@ -81,7 +81,8 @@
         <activity android:name=".Controladores.Tutor.ActualizarTutor" />
         <activity android:name=".Controladores.Tutor.AgregarTutor" />
         <activity android:name=".Controladores.Tutor.EliminarTutor" />
-        <activity android:name=".Controladores.Tutor.SeleccionarTutor"></activity>
+        <activity android:name=".Controladores.Tutor.SeleccionarTutor" />
+        <activity android:name=".Controladores.Institucion.ActualizarInstitucion"></activity>
     </application>
 
 </manifest>
