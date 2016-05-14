@@ -44,6 +44,7 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
         enlazarWdigets();
         //SetListeners
         setListeners();
+        Log.i(this.TAG,"Valor del objeto mCoodinadorDAO: " + mCoordiandorDAO);
 
 
     }

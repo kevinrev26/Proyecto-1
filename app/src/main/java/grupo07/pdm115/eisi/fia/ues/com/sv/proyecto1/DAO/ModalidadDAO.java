@@ -29,9 +29,8 @@ public class ModalidadDAO extends MasterDAO {
 
     public static String crearTablaModalidad(){
         return "CREATE TABLE " + MODALIDAD_TABLE + " (" +
-                IDENTIFICADOR_MODALIDAD + " INTEGER AUTOINCREMENT, " +
-                NOM_MODALIDAD + " TEXT(25) NOT NULL, " +
-                " PRIMARY KEY(" + IDENTIFICADOR_MODALIDAD + ") " +
+                IDENTIFICADOR_MODALIDAD + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                NOM_MODALIDAD + " TEXT(25) NOT NULL " +
                 ");";
     }
 

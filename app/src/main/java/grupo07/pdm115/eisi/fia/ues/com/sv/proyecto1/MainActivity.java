@@ -116,8 +116,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Toast.makeText(MainActivity.this, "Seleccionado: " + temp.getNombreClase(), Toast.LENGTH_SHORT).show();
         try{
             Class<?> clase = Class.forName("grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores." +temp.getNombreClase());
-            Intent intent = new Intent(this,clase);
+            Intent intent = new Intent(this.getApplicationContext(),clase);
             this.startActivity(intent);
+            Log.i("MainActivity","Llamado de la clase");
         } catch (ClassNotFoundException e){
             Log.i("EXE",e.toString());
         }

@@ -33,11 +33,10 @@ public class TutorDAO extends MasterDAO {
 
     public static String crearTablaTutor(){
         return "CREATE TABLE " + TUTOR_TABLE + " (" +
-                IDENTIFICADOR_TUTOR + " INTEGER AUTOINCREMENT, " +
+                IDENTIFICADOR_TUTOR + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 NOM_TUTOR + " TEXT(10) NOT NULL, " +
                 EMAIL_TUTOR + " TEXT(25), " +
-                TEL_TUTOR + " TEXT(8) NOT NULL, " +
-                " PRIMARY KEY(" + IDENTIFICADOR_TUTOR + ") " +
+                TEL_TUTOR + " TEXT(8) NOT NULL " +
                 ");";
     }
 
