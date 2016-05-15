@@ -118,8 +118,11 @@
         <activity
             android:name=".Controladores.Institucion.AgregarInstitucion"
             android:label="@string/AgregarInstitucion" />
-        <activity android:name=".Controladores.Institucion.ActualizarInstitucion"
-            android:label="@string/ActualizarInstituciones"></activity>
+        <activity
+            android:name=".Controladores.Institucion.ActualizarInstitucion"
+            android:label="@string/ActualizarInstituciones" />
+        <activity android:name=".Controladores.ServicioSocial.AgregarServicioSocial"
+            android:label="@string/AgregarServicioSocial"></activity>
     </application>
 
 </manifest>

@@ -46,11 +46,11 @@ public class ServicioSocialDAO extends MasterDAO {
                 ID_SERVICIO + " TEXT(5) NOT NULL, " +
                 IDENTIFICADOR_INSTITUCION + " TEXT(10) NOT NULL, " +
                 IDENTIFICADOR_MODALIDAD + " TEXT(5) NOT NULL, " +
-                IDENTIFICADOR_TUTOR + " TEXT, " +
+                IDENTIFICADOR_TUTOR + " TEXT(5), " +
                 TITULO + " TEXT(10), " +
                 DESCRIPCION + " TEXT(30), " +
-                DISPONIBLE + " INTEGER(1) NOT NULL " +
-                COORDINADOR_APROBADO + " TEXT(5) NOT NULL " +
+                DISPONIBLE + " INTEGER(1) NOT NULL, " +
+                COORDINADOR_APROBADO + " TEXT(5) NOT NULL, " +
                 "PRIMARY KEY(" + ID_SERVICIO + "), CONSTRAINT " +
                 "fk_servicio_institucion FOREIGN KEY (" + IDENTIFICADOR_INSTITUCION + ")" +
                 "REFERENCES institucion (ID_INSTITUCION) ON DELETE CASCADE ON UPDATE CASCADE, " +
