@@ -23,7 +23,7 @@ public class ActualizarInstitucion extends AppCompatActivity implements View.OnC
     private Spinner mSpinnerInstitucion;
     private Button mBtnActualizarIns;
 
-    //Referencia de estudiante
+    //Referencia de institucion
     private Institucion ins;
 
     //Referencia al DAO

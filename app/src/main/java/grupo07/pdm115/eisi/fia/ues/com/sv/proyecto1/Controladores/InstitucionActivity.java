@@ -75,12 +75,12 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btnAgregarIns:
                 //Cargar activity para el formulario
-                //intent = new Intent(this.getApplicationContext(), AgregarInstitucion.class);
+                intent = new Intent(this.getApplicationContext(), AgregarInstitucion.class);
                 startActivity(intent);
                 break;
             case R.id.btnActualizarIns:
                 //Cargar activity para actualizar
-               // intent = new Intent(this.getApplicationContext(), ActualizarInstitucion.class);
+                intent = new Intent(this.getApplicationContext(), ActualizarInstitucion.class);
                 startActivity(intent);
             case R.id.btnEliminarIns:
                 //Cargar activity para eliminar un elemento
@@ -90,7 +90,7 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
             case R.id.btnSeleccionarIns:
                 //Cargar activity para ver todos los elementos
                 cargarInstituciones();
-                //Toast.makeText(EstudianteActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
+
                 intent = new Intent(this.getApplicationContext(), SeleccionarInstitucion.class);
                 intent.putExtra("instituciones",instituciones);
                 startActivity(intent);

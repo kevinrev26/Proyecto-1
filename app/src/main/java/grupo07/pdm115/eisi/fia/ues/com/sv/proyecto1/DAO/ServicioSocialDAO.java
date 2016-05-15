@@ -6,9 +6,7 @@ import android.database.Cursor;
 import android.util.Log;
 
 import java.util.ArrayList;
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.ServicioSocial;
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Tutor;
 
 public class ServicioSocialDAO extends MasterDAO {
 
@@ -25,12 +23,10 @@ public class ServicioSocialDAO extends MasterDAO {
     private static final int TITULO_COL = 4;
     private static final String DESCRIPCION = "descripcion";
     private static final int DESCRIPCION_COL = 5;
-    private static final int DISPONIBLE = 1;
+    private static final String DISPONIBLE = "disponible";
     private static final int DISPONIBLE_COL = 6;
     private static final String COORDINADOR_APROBADO = "coordinador_aprobado";
     private static final int COORDINADOR_APROBADO_COL = 7;
-    //private static final Tutor tutor = new Tutor();
-    private static final Institucion institucion = new Institucion();
 
 
     public ServicioSocialDAO(Context ctx) {
@@ -51,15 +47,15 @@ public class ServicioSocialDAO extends MasterDAO {
                 DESCRIPCION + " TEXT(30), " +
                 DISPONIBLE + " INTEGER(1) NOT NULL, " +
                 COORDINADOR_APROBADO + " TEXT(5) NOT NULL, " +
-                "PRIMARY KEY(" + ID_SERVICIO + "), CONSTRAINT " +
-                "fk_servicio_institucion FOREIGN KEY (" + IDENTIFICADOR_INSTITUCION + ")" +
-                "REFERENCES institucion (ID_INSTITUCION) ON DELETE CASCADE ON UPDATE CASCADE, " +
-                "CONSTRAINT fk_servicio_modalidad FOREIGN KEY (" + IDENTIFICADOR_MODALIDAD + ") REFERENCES modalidad ("
-                + "IDENTIFICADOR_MODALIDAD ) ON DELETE CASCADE ON UPDATE CASCADE, " +
+                "PRIMARY KEY (" + ID_SERVICIO + ") , CONSTRAINT " +
+                "fk_servicio_institucion FOREIGN KEY (" + IDENTIFICADOR_INSTITUCION + ") " +
+                "REFERENCES " + InstitucionDAO.INSTITUCION_TABLE+ " (" + InstitucionDAO.ID_INSTITUCION + ") ON DELETE CASCADE ON UPDATE CASCADE, " +
+                "CONSTRAINT fk_servicio_modalidad FOREIGN KEY (" + IDENTIFICADOR_MODALIDAD + ") REFERENCES " + ModalidadDAO.MODALIDAD_TABLE + " ("
+                + ModalidadDAO.IDENTIFICADOR_MODALIDAD + ") ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "CONSTRAINT fk_servicio_tutor FOREIGN KEY (" + IDENTIFICADOR_TUTOR +
-                ") REFERENCES tutor (IDENTIFICADOR_TUTOR) ON DELETE CASCADE ON UPDATE CASCADE, " +
+                ") REFERENCES " + TutorDAO.TUTOR_TABLE + " (" + TutorDAO.IDENTIFICADOR_TUTOR + ") ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "CONSTRAINT fk_servicio_coordinador FOREIGN KEY (" + COORDINADOR_APROBADO +
-                ") REFERENCES coordinador (id_coordinador) ON DELETE CASCADE ON UPDATE CASCADE);";
+                ") REFERENCES " + CoordinadorDAO.COORDINADOR_TABLE + " (" + CoordinadorDAO.IDENTIFICADOR_COORDINADOR + ") ON DELETE CASCADE ON UPDATE CASCADE);";
     }
 
     public static String eliminarTablaServicioSocial() {
