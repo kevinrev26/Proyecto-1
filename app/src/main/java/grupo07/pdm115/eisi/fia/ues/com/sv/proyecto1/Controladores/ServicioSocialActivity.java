@@ -65,8 +65,8 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btnAgregarSV:
                 //Cargar activity para el formulario
-                intent = new Intent(this.getApplicationContext(), AgregarServicioSocial.class);
-                startActivity(intent);
+                //intent = new Intent(this.getApplicationContext(), AgregarServicioSocial.class);
+                //startActivity(intent);
                 break;
             case R.id.btnActualizarSV:
                 //Cargar activity para actualizar
