@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.ServicioSocialDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.ServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
@@ -97,10 +98,10 @@ public class ActualizarServicioSocial extends AppCompatActivity implements View.
                         ss.setTitulo(mTituloSSText.getText().toString());
                         ss.setDescripcion(mDesSSText.getText().toString());
                         ss.setDisponible(Integer.parseInt(mDispSSText.getText().toString()));
-                        ss.setCoordinadorAprobado(mCooAprSSText.getText().toString());
-                        ss.setIdentificadorInstitucion(mIdInsSSText.getText().toString());
-                        ss.setIdentificadorModalidad(mIdModSSText.getText().toString());
-                        ss.setIdentificadorTutor(mIdTutorSSText.getText().toString());
+                        ss.setCoordinadorAprobado(Integer.parseInt(mCooAprSSText.getText().toString()));
+                        ss.setIdentificadorInstitucion(Integer.parseInt(mIdInsSSText.getText().toString()));
+                        ss.setIdentificadorModalidad(Integer.parseInt(mIdModSSText.getText().toString()));
+                        ss.setIdentificadorTutor(Integer.parseInt(mIdTutorSSText.getText().toString()));
                         if (mServicioSocialDAO.actualizarServicioSocial(ss) == 1) {
                             Toast.makeText(ActualizarServicioSocial.this, "Servicio Social actualizado", Toast.LENGTH_SHORT).show();
                             ActualizarServicioSocial.this.finish();

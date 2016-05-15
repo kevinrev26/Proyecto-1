@@ -7,19 +7,18 @@ public class ServicioSocial {
 
     //Atributos
 
-    private String idServicio;
-    private String identificadorInstitucion;
-    private String identificadorTutor;
-    private String identificadorModalidad;
+    private int idServicio;
+    private int identificadorInstitucion;
+    private int identificadorTutor;
+    private int identificadorModalidad;
     private String titulo;
     private String descripcion;
     private int disponible;
-    private String coordinadorAprobado;
+    private int coordinadorAprobado;
 
-    public ServicioSocial(String idServicio, String identificadorInstitucion, String identificadorTutor,
-                          String identificadorModalidad, String titulo, String descripcion, int disponible, String coordinadorAprobado) {
+    public ServicioSocial(int identificadorInstitucion, int identificadorTutor,
+                          int identificadorModalidad, String titulo, String descripcion, int disponible, int coordinadorAprobado) {
 
-        this.idServicio=idServicio;
         this.identificadorInstitucion=identificadorInstitucion;
         this.identificadorTutor=identificadorTutor;
         this.identificadorModalidad=identificadorModalidad;
@@ -29,36 +28,37 @@ public class ServicioSocial {
         this.coordinadorAprobado=coordinadorAprobado;
     }
 
+    public ServicioSocial(){}
 
-    public String getIdServicio() {
+    public int getIdServicio() {
         return idServicio;
     }
 
-    public void setIdServicio(String idServicio) {
+    public void setIdServicio(int idServicio) {
         this.idServicio = idServicio;
     }
 
-    public String getIdentificadorInstitucion() {
+    public int getIdentificadorInstitucion() {
         return identificadorInstitucion;
     }
 
-    public void setIdentificadorInstitucion(String identificadorInstitucion) {
+    public void setIdentificadorInstitucion(int identificadorInstitucion) {
         this.identificadorInstitucion = identificadorInstitucion;
     }
 
-    public String getIdentificadorTutor() {
+    public int getIdentificadorTutor() {
         return identificadorTutor;
     }
 
-    public void setIdentificadorTutor(String identificadorTutor) {
+    public void setIdentificadorTutor(int identificadorTutor) {
         this.identificadorTutor = identificadorTutor;
     }
 
-    public String getIdentificadorModalidad() {
+    public int getIdentificadorModalidad() {
         return identificadorModalidad;
     }
 
-    public void setIdentificadorModalidad(String identificadorModalidad) {
+    public void setIdentificadorModalidad(int identificadorModalidad) {
         this.identificadorModalidad = identificadorModalidad;
     }
 
@@ -86,25 +86,25 @@ public class ServicioSocial {
         this.disponible=disponible;
     }
 
-    public String getCoordinadorAprobado() {
+    public int getCoordinadorAprobado() {
         return coordinadorAprobado;
     }
 
-    public void setCoordinadorAprobado(String coordinadorAprobado) {
+    public void setCoordinadorAprobado(int coordinadorAprobado) {
         this.coordinadorAprobado = coordinadorAprobado;
     }
 
     @Override
     public String toString() {
         return "ServicioSocial{" +
-                "idServicio='" + idServicio + '\'' +
-                ", identificadorInstitucion='" + identificadorInstitucion + '\'' +
-                ", identificadorTutor='" + identificadorTutor + '\'' +
-                ", identificadorModalidad='" + identificadorModalidad + '\'' +
+                "idServicio=" + idServicio +
+                ", identificadorInstitucion=" + identificadorInstitucion +
+                ", identificadorTutor=" + identificadorTutor +
+                ", identificadorModalidad=" + identificadorModalidad +
                 ", titulo='" + titulo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", disponible='" + disponible + '\'' +
-                ", coordinadorAprobado='" + coordinadorAprobado + '\'' +
+                ", coordinadorAprobado=" + coordinadorAprobado +
                 '}';
     }
 }

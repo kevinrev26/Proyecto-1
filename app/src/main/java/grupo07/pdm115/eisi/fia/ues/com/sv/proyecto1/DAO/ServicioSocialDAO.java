@@ -43,8 +43,8 @@ public class ServicioSocialDAO extends MasterDAO {
                 IDENTIFICADOR_INSTITUCION + " INTEGER NOT NULL, " +
                 IDENTIFICADOR_MODALIDAD + " INTEGER NOT NULL, " +
                 IDENTIFICADOR_TUTOR + " INTEGER, " +
-                TITULO + " TEXT(10), " +
-                DESCRIPCION + " TEXT(30), " +
+                TITULO + " TEXTO NOT NULL, " +
+                DESCRIPCION + " TEXT, " +
                 DISPONIBLE + " INTEGER(1) NOT NULL, " +
                 COORDINADOR_APROBADO + " INTEGER NOT NULL, " +
                 "CONSTRAINT " +
@@ -65,7 +65,6 @@ public class ServicioSocialDAO extends MasterDAO {
     public long insertarServicioSocial(ServicioSocial servicioSocial) {
         //super.abrirDB();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(ID_SERVICIO, servicioSocial.getIdServicio());
         contentValues.put(IDENTIFICADOR_INSTITUCION, servicioSocial.getIdentificadorInstitucion());
         contentValues.put(IDENTIFICADOR_TUTOR, servicioSocial.getIdentificadorTutor());
         contentValues.put(IDENTIFICADOR_MODALIDAD, servicioSocial.getIdentificadorModalidad());
@@ -89,15 +88,15 @@ public class ServicioSocialDAO extends MasterDAO {
         contentValues.put(COORDINADOR_APROBADO, servicioSocial.getCoordinadorAprobado());
 
         String where = ID_SERVICIO + "= ?";
-        String[] whereArgs = {servicioSocial.getIdServicio()};
+        String[] whereArgs = {String.valueOf(servicioSocial.getIdServicio())};
 
         return mDatabase.update(SERVICIO_SOCIAL_TABLE, contentValues, where, whereArgs);
     }
 
-    public int eliminarServicioSocial(String idServicio) {
+    public int eliminarServicioSocial(int idServicio) {
         // super.abrirDB();
         String where = ID_SERVICIO + "= ?";
-        String[] whereArgs = {idServicio};
+        String[] whereArgs = {String.valueOf(idServicio)};
         return mDatabase.delete(SERVICIO_SOCIAL_TABLE, where, whereArgs);
     }
 
@@ -118,10 +117,10 @@ public class ServicioSocialDAO extends MasterDAO {
 
     }
 
-    public ServicioSocial servicioSocial(String id) {
+    public ServicioSocial servicioSocial(int id) {
         //super.abrirDB();
         String where = ID_SERVICIO + "= ?";
-        String whereArgs[] = {id};
+        String whereArgs[] = {String.valueOf(id)};
         Cursor cursor = mDatabase.query(SERVICIO_SOCIAL_TABLE, null, where, whereArgs, null, null, null);
         cursor.moveToFirst();
         ServicioSocial temp = getServicioSocialPorCursor(cursor);
@@ -138,14 +137,13 @@ public class ServicioSocialDAO extends MasterDAO {
         } else {
             try {
                 return new ServicioSocial(
-                        cursor.getString(ID_SERVICIO_COL),
-                        cursor.getString(ID_INSTITUCION_COL),
-                        cursor.getString(ID_TUTOR_COL),
-                        cursor.getString(ID_MODALIDAD_COL),
+                        cursor.getInt(ID_INSTITUCION_COL),
+                        cursor.getInt(ID_TUTOR_COL),
+                        cursor.getInt(ID_MODALIDAD_COL),
                         cursor.getString(TITULO_COL),
                         cursor.getString(DESCRIPCION_COL),
                         cursor.getInt(DISPONIBLE_COL),
-                        cursor.getString(COORDINADOR_APROBADO_COL)
+                        cursor.getInt(COORDINADOR_APROBADO_COL)
                 );
 
             } catch (Exception e) {

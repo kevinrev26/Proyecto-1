@@ -14,7 +14,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 public class AgregarServicioSocial extends AppCompatActivity implements View.OnClickListener{
 
     //Widgets
-    private EditText mIdSSText, mTituloSSText, mDesSSText, mDispSSText, mIdInsSSText, mIdModSSText, mIdTutorSSText, mCooAprSSText;
+    private EditText mTituloSSText, mDesSSText, mDispSSText, mIdInsSSText, mIdModSSText, mIdTutorSSText, mCooAprSSText;
     private Button mBtnAgregarSS;
 
     //Objeto para manejar el ingreso del nuevo estudiante
@@ -35,7 +35,6 @@ public class AgregarServicioSocial extends AppCompatActivity implements View.OnC
 
 
     private void enlazarWidgets(){
-        mIdSSText= (EditText) findViewById(R.id.editTextIdSS);
         mTituloSSText = (EditText) findViewById(R.id.editTextTiSS);
         mDesSSText = (EditText) findViewById(R.id.editTextDesSS);
         mDispSSText = (EditText) findViewById(R.id.editTextDispSS);
@@ -59,19 +58,18 @@ public class AgregarServicioSocial extends AppCompatActivity implements View.OnC
             Toast.makeText(AgregarServicioSocial.this, "Disponibilidad solo puede ser 1=Disponible o 0=No Disponible", Toast.LENGTH_SHORT).show();
         } else {
 
-            ServicioSocial temp = new ServicioSocial(mIdSSText.getText().toString().toUpperCase(),
-                    mIdInsSSText.getText().toString(),
-                    mIdTutorSSText.getText().toString(),
-                    mIdModSSText.getText().toString(),
+            ServicioSocial temp = new ServicioSocial(Integer.parseInt(mIdInsSSText.getText().toString()),
+                    Integer.parseInt(mIdTutorSSText.getText().toString()),
+                    Integer.parseInt(mIdModSSText.getText().toString()),
                     mTituloSSText.getText().toString(),
                     mDesSSText.getText().toString(),
                     Integer.parseInt(mDispSSText.getText().toString()),
-                    mCooAprSSText.getText().toString());
+                    Integer.parseInt(mCooAprSSText.getText().toString()));
             if (mServicioSocialDAO.insertarServicioSocial(temp) > 0) {
-                Toast.makeText(AgregarServicioSocial.this, "Bitacora agregada con exito", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AgregarServicioSocial.this, "Servicio social agregado con exito", Toast.LENGTH_SHORT).show();
                 this.finish();
             } else {
-                Toast.makeText(AgregarServicioSocial.this, "Ocurrio algun problema al agregar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AgregarServicioSocial.this, "Ocurrio algun problema al agregar, verfique los identificadores", Toast.LENGTH_SHORT).show();
             }
             //}
         }
@@ -79,7 +77,7 @@ public class AgregarServicioSocial extends AppCompatActivity implements View.OnC
 
     //Validaciones
     public boolean validarVacios(){
-        if (mIdSSText.getText().toString().equals("") ||
+        if (mTituloSSText.getText().toString().equals("") ||
                 mIdInsSSText.getText().toString().equals("") ||
                 mIdModSSText.getText().toString().equals("")||
                 mDispSSText.getText().toString().equals("")||

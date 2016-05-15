@@ -78,18 +78,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/IdServicio"
-            android:id="@+id/textView40"
-            android:layout_column="0" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTextIdSS"
-            android:layout_column="5" />
-
     </TableRow>
 
     <TableRow
@@ -143,6 +131,19 @@
             android:layout_height="wrap_content"
             android:layout_column="4"
             android:id="@+id/editTextDispSS" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Diponible=1, No disponible=0"
+            android:id="@+id/textView40"
+            android:layout_column="0" />
     </TableRow>
 
     <TableRow

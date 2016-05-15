@@ -101,12 +101,22 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
     *
     * Metodo harcodeado para agregar Estudiantes, se incova al cliquear el button "Llenar BD"
     * */
+
     private void llenarDB(){
-        if (mServicioSocialDAO.insertarServicioSocial(new ServicioSocial("00001","00001",
-                "00001","00001","Mantenimiento de Software", "Actualizacion de versiones", 1, "")) > 0){
-            Toast.makeText(ServicioSocialActivity.this, "Registro Insertado", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(ServicioSocialActivity.this, "Error al insertar ", Toast.LENGTH_SHORT).show();
+        ServicioSocial temp;
+        int validador;
+        temp = new ServicioSocial();
+        temp.setTitulo("Reparar");
+        temp.setDescripcion("Arreglar");
+        temp.setDisponible(1);
+        temp.setCoordinadorAprobado(1);
+        temp.setIdentificadorInstitucion(1);
+        temp.setIdentificadorModalidad(1);
+        temp.setIdentificadorTutor(1);
+        validador = (int) mServicioSocialDAO.insertarServicioSocial(temp);
+
+        if (validador>0){
+            Toast.makeText(ServicioSocialActivity.this, "Se ingresaron los registros", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -31,7 +31,7 @@ public class SeleccionarServicioSocial extends AppCompatActivity{
 
     private void configurarAdapter(){
         Intent i = getIntent();
-        ArrayList<ServicioSocial> list = (ArrayList<ServicioSocial>)i.getSerializableExtra("servicios sociales");
+        ArrayList<ServicioSocial> list = (ArrayList<ServicioSocial>)i.getSerializableExtra("servicios_sociales");
         mList.setAdapter(mCustomAdapter = new CustomAdapterServicioSocial(this.getApplicationContext(),list));
     }
 }

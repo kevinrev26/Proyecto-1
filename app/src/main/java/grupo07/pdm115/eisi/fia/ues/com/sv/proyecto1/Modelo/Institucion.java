@@ -14,10 +14,9 @@ public class Institucion {
     private String telefono1;
     private String telefono2;
 
-    public Institucion(int idInstitucion, String nombreInstitucion, String emailInstitucion,
+    public Institucion(String nombreInstitucion, String emailInstitucion,
                           String nombreEncargado, String telefono1, String telefono2) {
 
-        this.idInstitucion=idInstitucion;
         this.nombreInstitucion=nombreInstitucion;
         this.emailInstitucion=emailInstitucion;
         this.nombreEncargado=nombreEncargado;

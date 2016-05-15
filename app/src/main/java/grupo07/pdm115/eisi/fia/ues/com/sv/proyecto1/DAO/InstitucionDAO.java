@@ -122,7 +122,6 @@ public class InstitucionDAO extends MasterDAO{
         } else {
             try {
                 return new Institucion(
-                        cursor.getInt(ID_INSTITUCION_COL),
                         cursor.getString(NOMBRE_INSTITUCION_COL),
                         cursor.getString(EMAIL_INSTITUCION_COL),
                         cursor.getString(NOMBRE_ENCARGADO_COL),
