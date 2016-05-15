@@ -128,8 +128,11 @@
         <activity
             android:name=".Controladores.ServicioSocial.SeleccionarServicioSocial"
             android:label="@string/SeleccionarServicioSocial" />
-        <activity android:name=".Controladores.ServicioSocial.ActualizarServicioSocial"
-            android:label="@string/ActualizarServiciosSociales"></activity>
+        <activity
+            android:name=".Controladores.ServicioSocial.ActualizarServicioSocial"
+            android:label="@string/ActualizarServiciosSociales" />
+        <activity android:name=".Controladores.ServicioSocial.EliminarServicioSocial"
+            android:label="@string/EliminarServiciosSociales" ></activity>
     </application>
 
 </manifest>
