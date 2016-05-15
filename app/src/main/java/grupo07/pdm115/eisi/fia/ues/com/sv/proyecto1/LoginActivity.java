@@ -21,7 +21,7 @@ import java.util.logging.LogRecord;
 /*
 * TODO Implementacion del login
 * */
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity {
 
 
     //Wdigets
@@ -33,42 +33,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         //Enlazando los widgets de la vista al codigo
-        bindWidgets();
+       // bindWidgets();
 
         //Estableciendo los eventos y sus manejadores
-        setListeners();
+       // setListeners();
 
 
     }
 
-    /*
-    * Implementacion de la referencias de los widgets de la vista al codigo de esta
-    * activity
-    */
-    private void bindWidgets(){
-        mBtnAcceder = (Button) findViewById(R.id.btnAcceder);
-    }
 
-    /*
-    * Este metodo implementa el establecimiento de los escuchadores y sus listeners
-    *
-    */
-    private void setListeners() {
-        mBtnAcceder.setOnClickListener(this);
-    }
-
-    /*
-    * Implementacion del metodo de la interfaz View.OnClickListener,
-    * se invoca la ActivityPrincipal
-    *
-    * */
-
-    @Override
-    public void onClick(View v) {
-        //Se Pasa el control a la actividad principal.
-        //Implementacion de la logica para
-        Intent intent = new Intent(this.getApplicationContext(),MainActivity.class);
-        startActivity(intent);
-        this.finish();
-    }
 }
