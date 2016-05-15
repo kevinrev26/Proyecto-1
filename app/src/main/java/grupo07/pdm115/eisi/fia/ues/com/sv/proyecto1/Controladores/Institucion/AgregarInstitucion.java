@@ -14,7 +14,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 public class AgregarInstitucion extends AppCompatActivity implements View.OnClickListener{
 
     //Widgets
-    private EditText mIdInsText, mNombreInsText, mEmailInsText, mNombreEncText, mTel1Text, mTel2Text;
+    private EditText mNombreInsText, mEmailInsText, mNombreEncText, mTel1Text, mTel2Text;
     private Button mBtnAgregarIns;
 
     //Objeto para manejar el ingreso del nuevo estudiante
@@ -35,7 +35,6 @@ public class AgregarInstitucion extends AppCompatActivity implements View.OnClic
 
 
     private void enlazarWidgets(){
-        mIdInsText = (EditText) findViewById(R.id.idInsEdit);
         mNombreInsText = (EditText) findViewById(R.id.nomInsEdit);
         mEmailInsText = (EditText) findViewById(R.id.correoInsEdit);
         mNombreEncText = (EditText) findViewById(R.id.nomEncEdit);
@@ -59,12 +58,12 @@ public class AgregarInstitucion extends AppCompatActivity implements View.OnClic
             } else if (!validarTelefono2()) {
                 Toast.makeText(AgregarInstitucion.this, "El telefono2 no es valido", Toast.LENGTH_SHORT).show();
             } else {
-                Institucion temp = new Institucion(mIdInsText.getText().toString().toUpperCase(),
-                        mNombreInsText.getText().toString(),
-                        mEmailInsText.getText().toString(),
-                        mNombreEncText.getText().toString(),
-                        mTel1Text.getText().toString(),
-                        mTel2Text.getText().toString());
+                Institucion temp = new Institucion();
+                        temp.setNombreInstitucion(mNombreInsText.getText().toString());
+                        temp.setEmailInstitucion(mEmailInsText.getText().toString());
+                        temp.setNombreEncargado(mNombreEncText.getText().toString());
+                        temp.setTelefono1(mTel1Text.getText().toString());
+                        temp.setTelefono2(mTel2Text.getText().toString());
                 if (mInstitucionDAO.insertarInstitucion(temp)>0){
                     Toast.makeText(AgregarInstitucion.this, "Institucion agregada con exito", Toast.LENGTH_SHORT).show();
                     this.finish();
@@ -77,8 +76,7 @@ public class AgregarInstitucion extends AppCompatActivity implements View.OnClic
 
     //Validaciones
     public boolean validarVacios(){
-        if (mIdInsText.getText().toString().equals("") ||
-                mNombreInsText.getText().toString().equals("") ||
+        if (mNombreInsText.getText().toString().equals("") ||
                 mEmailInsText.getText().toString().equals("") ||
                 mNombreEncText.getText().toString().equals("")||
                 mTel1Text.getText().toString().equals(""))

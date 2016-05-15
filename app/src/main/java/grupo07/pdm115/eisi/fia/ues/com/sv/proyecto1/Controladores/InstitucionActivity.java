@@ -60,8 +60,7 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
         btnLlenarBD.setOnClickListener(this);
     }
 
-    private void cargarInstituciones(){
-        instituciones = mInstitucionDAO.getListaInstitucion();
+    private void cargarInstituciones(){instituciones = mInstitucionDAO.getListaInstitucion();
     }
 
     @Override
@@ -70,7 +69,7 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
         switch (v.getId()){
             case R.id.btnLlenarDBIns:
                 //Llenar base de datos
-                llenarDB();
+                llenarInstituciones();
                 break;
             case R.id.btnAgregarIns:
                 //Cargar activity para el formulario
@@ -89,10 +88,10 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
             case R.id.btnSeleccionarIns:
                 //Cargar activity para ver todos los elementos
                 cargarInstituciones();
-
                 intent = new Intent(this.getApplicationContext(), SeleccionarInstitucion.class);
                 intent.putExtra("instituciones",instituciones);
                 startActivity(intent);
+                break;
         }
     }
 
@@ -100,12 +99,26 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
     *
     * Metodo harcodeado para agregar Instituciones, se incova al cliquear el button "Llenar BD"
     * */
-    private void llenarDB(){
-        if (mInstitucionDAO.insertarInstitucion(new Institucion("00002","EIQUIA",
-                "eiquia@gmail.com","Ingra. Tania","2222-2222","")) > 0){
-            Toast.makeText(InstitucionActivity.this, "Registro Insertado", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(InstitucionActivity.this, "Error al insertar ", Toast.LENGTH_SHORT).show();
+    private void llenarInstituciones(){
+        Institucion temp;
+        int validador;
+        temp = new Institucion();
+        temp.setNombreInstitucion("Quimica");
+        temp.setEmailInstitucion("q@gmail.com");
+        temp.setNombreEncargado("Tania");
+        temp.setTelefono1("22222222");
+        temp.setTelefono2("");
+        validador = (int) mInstitucionDAO.insertarInstitucion(temp);
+        temp = new Institucion();
+        temp.setNombreInstitucion("EIM");
+        temp.setEmailInstitucion("eiq@gmail.com");
+        temp.setNombreEncargado("Gerson");
+        temp.setTelefono1("22222222");
+        temp.setTelefono2("");
+        validador += (int) mInstitucionDAO.insertarInstitucion(temp);
+
+        if (validador>0){
+            Toast.makeText(InstitucionActivity.this, "Se ingresaron los registros", Toast.LENGTH_SHORT).show();
         }
     }
 }

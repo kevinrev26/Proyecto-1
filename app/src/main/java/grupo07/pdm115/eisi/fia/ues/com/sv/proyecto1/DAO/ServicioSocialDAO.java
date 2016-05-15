@@ -39,15 +39,15 @@ public class ServicioSocialDAO extends MasterDAO {
     */
     public static String crearTablaServicioSocial() {
         return "CREATE TABLE " + SERVICIO_SOCIAL_TABLE + " (" +
-                ID_SERVICIO + " TEXT(5) NOT NULL, " +
-                IDENTIFICADOR_INSTITUCION + " TEXT(10) NOT NULL, " +
-                IDENTIFICADOR_MODALIDAD + " TEXT(5) NOT NULL, " +
-                IDENTIFICADOR_TUTOR + " TEXT(5), " +
+                ID_SERVICIO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                IDENTIFICADOR_INSTITUCION + " INTEGER NOT NULL, " +
+                IDENTIFICADOR_MODALIDAD + " INTEGER NOT NULL, " +
+                IDENTIFICADOR_TUTOR + " INTEGER, " +
                 TITULO + " TEXT(10), " +
                 DESCRIPCION + " TEXT(30), " +
                 DISPONIBLE + " INTEGER(1) NOT NULL, " +
-                COORDINADOR_APROBADO + " TEXT(5) NOT NULL, " +
-                "PRIMARY KEY (" + ID_SERVICIO + ") , CONSTRAINT " +
+                COORDINADOR_APROBADO + " INTEGER NOT NULL, " +
+                "CONSTRAINT " +
                 "fk_servicio_institucion FOREIGN KEY (" + IDENTIFICADOR_INSTITUCION + ") " +
                 "REFERENCES " + InstitucionDAO.INSTITUCION_TABLE+ " (" + InstitucionDAO.ID_INSTITUCION + ") ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "CONSTRAINT fk_servicio_modalidad FOREIGN KEY (" + IDENTIFICADOR_MODALIDAD + ") REFERENCES " + ModalidadDAO.MODALIDAD_TABLE + " ("

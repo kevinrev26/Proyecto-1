@@ -31,7 +31,7 @@ public class SeleccionarInstitucion extends AppCompatActivity {
 
     private void configurarAdapter(){
         Intent i = getIntent();
-        ArrayList<Institucion> list = (ArrayList<Institucion>)i.getSerializableExtra("instituciones");
+        ArrayList<Institucion> list = (ArrayList<Institucion>) i.getSerializableExtra("instituciones");
         mList.setAdapter(mCustomAdapter = new CustomAdapterInstitucion(this.getApplicationContext(),list));
     }
 }

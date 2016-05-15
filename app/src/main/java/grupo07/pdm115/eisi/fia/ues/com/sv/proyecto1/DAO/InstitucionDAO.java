@@ -40,13 +40,13 @@ public class InstitucionDAO extends MasterDAO{
 
     public static String crearTablaInstitucion() {
         return "CREATE TABLE " + INSTITUCION_TABLE + " (" +
-                ID_INSTITUCION + " TEXT(5) NOT NULL, " +
-                NOMBRE_INSTITUCION + " TEXT(10) NOT NULL, " +
-                EMAIL_INSTITUCION + " TEXT(15) NOT NULL, " +
-                NOMBRE_ENCARGADO + " TEXT(10) NOT NULL, " +
+                ID_INSTITUCION + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                NOMBRE_INSTITUCION + " TEXT NOT NULL, " +
+                EMAIL_INSTITUCION + " TEXT NOT NULL, " +
+                NOMBRE_ENCARGADO + " TEXT NOT NULL, " +
                 TELEFONO1 + " TEXT(8) NOT NULL, " +
-                TELEFONO2 + " TEXT(8), " +
-                "PRIMARY KEY(" + ID_INSTITUCION + "));";
+                TELEFONO2 + " TEXT(8) " +
+                ");";
     }
 
     public static String eliminarTablaInstitucion() {
@@ -56,7 +56,6 @@ public class InstitucionDAO extends MasterDAO{
     public long insertarInstitucion(Institucion institucion) {
         //super.abrirDB();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(ID_INSTITUCION, institucion.getIdInstitucion());
         contentValues.put(NOMBRE_INSTITUCION, institucion.getNombreInstitucion());
         contentValues.put(EMAIL_INSTITUCION, institucion.getEmailInstitucion());
         contentValues.put(NOMBRE_ENCARGADO, institucion.getNombreEncargado());
@@ -75,15 +74,15 @@ public class InstitucionDAO extends MasterDAO{
         contentValues.put(TELEFONO1, institucion.getTelefono1());
         contentValues.put(TELEFONO2, institucion.getTelefono2());
         String where = ID_INSTITUCION + "= ?";
-        String[] whereArgs = {institucion.getIdInstitucion()};
+        String[] whereArgs = {String.valueOf(institucion.getIdInstitucion())};
 
         return mDatabase.update(INSTITUCION_TABLE, contentValues, where, whereArgs);
     }
 
-    public int eliminarInstiucion(String idInstitucion) {
+    public int eliminarInstiucion(int idInstitucion) {
         // super.abrirDB();
         String where = ID_INSTITUCION + "= ?";
-        String[] whereArgs = {idInstitucion};
+        String[] whereArgs = {String.valueOf(idInstitucion)};
         return mDatabase.delete(INSTITUCION_TABLE, where, whereArgs);
     }
 
@@ -103,10 +102,10 @@ public class InstitucionDAO extends MasterDAO{
         return instituciones;
     }
 
-    public Institucion institucion(String id) {
+    public Institucion institucion(int id) {
         //super.abrirDB();
         String where = ID_INSTITUCION + "= ?";
-        String whereArgs[] = {id};
+        String whereArgs[] = {String.valueOf(id)};
         Cursor cursor = mDatabase.query(INSTITUCION_TABLE, null, where, whereArgs, null, null, null);
         cursor.moveToFirst();
         Institucion temp = getInstitucionPorCursor(cursor);
@@ -123,7 +122,7 @@ public class InstitucionDAO extends MasterDAO{
         } else {
             try {
                 return new Institucion(
-                        cursor.getString(ID_INSTITUCION_COL),
+                        cursor.getInt(ID_INSTITUCION_COL),
                         cursor.getString(NOMBRE_INSTITUCION_COL),
                         cursor.getString(EMAIL_INSTITUCION_COL),
                         cursor.getString(NOMBRE_ENCARGADO_COL),

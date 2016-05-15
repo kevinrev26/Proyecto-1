@@ -52,7 +52,6 @@ public class CustomAdapterInstitucion extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.list_select_row_institucion,parent,false);
         }
 
-        TextView textIdIns = (TextView) convertView.findViewById(R.id.textViewIdIns);
         TextView textNombreIns = (TextView) convertView.findViewById(R.id.textViewNomIns);
         TextView textNombreEncIns = (TextView) convertView.findViewById(R.id.textViewNomEnc);
         TextView textCorreoIns = (TextView) convertView.findViewById(R.id.textViewEmalIns);
@@ -61,7 +60,7 @@ public class CustomAdapterInstitucion extends BaseAdapter {
 
         Institucion temp = lista.get(position);
 
-        textIdIns.setText(temp.getIdInstitucion());
+        //textIdIns.setText(temp.getIdInstitucion());
         textNombreIns.setText(temp.getNombreInstitucion());
         textNombreEncIns.setText(temp.getNombreEncargado());
         textCorreoIns.setText(temp.getEmailInstitucion());

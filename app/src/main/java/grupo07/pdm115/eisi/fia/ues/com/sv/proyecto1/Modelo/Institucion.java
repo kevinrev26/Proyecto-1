@@ -7,14 +7,14 @@ public class Institucion {
 
     //Atributos
 
-    private String idInstitucion;
+    private int idInstitucion;
     private String nombreInstitucion;
     private String emailInstitucion;
     private String nombreEncargado;
     private String telefono1;
     private String telefono2;
 
-    public Institucion(String idInstitucion, String nombreInstitucion, String emailInstitucion,
+    public Institucion(int idInstitucion, String nombreInstitucion, String emailInstitucion,
                           String nombreEncargado, String telefono1, String telefono2) {
 
         this.idInstitucion=idInstitucion;
@@ -29,11 +29,11 @@ public class Institucion {
 
     }
 
-    public String getIdInstitucion() {
+    public int getIdInstitucion() {
         return idInstitucion;
     }
 
-    public void setIdInstitucion(String idInstitucion) {
+    public void setIdInstitucion(int idInstitucion) {
         this.idInstitucion = idInstitucion;
     }
 
@@ -79,12 +79,13 @@ public class Institucion {
 
     @Override
     public String toString() {
-        return "Institucion{" +
-                "idInstitucion='" + idInstitucion + '\'' +
-                ", nombreInstitucion='" + nombreInstitucion + '\'' +
+
+        return "instituciones{" +
+                "idInstitucion=" + idInstitucion +
+                ", nombreInstitucion='" + nombreInstitucion+ '\'' +
                 ", emailInstitucion='" + emailInstitucion + '\'' +
                 ", nombreEncargado='" + nombreEncargado + '\'' +
-                ", telefono1='" + telefono1+ '\'' +
+                ", telefono1='" + telefono1 + '\'' +
                 ", telefono2='" + telefono2 + '\'' +
                 '}';
     }
