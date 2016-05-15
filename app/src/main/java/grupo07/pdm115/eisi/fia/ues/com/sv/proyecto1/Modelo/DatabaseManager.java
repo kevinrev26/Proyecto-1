@@ -27,7 +27,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
 
     //Constantes para la base de datos
     private static final String DB_NAME = "grupo07_pdm115.db";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
     private static final String LLAVE_FORANEA = "PRAGMA foreign_keys=ON;";
 
     //Clase con una instancia en si misma, para controlar la creacion de objetos
@@ -73,7 +73,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(BitacoraDAO.crearTablaBitacora());
         db.execSQL(ModalidadDAO.crearTablaModalidad());
         db.execSQL(InstitucionDAO.crearTablaInstitucion());
-        //db.execSQL(ServicioSocialDAO.crearTablaServicioSocial());
+        db.execSQL(ServicioSocialDAO.crearTablaServicioSocial());
     }
 
 
@@ -113,7 +113,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(BitacoraDAO.eliminarTablaBitacora());
         db.execSQL(ModalidadDAO.eliminarTablaModalidad());
         db.execSQL(InstitucionDAO.eliminarTablaInstitucion());
-       // db.execSQL(ServicioSocialDAO.eliminarTablaServicioSocial());
+        db.execSQL(ServicioSocialDAO.eliminarTablaServicioSocial());
         //Luego se manda a llamar el metodo para crear la base
         onCreate(db);
 

@@ -14,8 +14,8 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
  */
 public class InstitucionDAO extends MasterDAO{
 
-    private static final String INSTITUCION_TABLE = "institucion";
-    private static final String ID_INSTITUCION = "id_institucion";
+    public static String INSTITUCION_TABLE = "institucion";
+    public static String ID_INSTITUCION = "id_institucion";
     private static final int ID_INSTITUCION_COL = 0;
     private static final String NOMBRE_INSTITUCION = "nombre_institucion";
     private static final int NOMBRE_INSTITUCION_COL = 1;

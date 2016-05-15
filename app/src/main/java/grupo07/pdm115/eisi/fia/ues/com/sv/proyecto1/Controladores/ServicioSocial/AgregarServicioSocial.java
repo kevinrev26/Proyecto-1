@@ -81,7 +81,6 @@ public class AgregarServicioSocial extends AppCompatActivity implements View.OnC
     public boolean validarVacios(){
         if (mIdSSText.getText().toString().equals("") ||
                 mIdInsSSText.getText().toString().equals("") ||
-                mIdTutorSSText.getText().toString().equals("") ||
                 mIdModSSText.getText().toString().equals("")||
                 mDispSSText.getText().toString().equals("")||
                 mCooAprSSText.getText().toString().equals("")
@@ -95,10 +94,10 @@ public class AgregarServicioSocial extends AppCompatActivity implements View.OnC
     }
 
     public boolean validarDisponible(){
-        if(Integer.parseInt(mDispSSText.getText().toString())!=1 || Integer.parseInt(mDispSSText.getText().toString())!=0) {
-            return false;
-        }else{
+        if(Integer.parseInt(mDispSSText.getText().toString())==1 || Integer.parseInt(mDispSSText.getText().toString())==0) {
             return true;
+        }else{
+            return false;
         }
     }
 }

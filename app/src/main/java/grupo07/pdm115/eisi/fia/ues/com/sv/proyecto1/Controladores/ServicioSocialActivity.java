@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.ActualizarServicioSocial;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.AgregarServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.EliminarServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.SeleccionarServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.ServicioSocialDAO;
@@ -72,12 +74,12 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btnAgregarSV:
                 //Cargar activity para el formulario
-               // intent = new Intent(this.getApplicationContext(), AgregarServicioSocial.class);
+                intent = new Intent(this.getApplicationContext(), AgregarServicioSocial.class);
                 startActivity(intent);
                 break;
             case R.id.btnActualizarSV:
                 //Cargar activity para actualizar
-                //intent = new Intent(this.getApplicationContext(), ActualizarServicioSocial.class);
+                intent = new Intent(this.getApplicationContext(), ActualizarServicioSocial.class);
                 startActivity(intent);
                 break;
             case R.id.btnEliminarSV:
