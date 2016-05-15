@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.ActualizarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.SeleccionarInstitucion;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.ActualizarServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.AgregarServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.SeleccionarServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.ServicioSocialDAO;
@@ -79,7 +81,8 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btnActualizarSV:
                 //Cargar activity para actualizar
-                Toast.makeText(ServicioSocialActivity.this, "Proximamente Actualizar", Toast.LENGTH_SHORT).show();
+                //intent = new Intent(this.getApplicationContext(), ActualizarServicioSocial.class);
+                startActivity(intent);
                 break;
             case R.id.btnEliminarSV:
                 //Cargar activity para eliminar un elemento

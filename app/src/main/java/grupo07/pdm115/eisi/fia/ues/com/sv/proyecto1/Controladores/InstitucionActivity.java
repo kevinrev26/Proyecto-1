@@ -79,7 +79,7 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btnActualizarIns:
                 //Cargar activity para actualizar
-               // intent = new Intent(this.getApplicationContext(), ActualizarInstitucion.class);
+                //intent = new Intent(this.getApplicationContext(), ActualizarInstitucion.class);
                 startActivity(intent);
             case R.id.btnEliminarIns:
                 //Cargar activity para eliminar un elemento
