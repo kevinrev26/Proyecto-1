@@ -1,7 +1,10 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.LoginActivity;
 
 /**
  * Creado por Kevin Rivera, 05-14-16.
@@ -12,7 +15,7 @@ public class Sesion {
 
     private Context mContext;
     private boolean mFirstTime;
-    private boolean loggin;
+    //private boolean loggin;
 
     private SharedPreferences mPreferences;
     private SharedPreferences.Editor mEditor;
@@ -28,15 +31,17 @@ public class Sesion {
     }
 
     public boolean isFirstTime(){
-        mFirstTime = mPreferences.getBoolean("loggin",false);
+        mFirstTime = mPreferences.getBoolean("First",false);
         return mFirstTime;
     }
 
     public void editFirstTime(){
         mFirstTime=true;
-        mEditor.putBoolean("loggin",mFirstTime);
+        mEditor.putBoolean("First",mFirstTime);
         mEditor.commit();
     }
+
+
 
 
 }

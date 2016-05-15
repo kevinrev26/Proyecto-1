@@ -17,10 +17,20 @@ public class Clase {
 
     private String nombreClase;
     private String descripcionClase;
+    private int token;
 
-    public Clase(String descripcionClase, String nombreClase) {
+    public Clase(String descripcionClase, String nombreClase,int token) {
         this.descripcionClase = descripcionClase;
         this.nombreClase = nombreClase;
+        this.token = token;
+    }
+
+    public int getToken() {
+        return token;
+    }
+
+    public void setToken(int token) {
+        this.token = token;
     }
 
     public String getDescripcionClase() {

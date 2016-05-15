@@ -22,6 +22,7 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
 
     //TAG de la clase
     public static final String TAG = "TipoDeActividadActivity";
+    public static final int TOKEN = 30;
     private ArrayList<TipoDeActividad> tipoActividad = null;
 
     //Botones para controlar la app

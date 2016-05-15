@@ -23,6 +23,7 @@ public class TutorActivity extends AppCompatActivity implements View.OnClickList
 
     //TAG de la clase
     public static final String TAG = "TutorActivity";
+    public static final int TOKEN = 50;
 
     //Widgets
     private Button btnAgregar, btnActualizar, btnLlenar, btnEliminar, btnVer;

@@ -22,6 +22,7 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
 
     //TAG de la clase
     public static final String TAG = "InstitucionActivity";
+    public static final int TOKEN = 110;
 
     private ArrayList<Institucion> instituciones = null;
     //Botones para controlar la app

@@ -22,6 +22,7 @@ public class ModalidadActivity extends AppCompatActivity implements View.OnClick
 
     //TAG de la clase
     public static final String TAG = "ModalidadActivity";
+    public static final int TOKEN = 70;
 
     //Widgets
     private Button btnAgregar, btnActualizar, btnLlenar, btnEliminar, btnVer;

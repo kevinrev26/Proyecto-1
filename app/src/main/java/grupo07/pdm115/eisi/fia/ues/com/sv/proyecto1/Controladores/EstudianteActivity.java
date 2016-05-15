@@ -22,6 +22,7 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
 
     //TAG de la clase
     public static final String TAG = "EstudianteActivity";
+    public static final int TOKEN = 10;
 
 
     private ArrayList<Estudiante> estudiantes = null;

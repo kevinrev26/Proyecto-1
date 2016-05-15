@@ -19,6 +19,7 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
 
     //TAG de la clase
     public static final String TAG = "ServicioSocialActivity";
+    public static final int TOKEN = 60;
 
     //Botones para controlar la app
     private Button btnLlenarBD, btnAgregar, btnActualizar,

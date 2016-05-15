@@ -77,7 +77,7 @@ public class PermisoDAO extends MasterDAO {
         bandera += insertarPermiso(new Permiso(70,2));
         bandera += insertarPermiso(new Permiso(71,2));
         bandera += insertarPermiso(new Permiso(72,2));
-        bandera += insertarPermiso(new Permiso(72,2));
+        bandera += insertarPermiso(new Permiso(73,2));
         bandera += insertarPermiso(new Permiso(74,2));
         bandera += insertarPermiso(new Permiso(75,2));
 
@@ -144,7 +144,7 @@ public class PermisoDAO extends MasterDAO {
         String[] whereArgs = {String.valueOf(idUsuario)};
         Cursor cursor = mDatabase.query(PERMISO_TABLE,null,where,whereArgs,null,null,null);
         ArrayList<Permiso> permisos= new ArrayList<Permiso>();
-        cursor.moveToFirst();
+        //cursor.moveToFirst();
         while(cursor.moveToNext()){
             permisos.add(getPermisoPorCursor(cursor));
 

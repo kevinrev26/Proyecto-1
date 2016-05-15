@@ -30,7 +30,7 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"/>
+            android:id="@+id/editTextUserName"/>
     </LinearLayout>
 
     <LinearLayout
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/editText2"/>
+            android:id="@+id/editTextPassword"/>
     </LinearLayout>
 
     <LinearLayout
@@ -66,14 +66,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/BtnIngresar"
-            android:id="@+id/button"
+            android:id="@+id/btnIngresar"
             android:layout_weight="0.5"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/BtnSalir"
-            android:id="@+id/button2"
+            android:id="@+id/btnSalir"
             android:layout_weight="0.5"/>
     </LinearLayout>
 </LinearLayout>
