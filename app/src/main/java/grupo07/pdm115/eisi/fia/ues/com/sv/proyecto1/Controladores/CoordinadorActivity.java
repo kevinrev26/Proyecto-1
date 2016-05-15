@@ -23,6 +23,7 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
 
     //TAG de la clase
     public static final String TAG = "CoordinadorActivity";
+    public static final int TOKEN = 20;
 
     //Widgets
     private Button btnAgregar, btnActualizar, btnLlenar, btnEliminar, btnVer;

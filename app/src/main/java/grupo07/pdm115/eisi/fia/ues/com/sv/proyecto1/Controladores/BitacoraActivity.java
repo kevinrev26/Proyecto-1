@@ -21,6 +21,7 @@ public class BitacoraActivity extends AppCompatActivity implements View.OnClickL
 
     //TAG de la clase
     public static final String TAG = "BitacoraActivity";
+    public static final int TOKEN = 40;
     //Widgets
     private Button BTNAgregar, BTNActualizar, BTNLlenar, BTNEliminar, BTNVer;
     //Referencia al DAO

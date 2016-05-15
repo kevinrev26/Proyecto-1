@@ -44,6 +44,15 @@ public class TutorDAO extends MasterDAO {
         return "DROP TABLE IF EXISTS " + TUTOR_TABLE;
     }
 
+    public static String crearTrigger(){
+        return "CREATE TRIGGER tutor_log AFTER INSERT " +
+                " ON[" +TUTOR_TABLE + "] " +
+                " BEGIN " +
+                " INSERT INTO " + SystemLogDAO.SYSTEMLOG_TABLE +
+                " VALUES (new.id_tutor, new.nombre_tutor); " +
+                " END;";
+    }
+
 
     public long insertarTutor(Tutor tutor){
         ContentValues contentValues = new ContentValues();

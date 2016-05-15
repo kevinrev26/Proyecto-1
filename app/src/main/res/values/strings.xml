@@ -262,4 +262,6 @@
     <string name="BtnIngresar">Ingresar al sistema</string>
     <string name="BtnSalir">Salir del sistema</string>
 
+    <!--Menu del sistema-->
+    <string name="menu">Cerrar sesion</string>
 </resources>

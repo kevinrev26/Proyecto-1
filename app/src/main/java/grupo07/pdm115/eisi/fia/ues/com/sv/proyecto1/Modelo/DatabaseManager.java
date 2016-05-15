@@ -12,6 +12,7 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.InstitucionDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.OpcionDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.PermisoDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.ServicioSocialDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.SystemLogDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.TipoDeActividadDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.UsuarioDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.TutorDAO;
@@ -74,6 +75,12 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(ModalidadDAO.crearTablaModalidad());
         db.execSQL(InstitucionDAO.crearTablaInstitucion());
         db.execSQL(ServicioSocialDAO.crearTablaServicioSocial());
+        db.execSQL(SystemLogDAO.crearTablaSystemLog());
+
+
+        //Espacio reservado para los triggers
+        db.execSQL(CoordinadorDAO.crearTrigger());
+        db.execSQL(TutorDAO.crearTrigger());
     }
 
 
@@ -114,6 +121,8 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(ModalidadDAO.eliminarTablaModalidad());
         db.execSQL(InstitucionDAO.eliminarTablaInstitucion());
         db.execSQL(ServicioSocialDAO.eliminarTablaServicioSocial());
+        db.execSQL(SystemLogDAO.eliminarTablaSystemLog());
+
         //Luego se manda a llamar el metodo para crear la base
         onCreate(db);
 

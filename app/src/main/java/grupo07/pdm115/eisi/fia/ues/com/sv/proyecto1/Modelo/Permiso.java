@@ -30,4 +30,12 @@ public class Permiso {
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
+
+    @Override
+    public String toString() {
+        return "Permiso{" +
+                "idOpcion=" + idOpcion +
+                ", idUsuario=" + idUsuario +
+                '}';
+    }
 }
