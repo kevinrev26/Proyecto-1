@@ -114,8 +114,6 @@
         <activity
             android:name=".Controladores.Institucion.SeleccionarInstitucion"
             android:label="@string/SeleccionarInstituciones" />
-        <activity android:name=".Controladores.ServicioSocial.EliminarServicioSocial"
-            android:label="@string/EliminarServicioSocial"/>
         <activity
             android:name=".Controladores.Institucion.AgregarInstitucion"
             android:label="@string/AgregarInstitucion" />

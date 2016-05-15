@@ -1,5 +1,6 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,16 +10,14 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.EstudianteDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.ServicioSocialDAO;
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Estudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.ServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 public class ServicioSocialActivity extends AppCompatActivity implements View.OnClickListener{
 
     //TAG de la clase
-    public static final String TAG = "EstudianteActivity";
+    public static final String TAG = "ServicioSocialActivity";
 
     //Botones para controlar la app
     private Button btnLlenarBD, btnAgregar, btnActualizar,
@@ -58,6 +57,7 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
 
     @Override
     public void onClick(View v) {
+        Intent intent = null;
         switch (v.getId()){
             case R.id.btnLlenarDBSV:
                 //Llenar base de datos
@@ -65,7 +65,8 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btnAgregarSV:
                 //Cargar activity para el formulario
-                Toast.makeText(ServicioSocialActivity.this, "Proximamente Agregar", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), AgregarServicioSocial.class);
+                startActivity(intent);
                 break;
             case R.id.btnActualizarSV:
                 //Cargar activity para actualizar

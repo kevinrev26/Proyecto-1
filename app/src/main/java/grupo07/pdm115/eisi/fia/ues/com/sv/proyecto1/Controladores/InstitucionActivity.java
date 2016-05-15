@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.ActualizarInstitucion;
-import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.AgregarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.EliminarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.SeleccionarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.InstitucionDAO;
