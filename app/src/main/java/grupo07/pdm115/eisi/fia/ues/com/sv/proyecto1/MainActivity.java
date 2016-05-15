@@ -215,6 +215,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (item.getItemId()){
             case R.id.menu_cerrarSesion:
                 sesion.logout();
+                //this.finish();
                 return true;
                 //break;
             default:

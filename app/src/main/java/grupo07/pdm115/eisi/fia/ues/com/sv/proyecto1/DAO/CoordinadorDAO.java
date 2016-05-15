@@ -45,6 +45,16 @@ public class CoordinadorDAO extends MasterDAO {
         return "DROP TABLE IF EXISTS " + COORDINADOR_TABLE;
     }
 
+    public static String crearTrigger(){
+        return "CREATE TRIGGER coordinador_log " +
+                " AFTER INSERT " +
+                " ON[" +COORDINADOR_TABLE + "] " +
+                " BEGIN " +
+                " INSERT INTO " + SystemLogDAO.SYSTEMLOG_TABLE +
+                " VALUES (new.id_coordinador, new.nombre_coordinador); " +
+                " END;";
+    }
+
 
     public long insertarCoordinador(Coordinador coordinador){
         ContentValues contentValues = new ContentValues();
