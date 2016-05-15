@@ -45,6 +45,9 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TipoDeActividadActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.TutorActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.MasterDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.OpcionDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.PermisoDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.UsuarioDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.TipoDeActividad;
 
@@ -56,6 +59,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Adaptador que implementa el comportamiento del llenado de cada item de la lista
     private Adapter mAdapter;
 
+
+    //DAO
+    UsuarioDAO mUsuarioDAO;
+    OpcionDAO  mOpcionDAO;
+    PermisoDAO mPermisoDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,9 +78,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //Creando las opciones del menu
         crearClases();
         MasterDAO master = new MasterDAO(this.getApplicationContext());
+        mUsuarioDAO = new UsuarioDAO(this.getApplicationContext());
+        mOpcionDAO = new OpcionDAO(this.getApplicationContext());
+        mPermisoDAO = new PermisoDAO(this.getApplicationContext());
+
         SharedPreferences settings = getSharedPreferences("preferencias",0);
         boolean dialogo = settings.getBoolean("dialogShow",false);
         if(!dialogo) {
+            mUsuarioDAO.llenarUsuarios();
+            mOpcionDAO.llenarOpciones();
+            mPermisoDAO.llenarPermisos();
             crearAlerta(master.versionDB());
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean("dialogShow",true);
@@ -126,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             AlertDialog.Builder show = new AlertDialog.Builder(MainActivity.this);
             show.setTitle("Version de la base de datos");
-            show.setMessage(getResources().getString(R.string.AlertaBaseDeDatos)+ "\n"+
+            show.setMessage(getResources().getString(R.string.AlertaBaseDeDatos)+ "\n\n"+
             getResources().getString(R.string.Version) + " " + version);
             show.show();
 

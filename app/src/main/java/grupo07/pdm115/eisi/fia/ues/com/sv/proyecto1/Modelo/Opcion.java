@@ -7,11 +7,11 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
  */
 public class Opcion {
 
-    private String idOpcion;
+   // private String idOpcion;
     private String DescripcionOpcion;
-    private String token;
+    private int token;
 
-    public Opcion(String token, String descripcionOpcion) {
+    public Opcion(int token, String descripcionOpcion) {
         this.token = token;
         DescripcionOpcion = descripcionOpcion;
     }
@@ -24,19 +24,11 @@ public class Opcion {
         DescripcionOpcion = descripcionOpcion;
     }
 
-    public String getIdOpcion() {
-        return idOpcion;
-    }
-
-    public void setIdOpcion(String idOpcion) {
-        this.idOpcion = idOpcion;
-    }
-
-    public String getToken() {
+    public int getToken() {
         return token;
     }
 
-    public void setToken(String token) {
+    public void setToken(int token) {
         this.token = token;
     }
 }

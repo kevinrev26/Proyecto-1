@@ -7,27 +7,27 @@ package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
  */
 public class Permiso {
 
-    private String idUsuario;
-    private String idOpcion;
+    private int idUsuario;
+    private int idOpcion;
 
-    public Permiso(String idOpcion, String idUsuario) {
+    public Permiso(int idOpcion, int idUsuario) {
         this.idOpcion = idOpcion;
         this.idUsuario = idUsuario;
     }
 
-    public String getIdOpcion() {
+    public int getIdOpcion() {
         return idOpcion;
     }
 
-    public void setIdOpcion(String idOpcion) {
+    public void setIdOpcion(int idOpcion) {
         this.idOpcion = idOpcion;
     }
 
-    public String getIdUsuario() {
+    public int getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
+    public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
 }
