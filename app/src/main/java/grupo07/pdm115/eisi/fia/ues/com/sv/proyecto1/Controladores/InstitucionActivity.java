@@ -89,7 +89,7 @@ public class InstitucionActivity extends AppCompatActivity implements View.OnCli
             case R.id.btnSeleccionarIns:
                 //Cargar activity para ver todos los elementos
                 cargarInstituciones();
-                //Toast.makeText(EstudianteActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
+
                 intent = new Intent(this.getApplicationContext(), SeleccionarInstitucion.class);
                 intent.putExtra("instituciones",instituciones);
                 startActivity(intent);

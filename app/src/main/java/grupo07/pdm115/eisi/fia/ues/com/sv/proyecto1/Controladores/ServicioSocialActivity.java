@@ -10,13 +10,17 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Institucion.SeleccionarInstitucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.AgregarServicioSocial;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.ServicioSocial.SeleccionarServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.ServicioSocialDAO;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Institucion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.ServicioSocial;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
 
 public class ServicioSocialActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private ArrayList<ServicioSocial> servicioSociales = null;
     //TAG de la clase
     public static final String TAG = "ServicioSocialActivity";
 
@@ -56,6 +60,10 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
         btnLlenarBD.setOnClickListener(this);
     }
 
+    private void cargarServiciosSociales(){
+        servicioSociales = mServicioSocialDAO.getListaServicioSocials();
+    }
+
     @Override
     public void onClick(View v) {
         Intent intent = null;
@@ -79,12 +87,10 @@ public class ServicioSocialActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.btnSeleccionarSV:
                 //Cargar activity para ver todos los elementos
-                ArrayList<ServicioSocial> servicioSociales = mServicioSocialDAO.getListaServicioSocials();
-                for(ServicioSocial sV : servicioSociales){
-                    Log.i("DAO",sV.toString());
-                }
-                Toast.makeText(ServicioSocialActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
-                break;
+                cargarServiciosSociales();
+                intent = new Intent(this.getApplicationContext(), SeleccionarServicioSocial.class);
+                intent.putExtra("servicios_sociales",servicioSociales);
+                startActivity(intent);
 
         }
     }
