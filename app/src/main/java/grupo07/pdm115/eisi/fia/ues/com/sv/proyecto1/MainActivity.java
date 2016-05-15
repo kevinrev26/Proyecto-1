@@ -36,6 +36,7 @@ import android.widget.Toast;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.Adapter;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.Clase;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.Sesion;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.BitacoraActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.CoordinadorActivity;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.EstudianteActivity;
@@ -64,6 +65,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     UsuarioDAO mUsuarioDAO;
     OpcionDAO  mOpcionDAO;
     PermisoDAO mPermisoDAO;
+    MasterDAO master;
+
+    //Sesion actual
+    Sesion sesionActual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,26 +78,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         bindWidgets();
         //Enlanzado el adapter para la listView
         mLista.setAdapter(mAdapter = new Adapter(this.getApplicationContext()));
+        sesionActual = new Sesion(this.getApplicationContext());
         //Configurando los escuchadores
         setListeners();
         //Creando las opciones del menu
         crearClases();
-        MasterDAO master = new MasterDAO(this.getApplicationContext());
+        master = new MasterDAO(this.getApplicationContext());
         mUsuarioDAO = new UsuarioDAO(this.getApplicationContext());
         mOpcionDAO = new OpcionDAO(this.getApplicationContext());
         mPermisoDAO = new PermisoDAO(this.getApplicationContext());
-
-        SharedPreferences settings = getSharedPreferences("preferencias",0);
-        boolean dialogo = settings.getBoolean("dialogShow",false);
-        if(!dialogo) {
-            mUsuarioDAO.llenarUsuarios();
-            mOpcionDAO.llenarOpciones();
-            mPermisoDAO.llenarPermisos();
-            crearAlerta(master.versionDB());
-            SharedPreferences.Editor editor = settings.edit();
-            editor.putBoolean("dialogShow",true);
-            editor.commit();
-        }
+        //Verificar primera vez en la app
+        verificarInicio();
 
 
     }
@@ -104,6 +100,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void setListeners(){
         mLista.setOnItemClickListener(this);
+
+    }
+
+    private void verificarInicio(){
+        if (!sesionActual.isFirstTime()){
+            crearAlerta(master.versionDB());
+            sesionActual.editFirstTime();
+        }
+
 
     }
 

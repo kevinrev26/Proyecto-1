@@ -35,6 +35,8 @@
     <string name="VerTodosModalidades">Modalidades registrados</string>
     <string name="EliminarModalidad">Eliminar Modalidad</string>
     <string name="ActualizarModalidad">Actualizar Modalidad</string>
+
+    <string name="LoginActivity">Ingresar al sistema</string>
     <!--Nombre de la clase, con su descripcion.
         Se implementa de esta forma para luego traducir
         cada descripcion-->
@@ -253,4 +255,11 @@
     <string name="EliminarModalidadText">Seleccione una modalidad a eliminar</string>
     <string name="SeleccionarModalidades">Modalidades en el sistema</string>
     <string name="BotonActualizarModalidades">Actualizar Modalidad</string>
+
+
+    <string name="NombreUsuarioLogin">Username</string>
+    <string name="PasswordLogin">Contraseña</string>
+    <string name="BtnIngresar">Ingresar al sistema</string>
+    <string name="BtnSalir">Salir del sistema</string>
+
 </resources>
