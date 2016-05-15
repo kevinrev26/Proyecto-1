@@ -108,10 +108,19 @@
         <activity
             android:name=".Controladores.Modalidad.ActualizarModalidad"
             android:label="@string/ActualizarModalidad" />
-
-        <activity android:name=".Controladores.Institucion.ActualizarInstitucion" />
-        <activity android:name=".Controladores.Institucion.EliminarInstitucion" />
-        <activity android:name=".Controladores.Institucion.SeleccionarInstitucion"></activity>
+        <activity
+            android:name=".Controladores.Institucion.EliminarInstitucion"
+            android:label="@string/EliminarInstituciones" />
+        <activity
+            android:name=".Controladores.Institucion.SeleccionarInstitucion"
+            android:label="@string/SeleccionarInstituciones" />
+        <activity android:name=".Controladores.ServicioSocial.EliminarServicioSocial"
+            android:label="@string/EliminarServicioSocial"/>
+        <activity
+            android:name=".Controladores.Institucion.AgregarInstitucion"
+            android:label="@string/AgregarInstitucion" />
+        <activity android:name=".Controladores.Institucion.ActualizarInstitucion"
+            android:label="@string/ActualizarInstituciones"></activity>
     </application>
 
 </manifest>
