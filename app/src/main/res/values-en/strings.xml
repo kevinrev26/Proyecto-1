@@ -1,0 +1,267 @@
+<resources>
+    <string name="app_name">Proyect 1 - Group 07 - PDM115</string>
+    <string name="AppGrupo">Group 07: Mobile Devices Programming</string>
+    <!--Titulos para las activities-->
+    <string name="MainActivity">Main Menu</string>
+    <string name="Tabla_Coordinador"> Coordinator items</string>
+    <string name="Tabla_Estudiante">Student items</string>
+    <string name="AgregarEstudiante">Add new Student</string>
+    <string name="VerTodosEstudiantes">Registered Students</string>
+    <string name="EliminarEstudiantes">Delete Student</string>
+    <string name="ActualizarEstudiantes">Update Student</string>
+    <string name="AgregarCoordinador">Add new Coordinator</string>
+    <string name="VerTodosCoordinadores">Registered Coordinators</string>
+    <string name="EliminarCoordinadores">Delete Coordinator</string>
+    <string name="ActualizarCoordinadores">Update Coordinator</string>
+
+    <string name="Tabla_Bitacora"> Binnacle items </string>
+    <string name="Tabla_TipoDeActividad">Type of Activity items</string>
+    <string name="AgregarTipoDeActividad">Add a new type of activity</string>
+    <string name="VerTodosTiposDeActividad">Type of activities registered </string>
+    <string name="EliminarTipoDeActividades">Delete a Type of Activity</string>
+    <string name="ActualizarTiposDeActividades">Update a Type of Activity</string>
+    <string name="AgregarBitacora">Add new Binnacle</string>
+    <string name="VerTodasBitacoras">Registered Binnacles</string>
+    <string name="EliminarBitacora">Delete Binnacle</string>
+    <string name="ActualizarBitacora">Update Binnacle</string>
+
+    <string name="Tabla_Modalidad"> Modality items </string>
+    <string name="Tabla_Tutor">Tutor items</string>
+    <string name="AgregarTutor">Add new Tutor</string>
+    <string name="VerTodosTutores">Registered Tutors</string>
+    <string name="EliminarTutor">Delete a Tutor</string>
+    <string name="ActualizarTutor">Update a Tutor</string>
+    <string name="AgregarModalidad">Add new Modality</string>
+    <string name="VerTodosModalidades">Registered Modalities</string>
+    <string name="EliminarModalidad">Delete Modality</string>
+    <string name="ActualizarModalidad">Update a Modality</string>
+
+    <string name="LoginActivity">Enter</string>
+    <!--Nombre de la clase, con su descripcion.
+        Se implementa de esta forma para luego traducir
+        cada descripcion-->
+    <string name="CoordinadorActivity">
+        Navigate to Coordinator\'s items
+    </string>
+    <string name="EstudianteActivity">
+        Students\'s menu to manage his items
+    </string>
+    <string name="BitacoraActivity">
+        Manage all Binnacles
+    </string>
+    <string name="TipoDeActividadActivity">
+        Navigate to Type Of Activities\' choices
+    </string>
+    <string name="InstitucionActivity">
+        Institution\'s items
+    </string>
+    <string name="ServicioSocialActivity">
+        Manage all Social Services
+    </string>
+    <string name="ModalidadActivity">
+        Modality table
+    </string>
+    <string name="TutorActivity">
+        Navigate to Tutor\'s menu
+    </string>
+
+    <!--Valores para el dialogo de la version de la base de datos-->
+    <string name="AlertaBaseDeDatos">For versions prior 3.6. This app will not work properly </string>
+    <string name="Version">Devices\' database version: </string>
+
+
+    <!--Botones de las opciones para realizar el crud Estudiante-->
+    <string name="llenarBD">Populate database</string>
+    <string name="llenarBDBitacora">Populate Binnacles</string>
+    <!--Botones para EstudianteActivity-->
+    <string name="CrearEstudiante">Add a Student</string>
+    <string name="ActualizarEstudiante">Update a existing Student</string>
+    <string name="EliminarEstudiante">Delete a Student from records</string>
+    <string name="VerEstudiantes">See all students</string>
+
+
+    <!--Botones de las opciones para realizar el crud bITACORA-->
+    <string name="LLENARBD">Populate records</string>
+    <!--Botones para TipoDeActividadActivity-->
+    <string name="CrearTipoDeActividad">Add new Type of Activity</string>
+    <string name="ActualizarTipoDeActividad">Update an existing Type of Activity</string>
+    <string name="EliminarTipoDeActividad">Delete Type of Activity</string>
+    <string name="VerTipoDeActividades">See all Type of Activities</string>
+
+    <!--Botones de las opciones para realizar el crud coordinador-->
+    <!--Botones para CoordinadorActivity-->
+    <string name="CrearCoordinador">Add new Coordinator</string>
+    <string name="ActualizarCoordinador">Update Existing Coordinator</string>
+    <string name="EliminarCoordinador">Delete a Coordinator</string>
+    <string name="VerCoordinadores">See all Coordinators</string>
+
+    <!--Botones de las opciones para realizar el crud de bitacora-->
+    <!--Botones para BitacoraActivity-->
+    <string name="CrearBitacora">Add new Binnacle </string>
+    <string name="Actualizarbitacora">Update an existing Binnacle</string>
+    <string name="EliminaBitacora">Delete a binnacle</string>
+    <string name="VerBitacora">See all Binacles</string>
+
+    <!--Opciones de la activity AgregarEstudiante-->
+    <string name="CarnetEstudiante">Student\'s ID</string>
+    <string name="NombreEstudiante">Name</string>
+    <string name="EmailEstudiante">Email</string>
+    <string name="TelEstudiante">Student\'s phone</string>
+    <string name="CarreraEstudiante">Career</string>
+    <string name="AgregarBtn">Add new Student</string>
+
+    <!--Opciones de la activity AgregarTipoDeActividad-->
+    <string name="IdTipoActividad">Id</string>
+    <string name="NomActividad">Name</string>
+    <string name="CantHoras">Hours</string>
+    <string name="DescActividad">Description</string>
+    <string name="AgregBtn">Add new Type of Activity</string>
+
+
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarEstudianteText">Select an item to remove</string>
+    <string name="SeleccionarEstudiantes">Registered Students</string>
+    <string name="ActualizarEstudianteActivity">Select a Student to update</string>
+    <string name="BotonActualizarEstudiante">Update Student</string>
+
+
+    <!--Otros elementos para activities tipo de actividad-->
+    <string name="EliminarTipoDeActividadText">Select an item to remove</string>
+    <string name="SeleccionarTipoActividad">Type of Activities</string>
+    <string name="ActualizarTipoActividadActivity">Select a Type of Activity to update</string>
+    <string name="BotonActualizarTipoActividad">Update Type of Activity</string>
+
+    <!--Items para la activity Agregar estudiante-->
+    <string-array name="carreras_array">
+        <item>Civil Engineering</item>
+        <item>Industrial Engineering</item>
+        <item>Electric Engineering</item>
+        <item>Food Engineering</item>
+        <item>Chemical Engineering</item>
+        <item>Systems Engineering</item>
+        <item>Architecture</item>
+        <item>Mechanical Engineering</item>
+    </string-array>
+
+    <!--Opciones para la activity AgregarBitacora-->
+    <string name="IdentidicadorBitacora">Id</string>
+    <string name="FechaInicioBitacora">Start Date</string>
+    <string name="FechaFinBitacota">End Date</string>
+    <string name="RevisionCoordinador">Coordinator</string>
+    <string name="RevisonTutor">Tutor</string>
+    <string name="IdentificadorTipActividad">Id </string>
+    <string name="BotonAgregarBitacora">Add new</string>
+    <!--Demas elementos para activities coordinador-->
+    <string name="EliminarBitacoraText">Select a Binnacle to remove</string>
+    <string name="SeleccionarBitacoras">Registered Binnacles</string>
+    <string name="ActualizarBitacoraActivity">Select a Binnacle to update</string>
+    <string name="BotonActualizarBitacora">Update Bitacora</string>
+
+    <!--Opciones para la activity AgregarCoordinador-->
+    <string name="NombreCoordinador">Name</string>
+    <string name="EmailCoordinador">Email</string>
+    <string name="TelCoordinador">Coordinator\'s phone</string>
+    <string name="BotonAgregarCoordinador">Add new</string>
+    <!--Demas elementos para activities coordinador-->
+    <string name="EliminarCoordinadorText">Select a Coordinator to remove</string>
+    <string name="SeleccionarCoordinadores">Registered Coordinators</string>
+    <string name="ActualizarCoordinadorActivity">Select and item to update</string>
+    <string name="BotonActualizarCoordinador">Update Coordinator</string>
+
+    <!--Botones de las opciones para realizar el crud-->
+    <string name="llenarBDIns">Populate Institution</string>
+    <!--Botones para InstitucionActivity-->
+    <string name="CrearInstitucion">Add new Institution</string>
+    <string name="ActualizarInstitucion">Update and existing Institution</string>
+    <string name="EliminarInstitucion">Delete an Institution from records</string>
+    <string name="VerInstitucion">See all institutions</string>
+
+    <!--Botones de las opciones para realizar el crud-->
+    <string name="llenarBDSV">Populate records</string>
+    <!--Botones para ServicioSocialActivity-->
+    <string name="CrearServicioSocial">Add new Social Service</string>
+    <string name="ActualizarServicioSocial">Update an existing Social Service</string>
+    <string name="EliminarServicioSocial">Delete a Social Service</string>
+    <string name="VerServiciosSociales">See Social Services</string>
+
+    <string name="Tabla_Institucion">Institution\'s options</string>
+    <string name="AgregarInstitucion">Add new Institution</string>
+    <string name="VerTodasInstituciones">Registered Institutions</string>
+    <string name="EliminarInstituciones">Delete an Institution</string>
+    <string name="ActualizarInstituciones">Update and Institution</string>
+    <!--Opciones de la activity AgregarInstitucion-->
+    <string name="IdInstitucion">id</string>
+    <string name="NombreInstitucion">Name</string>
+    <string name="EmailInstitucion">Email</string>
+    <string name="NombreEncargado">Manager\'s Name</string>
+    <string name="Telefono1">Phone 1</string>
+    <string name="Telefono2">Phone 2</string>
+    <string name="AgregarIns">Add new Institution</string>
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarInstitucionText">Select and item to remove</string>
+    <string name="SeleccionarInstituciones">Institutions in the system</string>
+    <string name="ActualizarInstitucionActivity">Select and Institution to update</string>
+    <string name="BotonActualizarInstitucion">Update Institution</string>
+
+    <string name="Tabla_Servicio_Social">Social Service items</string>
+    <string name="AgregarServicioSocial">Add new Social Service</string>
+    <string name="VerTodosServiciosSociales">Registered Social Services</string>
+    <string name="EliminarServiciosSociales">Delete a Social Service</string>
+    <string name="ActualizarServiciosSociales">Update Social Service</string>
+    <!--Opciones de la activity AgregarEstudiante-->
+    <string name="IdServicio">Id</string>
+    <string name="Titulo">Title</string>
+    <string name="Descripcion">Description</string>
+    <string name="Disponible">availability</string>
+    <string name="IdentificadorInstitucion">Institution\'s ID</string>
+    <string name="IdentificadorModalidad">Modality\'s ID</string>
+    <string name="IdentificadorTutor">Tutor\'s ID</string>
+    <string name="CoordinadorAprobado">Coordinator</string>
+    <string name="AgregarSS">Add Social Service</string>
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarServicioSocialText">Select a Social Service to Remove</string>
+    <string name="SeleccionarServicioSocial">Social Services in the system</string>
+    <string name="ActualizarServicioSocialActivity">Select a Social Service to Update</string>
+    <string name="BotonActualizarServicioSocial">Update Social Service</string>
+
+    <!--Botones de las opciones para realizar el crud Tutor-->
+    <string name="llenarBDTutor">Populate database</string>
+    <!--Botones para TutorActivity-->
+    <string name="CrearTutor">Add new Tutor</string>
+    <string name="ActualizarTutorActivity">Update an existing Tutor</string>
+    <string name="EliminarTutorActivity">Delete a tutor from records</string>
+    <string name="VerTutores">See all tutors</string>
+    <!--Opciones para la activity AgregarTutor-->
+    <string name="NombreTutor">Name</string>
+    <string name="EmailTutor">Email</string>
+    <string name="TelTutor">Tutor\'s phone</string>
+    <string name="BotonAgregarTutor">Add new</string>
+    <!--Demas elementos para activities modalidad-->
+    <string name="EliminarTutorText">Select a Tutor to revome</string>
+    <string name="SeleccionarTutores">Tutors in the system</string>
+    <string name="BotonActualizarTutor">Update Tutor</string>
+
+    <!--Botones de las opciones para realizar el crud Modalidad-->
+    <string name="llenarBDModalidad">Populate records</string>
+    <!--Botones para ModalidadActivity-->
+    <string name="CrearModalidad">Add new mode</string>
+    <string name="ActualizarModalidadActivity">Update new modality</string>
+    <string name="EliminarModalidadActivity">Delete modality from records</string>
+    <string name="VerModalidades">See all modalities</string>
+    <!--Opciones para la activity AgregarModalidad-->
+    <string name="NombreModalidad">Modality\'s name</string>
+    <string name="BotonAgregarModalidad">Add new</string>
+    <!--Demas elementos para activities modalidad-->
+    <string name="EliminarModalidadText">Select a Modality to delete</string>
+    <string name="SeleccionarModalidades">See all modalities</string>
+    <string name="BotonActualizarModalidades">Update Modality</string>
+
+
+    <string name="NombreUsuarioLogin">Username</string>
+    <string name="PasswordLogin">Password</string>
+    <string name="BtnIngresar">Enter</string>
+    <string name="BtnSalir">Exit</string>
+
+    <!--Menu del sistema-->
+    <string name="menu">Log Out</string>
+</resources>
