@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.SesionPermisos;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.ActualizarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.AgregarCoordinador;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Coordinador.EliminarCoordinador;
@@ -24,6 +25,16 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
     //TAG de la clase
     public static final String TAG = "CoordinadorActivity";
     public static final int TOKEN = 20;
+
+    //Constantes para permisos
+    private static final int BTNLLENAR = 21; //Cambiada por objeto de prueba
+    private static final int BTNAGREGAR = 22;
+    private static final int BTNSELECCIONAR = 23;
+    private static final int BTNACTUALIZAR = 24;
+    private static final int BTNELIMINAR = 25;
+
+    //Referencia de la sesion:
+   // private SesionPermisos sesion;
 
     //Widgets
     private Button btnAgregar, btnActualizar, btnLlenar, btnEliminar, btnVer;
@@ -45,7 +56,8 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
         enlazarWdigets();
         //SetListeners
         setListeners();
-        Log.i(this.TAG,"Valor del objeto mCoodinadorDAO: " + mCoordiandorDAO);
+        //Log.i(this.TAG,"Valor del objeto mCoodinadorDAO: " + mCoordiandorDAO);
+       // getSesion();
 
 
     }
@@ -66,42 +78,65 @@ public class CoordinadorActivity extends AppCompatActivity implements View.OnCli
         btnVer.setOnClickListener(this);
     }
 
+   /*
+    private void getSesion(){
+        Intent i = this.getIntent();
+        sesion = (SesionPermisos) i.getSerializableExtra("sesion");
+    }
+    */
+
 
     @Override
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()){
             case R.id.btnLlenarBase:
-
-                llenarCoordinadores();
-                Toast.makeText(CoordinadorActivity.this, "llenado de la base de datos, verificar...", Toast.LENGTH_SHORT).show();
+                if(SesionPermisos.getPermiso(BTNLLENAR)!=0) {
+                    llenarCoordinadores();
+                } else {
+                    toast("No tiene permisos para llenar la base de datos");
+                }
                 break;
             case R.id.btnAgregarCoordinador:
-                //Toast.makeText(CoordinadorActivity.this, "Activity agregar coordinador", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this.getApplicationContext(), AgregarCoordinador.class);
-                startActivity(intent);
+                if (SesionPermisos.getPermiso(BTNAGREGAR)!=0) {
+                    intent = new Intent(this.getApplicationContext(), AgregarCoordinador.class);
+                    startActivity(intent);
+                } else {
+                    toast("No tiene permisos para agregar coordinador");
+                }
                 break;
             case R.id.btnActualizarCoordinador:
-                intent = new Intent(this.getApplicationContext(), ActualizarCoordinador.class);
-                startActivity(intent);
-                //Toast.makeText(CoordinadorActivity.this, "Activity actualizar coordinador", Toast.LENGTH_SHORT).show();
+                if (SesionPermisos.getPermiso(BTNACTUALIZAR)!=0) {
+                    intent = new Intent(this.getApplicationContext(), ActualizarCoordinador.class);
+                    startActivity(intent);
+                } else {
+                    toast("No tiene permisos para actualizar coordinador");
+                }
                 break;
             case R.id.btnEliminarCoordinador:
-                //Toast.makeText(CoordinadorActivity.this, "Activity eliminar coordinador", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this.getApplicationContext(), EliminarCoordinador.class);
-                startActivity(intent);
+                if(SesionPermisos.getPermiso(BTNELIMINAR)!=0) {
+                    intent = new Intent(this.getApplicationContext(), EliminarCoordinador.class);
+                    startActivity(intent);
+                } else {
+                    toast("No tiene permisos para eliminar coordinador");
+                }
                 break;
             case R.id.btnVerCoordinadores:
-                cargarCoordinadores();
-                intent = new Intent(this.getApplicationContext(), SeleccionarCoordinador.class);
-                intent.putExtra("coordinadores",coordinadores);
-                startActivity(intent);
-
-
-                //Toast.makeText(CoordinadorActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
+                if (SesionPermisos.getPermiso(BTNSELECCIONAR)!=0) {
+                    cargarCoordinadores();
+                    intent = new Intent(this.getApplicationContext(), SeleccionarCoordinador.class);
+                    intent.putExtra("coordinadores", coordinadores);
+                    startActivity(intent);
+                } else {
+                    toast("No tiene permisos para ver los coordinadores");
+                }
                 break;
 
         }
+    }
+
+    private void toast(String msg){
+        Toast.makeText(CoordinadorActivity.this, msg, Toast.LENGTH_SHORT).show();
     }
 
     private void cargarCoordinadores(){

@@ -95,14 +95,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mOpcionDAO = new OpcionDAO(this.getApplicationContext());
         verificarInicio();
         //Verificando login
-        sesion.checkLogin();
+        loggin();
         //Configurando los escuchadores
         setListeners();
         //Creando las opciones del menu
         crearClases();
-
-
-
         //Agregar permisos
         agregarPermisos();
 
@@ -138,6 +135,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Log.i("MainActivity",p.toString());
         }
         sesion.configurarPermisos(mPermisoDAO.getPermisos(usuario));
+    }
+
+    private void loggin(){
+        if (!sesion.checkLogin()){
+            Intent i = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(i);
+            this.finish();
+        }
     }
 
     /*
@@ -190,6 +195,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Log.i("MainActivity",String.valueOf(token));
             if (token!=0) {
                 Intent intent = new Intent(this.getApplicationContext(), clase);
+                //intent.putExtra("sesion",sesion);
                 this.startActivity(intent);
                 //Log.i("MainActivity","Llamado de la clase");
             } else {
@@ -215,6 +221,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (item.getItemId()){
             case R.id.menu_cerrarSesion:
                 sesion.logout();
+                Intent i = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(i);
+                this.finish();
                 //this.finish();
                 return true;
                 //break;

@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Apoyo.SesionPermisos;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.ActualizarEstudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.AgregarEstudiante;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Estudiante.EliminarEstudiante;
@@ -24,6 +25,15 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
     public static final String TAG = "EstudianteActivity";
     public static final int TOKEN = 10;
 
+    //Constantes para permisos
+    private static final int BTNLLENAR = 21;
+    private static final int BTNAGREGAR = 22;
+    private static final int BTNSELECCIONAR = 23;
+    private static final int BTNACTUALIZAR = 24;
+    private static final int BTNELIMINAR = 25;
+
+    //Referencia a la sesion
+   // private SesionPermisos sesion;
 
     private ArrayList<Estudiante> estudiantes = null;
     //Botones para controlar la app
@@ -43,6 +53,9 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
         enlazarWidgets();
         //Establecer los listeners
         setListeners();
+        //Referenciando la sesion
+        //getSesion();
+
 
 
 
@@ -63,6 +76,11 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
         btnActualizar.setOnClickListener(this);
         btnLlenarBD.setOnClickListener(this);
     }
+    /*
+    private void getSesion(){
+        Intent i = this.getIntent();
+        sesion = (SesionPermisos) i.getSerializableExtra("sesion");
+    } */
 
     private void cargarEstudiantes(){
         estudiantes = mEstudianteDAO.getListaEstudiantes();
@@ -75,35 +93,59 @@ public class EstudianteActivity extends AppCompatActivity implements View.OnClic
 
             case R.id.btnLlenarDB:
                 //Llenar base de datos
-                llenarDB();
+                if (SesionPermisos.getPermiso(BTNLLENAR)!=0) {
+                    llenarDB();
+                } else {
+                    toast("No tiene permisos para llenar la base de datos");
+                }
                 break;
             case R.id.btnAgregarEstudiante:
-                //Cargar activity para el formulario
-                intent = new Intent(this.getApplicationContext(), AgregarEstudiante.class);
-                startActivity(intent);
+                if (SesionPermisos.getPermiso(BTNAGREGAR)!=0) {
+                    intent = new Intent(this.getApplicationContext(), AgregarEstudiante.class);
+                    startActivity(intent);
+                } else {
+                    toast("No tiene permisos para agregar estudiante");
+                }
                 break;
             case R.id.btnActualizar:
                 //Cargar activity para actualizar
-                //Toast.makeText(EstudianteActivity.this, "Proximamente Actualizar", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this.getApplicationContext(), ActualizarEstudiante.class);
-                startActivity(intent);
+                if(SesionPermisos.getPermiso(BTNACTUALIZAR)!=0) {
+                    intent = new Intent(this.getApplicationContext(), ActualizarEstudiante.class);
+                    startActivity(intent);
+                } else {
+                    toast("Usted ni tiene permisos para actualizar estudiante");
+                }
                 break;
             case R.id.btnEliminar:
                 //Cargar activity para eliminar un elemento
-                //Toast.makeText(EstudianteActivity.this, "Proximamente eliminar", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this.getApplicationContext(), EliminarEstudiante.class);
-                startActivity(intent);
+                if(SesionPermisos.getPermiso(BTNELIMINAR)!=0) {
+                    intent = new Intent(this.getApplicationContext(), EliminarEstudiante.class);
+                    startActivity(intent);
+                } else {
+                    toast("No tiene permisos para eliminar estudiante");
+                }
                 break;
             case R.id.btnSeleccionar:
                 //Cargar activity para ver todos los elementos
-                cargarEstudiantes();
-                //Toast.makeText(EstudianteActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this.getApplicationContext(), SeleccionarEstudiante.class);
-                intent.putExtra("estudiantes",estudiantes);
-                startActivity(intent);
+                if(SesionPermisos.getPermiso(BTNSELECCIONAR)!=0) {
+                    cargarEstudiantes();
+                    intent = new Intent(this.getApplicationContext(), SeleccionarEstudiante.class);
+                    intent.putExtra("estudiantes", estudiantes);
+                    startActivity(intent);
+                } else {
+                    toast("No tiene permisos para ver todos los estudiantes");
+                }
                 break;
 
         }
+    }
+
+    /*
+    * Metodo para mostrar el toast
+    *
+    */
+    private void toast(String msg){
+        Toast.makeText(EstudianteActivity.this, msg, Toast.LENGTH_SHORT).show();
     }
 
     /*

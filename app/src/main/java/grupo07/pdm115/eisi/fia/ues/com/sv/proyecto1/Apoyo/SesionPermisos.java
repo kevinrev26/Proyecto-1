@@ -17,11 +17,11 @@ import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Permiso;
  */
 public class SesionPermisos implements Serializable{
 
-    private Context mContext;
+    //private Context mContext;
     private boolean loggin;
 
 
-    private SharedPreferences mPreferences;
+    private static SharedPreferences mPreferences;
     private SharedPreferences.Editor mEditor;
 
     public final static String PERMISOS = "permisos";
@@ -31,8 +31,8 @@ public class SesionPermisos implements Serializable{
     //private static SesionPermisos instancia;
 
     public SesionPermisos(Context context) {
-        mContext = context;
-        mPreferences = mContext.getSharedPreferences(PERMISOS,MODE);
+        //mContext = context;
+        mPreferences = context.getSharedPreferences(PERMISOS,MODE);
         mEditor = mPreferences.edit();
     }
 
@@ -47,14 +47,19 @@ public class SesionPermisos implements Serializable{
         mEditor.commit();
     }
 
-    public void checkLogin(){
+    public boolean checkLogin(){
         if (!this.isLogged()) {
+            /*
             Intent i = new Intent(this.mContext, LoginActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             editLoggin();
             mContext.startActivity(i);
-
+            */
+            editLoggin();
+            return false;
+        } else {
+            return true;
         }
     }
 
@@ -68,16 +73,18 @@ public class SesionPermisos implements Serializable{
 
     }
 
-    public int getPermiso(int idOpcion){
+    public static int getPermiso(int idOpcion){
         return mPreferences.getInt(String.valueOf(idOpcion),0);
     }
 
     public void logout(){
         mEditor.clear();
         mEditor.commit();
+        /*
         Intent i = new Intent(mContext, LoginActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(i);
+        */
     }
 }
