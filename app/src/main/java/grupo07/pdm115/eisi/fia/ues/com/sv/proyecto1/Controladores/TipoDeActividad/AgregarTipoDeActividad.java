@@ -58,21 +58,21 @@ public class AgregarTipoDeActividad extends AppCompatActivity implements View.On
             /*if (validarId()){
                 Toast.makeText(AgregarTipoDeActividad.this, "El id debe comenzar con una letra", Toast.LENGTH_SHORT).show();
             } else {*/
-                if (validarHoras()){
-                    Toast.makeText(AgregarTipoDeActividad.this, "El cantidad de horas no es valida", Toast.LENGTH_SHORT).show();
+            if (validarHoras()){
+                Toast.makeText(AgregarTipoDeActividad.this, "El cantidad de horas no es valida", Toast.LENGTH_SHORT).show();
+            } else {
+                Horas=String.valueOf(mHorasText);
+                TipoDeActividad temp = new TipoDeActividad(mIdText.getText().toString().toUpperCase(),
+                        mNombreText.getText().toString(),
+                        mHorasText.getInputType(), ///DUDAS?????
+                        mDescText.getText().toString());
+                if (mTipoActividadDAO.insertarTipoActividad(temp)>0){
+                    Toast.makeText(AgregarTipoDeActividad.this, "TipoActividad Agregado con Exito", Toast.LENGTH_SHORT).show();
+                    this.finish();
                 } else {
-                    Horas=String.valueOf(mHorasText);
-                    TipoDeActividad temp = new TipoDeActividad(mIdText.getText().toString().toUpperCase(),
-                            mNombreText.getText().toString(),
-                            mHorasText.getInputType(), ///DUDAS?????
-                            mDescText.getText().toString());
-                    if (mTipoActividadDAO.insertarTipoActividad(temp)>0){
-                        Toast.makeText(AgregarTipoDeActividad.this, "TipoActividad Agregado con Exito", Toast.LENGTH_SHORT).show();
-                        this.finish();
-                    } else {
-                        Toast.makeText(AgregarTipoDeActividad.this, "Ocurrio algun error al agregar la nueva TipoActividad", Toast.LENGTH_SHORT).show();
-                    }
-               // }//Validar telefono
+                    Toast.makeText(AgregarTipoDeActividad.this, "Ocurrio algun error al agregar la nueva TipoActividad", Toast.LENGTH_SHORT).show();
+                }
+                // }//Validar telefono
             } //Else validar carnet
 
         }//Else validar vacios

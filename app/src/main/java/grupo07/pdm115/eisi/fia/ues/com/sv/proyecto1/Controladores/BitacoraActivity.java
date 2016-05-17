@@ -93,17 +93,42 @@ public class BitacoraActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    private void toast (String msg){
+        Toast.makeText(BitacoraActivity.this, msg, Toast.LENGTH_SHORT).show();}
+
     private void cargarBitacoras(){
         Bitacoras = mBitacoraDAO.getListaBitacoras();
     }
 
 
     private void llenarBitacoras(){
-        if (mBitacoraDAO.insertarBitacora(new Bitacora("AZXC", "10-02-2003", "11/03/2003", "az", "edft", "qwe45")) > 0){
+        Bitacora temp;
+        int validador;
+        temp=new Bitacora();
+        //temp.setId_bitacora(2);
+        temp.setFecha_inicio("10/12/2003");
+        temp.setFecha_fin("30/01/2004");
+        temp.setRevision_coordinador(1);
+        temp.setRevision_tutor(2);
+        temp.setIdentificador_actividad("1234");
+        validador=(int) mBitacoraDAO.insertarBitacora(temp);
+        temp=new Bitacora();
+        //temp.setId_bitacora(2);
+        temp.setFecha_inicio("10/12/2003");
+        temp.setFecha_fin("30/01/2004");
+        temp.setRevision_coordinador(3);
+        temp.setRevision_tutor(4);
+        temp.setIdentificador_actividad("1234s");
+        validador=(int) mBitacoraDAO.insertarBitacora(temp);
+
+        if(validador>0){
+            Toast.makeText(BitacoraActivity.this, "Se Ingresaron Registros", Toast.LENGTH_SHORT).show();
+        }
+        /*if (mBitacoraDAO.insertarBitacora(new Bitacora("AZXC", "10-02-2003", "11/03/2003", "az", "edft", "qwe45")) > 0){
             Toast.makeText(BitacoraActivity.this, "Registro Insertado", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(BitacoraActivity.this, "Error al insertar ", Toast.LENGTH_SHORT).show();
-        }
+        }*/
     }
 
 

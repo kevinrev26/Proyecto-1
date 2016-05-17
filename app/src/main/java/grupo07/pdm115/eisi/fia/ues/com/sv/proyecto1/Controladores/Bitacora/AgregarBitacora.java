@@ -34,7 +34,7 @@ public class AgregarBitacora extends AppCompatActivity  implements View.OnClickL
     }
 
     private void anclarWidgets(){
-        editTextIdBitacora=(EditText) findViewById(R.id.editTextIdentificadorBitacora);
+       // editTextIdBitacora=(EditText) findViewById(R.id.editTextIdentificadorBitacora);
         editTextFechaIn = (EditText) findViewById(R.id.editTextFechaInicio);
         editTextFechaFi = (EditText) findViewById(R.id.editTextFechaFinal);
         editTextRevCoor = (EditText) findViewById(R.id.editTextRevCoordinador);
@@ -59,14 +59,12 @@ public class AgregarBitacora extends AppCompatActivity  implements View.OnClickL
                 Toast.makeText(AgregarBitacora.this, "El telefono no es valido", Toast.LENGTH_SHORT).show();
             } else {*/
 
-                Bitacora temp = new Bitacora();
-                temp.setId_bitacora(editTextIdBitacora.getText().toString());
-                temp.setFecha_inicio(editTextFechaIn.getText().toString());
-                temp.setFecha_fin(editTextFechaFi.getText().toString());
-                temp.setRevision_coordinador(editTextRevCoor.getText().toString());
-                temp.setRevision_tutor(editTextRevTut.getText().toString());
-                temp.setIdentificador_actividad(editTextIdTipA.getText().toString());
-
+                Bitacora temp = new Bitacora(
+                               editTextFechaIn.getText().toString(),
+                               editTextFechaFi.getText().toString(),
+                               Integer.parseInt(editTextRevCoor.getText().toString()),
+                               Integer.parseInt(editTextRevTut.getText().toString()),
+                               editTextIdTipA.getText().toString());
                 if (mBitacoraDAO.insertarBitacora(temp)>0){
                     Toast.makeText(AgregarBitacora.this, "Bitacora agregada con exito", Toast.LENGTH_SHORT).show();
                     this.finish();
@@ -81,7 +79,7 @@ public class AgregarBitacora extends AppCompatActivity  implements View.OnClickL
 
     //Validaciones
     public boolean validarVacios(){
-        if (editTextIdBitacora.getText().toString().equals("") ||
+        if (/*editTextIdBitacora.getText().toString().equals("") ||*/
                 editTextFechaIn.getText().toString().equals("") ||
                 editTextFechaFi.getText().toString().equals("") ||
                 editTextRevCoor.getText().toString().equals("") ||

@@ -57,7 +57,7 @@ public class EliminarBitacora extends AppCompatActivity implements AdapterView.O
             //Toast.makeText(EliminarEstudiante.this, "Seleccionado: "+e.getCarnet(), Toast.LENGTH_SHORT).show();
             final AlertDialog show = new AlertDialog.Builder(this)
                     .setTitle("Eliminar Bitacora")
-                    .setMessage("Se eliminara a: " + e.getId_bitacora() + ", ¿Esta seguro?")
+                    .setMessage("Se eliminara a: " + e.getFecha_inicio() + ", ¿Esta seguro?")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             if (mBitacoraDAO.eliminarBitacora(e.getId_bitacora()) == 1) {

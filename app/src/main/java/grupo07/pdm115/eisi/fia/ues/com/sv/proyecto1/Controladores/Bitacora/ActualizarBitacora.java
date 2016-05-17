@@ -49,7 +49,7 @@ public class ActualizarBitacora extends AppCompatActivity implements View.OnClic
     }
 
     private void enlazarWidgets(){
-        editIdentificador = (EditText) findViewById(R.id.editTextActutalizarIdentificadorBitacora);
+        mSpinner = (Spinner) findViewById(R.id.spinnerActualizarBitacora);
         editFechaInicio = (EditText) findViewById(R.id.editTextActutalizarFechaInicio);
         editFechaFin = (EditText) findViewById(R.id.editTextActutalizarFechaFinal);
         editRevisionCoor = (EditText) findViewById(R.id.editTextActutalizarRevisionCoordinador);
@@ -73,7 +73,7 @@ public class ActualizarBitacora extends AppCompatActivity implements View.OnClic
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 c = (Bitacora) parent.getItemAtPosition(position);
-                editIdentificador.setText(c.getId_bitacora());
+                //editIdentificador.setText(c.getId_bitacora());
                 editFechaInicio.setText(c.getFecha_inicio());
                 editFechaFin.setText(c.getFecha_fin());
                 editRevisionCoor.setText(c.getRevision_coordinador());
@@ -95,11 +95,11 @@ public class ActualizarBitacora extends AppCompatActivity implements View.OnClic
                 .setMessage("Se actualizara: " + c.getId_bitacora() + ", ¿Esta seguro?")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        c.setId_bitacora(editIdentificador.getText().toString());
                         c.setFecha_inicio(editFechaInicio.getText().toString());
                         c.setFecha_fin(editFechaFin.getText().toString());
-                        c.setRevision_coordinador(editRevisionCoor.getText().toString());
-                        c.setRevision_tutor(editRevTutor.getText().toString());
+                       // c.setId_bitacora(Integer.parseInt(editIdentificador.getText().toString()));
+                        c.setRevision_coordinador(Integer.parseInt(editRevisionCoor.getText().toString()));
+                        c.setRevision_tutor(Integer.parseInt(editRevTutor.getText().toString()));
                         c.setIdentificador_actividad(editIdTipoAct.getText().toString());
 
                         if (mBitacoraDAO.actualizarBitacora(c) == 1) {
@@ -121,7 +121,7 @@ public class ActualizarBitacora extends AppCompatActivity implements View.OnClic
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         c = (Bitacora) parent.getItemAtPosition(position);
-        editIdentificador.setText(c.getId_bitacora());
+        //editIdentificador.setText(c.getId_bitacora());
         editFechaInicio.setText(c.getFecha_inicio());
         editFechaFin.setText(c.getFecha_fin());
         editRevisionCoor.setText(c.getRevision_coordinador());

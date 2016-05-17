@@ -39,11 +39,11 @@ public class BitacoraDAO extends MasterDAO {
     public static String crearTablaBitacora(){
 
         return "CREATE TABLE " + TABLA_BITACORA + " (" +
-                IDENTIFICADOR_BITACORA + " TEXT(5) NOT NULL, " +
+                IDENTIFICADOR_BITACORA + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 FECHA_INICIO + " TEXT(10) NOT NULL, " +
                 FECHA_FIN + " TEXT(10) NOT NULL, " +
-                REVI_COORDINADOR + " TEXT(5) NOT NULL, " +
-                REVI_TUTOR + " TEXT(5) NOT NULL, " +
+                REVI_COORDINADOR + " INTEGER NOT NULL, " +
+                REVI_TUTOR + " INTEGER NOT NULL, " +
                 ID_TIPO_ACTIVIDAD + " TEXT(5) NOT NULL, " +
                 "PRIMARY KEY (" + IDENTIFICADOR_BITACORA + "), CONSTRAINT " +
                 "fk_bitacora_coordinador FOREIGN KEY (" + REVI_COORDINADOR + ") " +
@@ -60,7 +60,7 @@ public class BitacoraDAO extends MasterDAO {
 
     public long insertarBitacora(Bitacora bitacora){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(IDENTIFICADOR_BITACORA,bitacora.getId_bitacora());
+        //contentValues.put(IDENTIFICADOR_BITACORA,bitacora.getId_bitacora());
         contentValues.put(FECHA_INICIO,bitacora.getFecha_inicio());
         contentValues.put(FECHA_FIN, bitacora.getFecha_fin());
         contentValues.put(REVI_COORDINADOR,bitacora.getRevision_coordinador());
@@ -87,9 +87,9 @@ public class BitacoraDAO extends MasterDAO {
 
     }
 
-    public int eliminarBitacora(String id_tipo_actividad){
+    public int eliminarBitacora(int id){
         String where = IDENTIFICADOR_BITACORA + "= ?";
-        String[] whereArgs={id_tipo_actividad};
+        String[] whereArgs={String.valueOf(id)};
 
         return mDatabase.delete(TABLA_BITACORA, where, whereArgs);
     }
@@ -101,11 +101,11 @@ public class BitacoraDAO extends MasterDAO {
         } else {
             try {
                 return new Bitacora(
-                        cursor.getString(ID_BITACORA_COL),
+
                         cursor.getString(FECH_INICIO_COL),
                         cursor.getString(FECH_FINALE_COL),
-                        cursor.getString(REV_COORDINADOR_COL),
-                        cursor.getString(REV_TUTOR_COL),
+                        cursor.getInt(REV_COORDINADOR_COL),
+                        cursor.getInt(REV_TUTOR_COL),
                         cursor.getString(ID_TIPOACT_COL)
                 );
             } catch (Exception e){
@@ -117,9 +117,9 @@ public class BitacoraDAO extends MasterDAO {
     }
 
 
-    public Bitacora getBitacora(String id){
+    public Bitacora Bitacora(int id){
         String where = IDENTIFICADOR_BITACORA + "= ?";
-        String[] whereArgs = {id};
+        String[] whereArgs = {String.valueOf(id)};
         Cursor cursor = mDatabase.query(TABLA_BITACORA,null,where,whereArgs,null,null,null);
         cursor.moveToFirst();
         Bitacora temp = getBitacoraPorCursor(cursor);

@@ -54,8 +54,8 @@ public class TipoDeActividadDAO  extends MasterDAO
 
         contentValues.put(ID_TIPO_ACTIVIDAD,tipoActividad.getId_tipo_actividad());
         contentValues.put(NOMBRE_ACTIVIDAD,tipoActividad.getNombre_actividad());
-        contentValues.put(HORAS,tipoActividad.getCantidad_horas()); //dudas ahi ?????
-        contentValues.put(DESCRIPCION,tipoActividad.getDescripcion());
+        contentValues.put(HORAS, tipoActividad.getCantidad_horas()); //dudas ahi ?????
+        contentValues.put(DESCRIPCION, tipoActividad.getDescripcion());
 
         return mDatabase.insert(TIPOACTIVIDAD_TABLE,null,contentValues);
     }

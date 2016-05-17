@@ -100,5 +100,3 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
         }
     }
 }
-
-
