@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Progetto 1 - Gruppo 07 - PDM115</string>
+    <string name="AppGrupo">Gruppo 07: Programmazione per Dispositivi Mobili</string>
+    <!--Titulos para las activities-->
+    <string name="MainActivity">Menu Principale</string>
+    <string name="Tabla_Coordinador"> Coordinatore Articoli</string>
+    <string name="Tabla_Estudiante">Studente Articoli</string>
+    <string name="AgregarEstudiante">Aggiungere Nuovo Studente</string>
+    <string name="VerTodosEstudiantes">Studente Iscritti</string>
+    <string name="EliminarEstudiantes">Cancellare Studente</string>
+    <string name="ActualizarEstudiantes">Aggiornare Studente</string>
+    <string name="AgregarCoordinador">Aggiungi Nuovo Coordinatore</string>
+    <string name="VerTodosCoordinadores">Coordinatori Iscritti</string>
+    <string name="EliminarCoordinadores">Cancellare Coordinatore</string>
+    <string name="ActualizarCoordinadores">Aggiornare Coordinatore</string>
+
+    <string name="Tabla_Bitacora"> Chiesuola Articoli</string>
+    <string name="Tabla_TipoDeActividad">Tipi di Attività Articoli</string>
+    <string name="AgregarTipoDeActividad">Aggiungere Nuovo Tipo di Attività</string>
+    <string name="VerTodosTiposDeActividad">Tipi di Attività Iscritti </string>
+    <string name="EliminarTipoDeActividades">Cancellare un Tipo di Attività</string>
+    <string name="ActualizarTiposDeActividades">Aggiornare un Tipo di Attività</string>
+    <string name="AgregarBitacora">Aggiungere Nuova Chiesuola</string>
+    <string name="VerTodasBitacoras">Chiesuole Iscritte</string>
+    <string name="EliminarBitacora">Cancellare Chiesuola</string>
+    <string name="ActualizarBitacora">Aggiornare Chiesuola</string>
+
+    <string name="Tabla_Modalidad"> Modalità Articoli</string>
+    <string name="Tabla_Tutor">Precettore Articoli</string>
+    <string name="AgregarTutor">Aggiungere Nuovo Precettore</string>
+    <string name="VerTodosTutores">Precettori Iscritti</string>
+    <string name="EliminarTutor">Cancellare Precettore</string>
+    <string name="ActualizarTutor">Aggiornare Precettore</string>
+    <string name="AgregarModalidad">Aggiungi Nuova Modalità</string>
+    <string name="VerTodosModalidades">Modalità Iscritti</string>
+    <string name="EliminarModalidad">Cancellare Modalità</string>
+    <string name="ActualizarModalidad">Aggiornare Modalità</string>
+
+    <string name="LoginActivity">Avanti</string>
+    <!--Nombre de la clase, con su descripcion.
+        Se implementa de esta forma para luego traducir
+        cada descripcion-->
+    <string name="CoordinadorActivity">
+        Navigare verso Coordinatore Articoli
+    </string>
+    <string name="EstudianteActivity">
+        Studente Menu per Gestire suoi Articoli
+    </string>
+    <string name="BitacoraActivity">
+        Gestire Tutte le Chiesuole
+    </string>
+    <string name="TipoDeActividadActivity">
+        Gestire le Opzioni Tipo di Attività
+    </string>
+    <string name="InstitucionActivity">
+        Istituzione Articoli
+    </string>
+    <string name="ServicioSocialActivity">
+        Gestire tutti Servizi Sociali
+    </string>
+    <string name="ModalidadActivity">
+       Modalità Tavola
+    </string>
+    <string name="TutorActivity">
+        Navigare verso Precettore Menu
+    </string>
+
+    <!--Valores para el dialogo de la version de la base de datos-->
+    <string name="AlertaBaseDeDatos">Per le versioni precedenti 3.6. Questa Aplicazione non funziona correttamente </string>
+    <string name="Version">Dispositivi\' versione del database: </string>
+
+
+    <!--Botones de las opciones para realizar el crud Estudiante-->
+    <string name="llenarBD">Riempire la database</string>
+    <string name="llenarBDBitacora">Riempire la Chiesuola</string>
+    <!--Botones para EstudianteActivity-->
+    <string name="CrearEstudiante">Aggiungere uno Studente</string>
+    <string name="ActualizarEstudiante">Aggiornare uno Student Esistente</string>
+    <string name="EliminarEstudiante">Cancellare uno Studente Iscritto</string>
+    <string name="VerEstudiantes">Vedere Tutti Gli Studenti</string>
+
+
+    <!--Botones de las opciones para realizar el crud bITACORA-->
+    <string name="LLENARBD">Riempire arcivi</string>
+    <!--Botones para TipoDeActividadActivity-->
+    <string name="CrearTipoDeActividad">Aggiungere Nuovo Tipo di Attività</string>
+    <string name="ActualizarTipoDeActividad">Aggiornare Tipo di Attività Esistente</string>
+    <string name="EliminarTipoDeActividad">Cancellare Tipo di Attività</string>
+    <string name="VerTipoDeActividades">Vedere Tutti Gli Tipi di Attività</string>
+
+    <!--Botones de las opciones para realizar el crud coordinador-->
+    <!--Botones para CoordinadorActivity-->
+    <string name="CrearCoordinador">Aggiungere Nuovo Coordinatore</string>
+    <string name="ActualizarCoordinador">Aggiornare Coordinatore Esistente</string>
+    <string name="EliminarCoordinador">Cancellare un Coordinatore</string>
+    <string name="VerCoordinadores">Vedere Tutti Gli Coordinatori</string>
+
+    <!--Botones de las opciones para realizar el crud de bitacora-->
+    <!--Botones para BitacoraActivity-->
+    <string name="CrearBitacora">Aggiungere Nuova Chiesuola </string>
+    <string name="Actualizarbitacora">Aggiornare una Chiesuola Esistente </string>
+    <string name="EliminaBitacora">Cancellare una Chiesuola</string>
+    <string name="VerBitacora">Vedere Tutti Le Chiesuole</string>
+
+    <!--Opciones de la activity AgregarEstudiante-->
+    <string name="CarnetEstudiante">Studente ID</string>
+    <string name="NombreEstudiante">Nome</string>
+    <string name="EmailEstudiante">Email</string>
+    <string name="TelEstudiante">Studente Telefono</string>
+    <string name="CarreraEstudiante">Carriera</string>
+    <string name="AgregarBtn">Aggiungi Nuovo Studente</string>
+
+    <!--Opciones de la activity AgregarTipoDeActividad-->
+    <string name="IdTipoActividad">Id</string>
+    <string name="NomActividad">Nome</string>
+    <string name="CantHoras">Ore</string>
+    <string name="DescActividad">Descrizione</string>
+    <string name="AgregBtn">Aggiungi Nuovo Tipo di Attività</string>
+
+
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarEstudianteText">Selezionate un Articolo a Cancellare </string>
+    <string name="SeleccionarEstudiantes">Studenti Iscritti</string>
+    <string name="ActualizarEstudianteActivity">Selezionate uno Studente a Aggiornare</string>
+    <string name="BotonActualizarEstudiante">Aggiorna Studente</string>
+
+
+    <!--Otros elementos para activities tipo de actividad-->
+    <string name="EliminarTipoDeActividadText">Selezionate un Articolo a Cancellare </string>
+    <string name="SeleccionarTipoActividad">Tipo di Attività Iscritti</string>
+    <string name="ActualizarTipoActividadActivity">Selezionate un Tipo di Attività a Aggiornare</string>
+    <string name="BotonActualizarTipoActividad">Agiorna Tipo di Attività</string>
+
+    <!--Items para la activity Agregar estudiante-->
+    <string-array name="carreras_array">
+        <item>Ingegneria Civile</item>
+        <item>Ingegneria Industriale</item>
+        <item>Ingegneria Elettrica</item>
+        <item>Ingegneria Alimentare</item>
+        <item>Ingegneria Chimica</item>
+        <item>Ingegneria Dei Sistemi</item>
+        <item>Architettura</item>
+        <item>Ingegneria Meccanica</item>
+    </string-array>
+
+    <!--Opciones para la activity AgregarBitacora-->
+    <string name="IdentidicadorBitacora">Id</string>
+    <string name="FechaInicioBitacora">Data D'inizio</string>
+    <string name="FechaFinBitacota">Data Di Fine</string>
+    <string name="RevisionCoordinador">Coordinatore</string>
+    <string name="RevisonTutor">Precettore</string>
+    <string name="IdentificadorTipActividad">Id </string>
+    <string name="BotonAgregarBitacora">Aggiungere Nuovo</string>
+    <!--Demas elementos para activities coordinador-->
+    <string name="EliminarBitacoraText">Selezionate una Chiesuola a Cancellare</string>
+    <string name="SeleccionarBitacoras">Chiesuole Iscritte</string>
+    <string name="ActualizarBitacoraActivity">Selezionate una Chiesuola a Aggiornare</string>
+    <string name="BotonActualizarBitacora">Aggiorna Chiesuola</string>
+
+    <!--Opciones para la activity AgregarCoordinador-->
+    <string name="NombreCoordinador">Nome</string>
+    <string name="EmailCoordinador">Email</string>
+    <string name="TelCoordinador">Coordinatore telefono</string>
+    <string name="BotonAgregarCoordinador">Aggiungere Nuovo</string>
+    <!--Demas elementos para activities coordinador-->
+    <string name="EliminarCoordinadorText">Selezionate un Coordinatore a Cancellare</string>
+    <string name="SeleccionarCoordinadores">Coordinatori Iscritti</string>
+    <string name="ActualizarCoordinadorActivity">Selezionate un Articolo a Aggiornare</string>
+    <string name="BotonActualizarCoordinador">Aggiorna Coordinatore</string>
+
+    <!--Botones de las opciones para realizar el crud-->
+    <string name="llenarBDIns">Riempire Istituzione</string>
+    <!--Botones para InstitucionActivity-->
+    <string name="CrearInstitucion">Aggiungere Nuova Istituzione</string>
+    <string name="ActualizarInstitucion">Aggiornare una Istituzione Esistente</string>
+    <string name="EliminarInstitucion">Cancella una Istituzione degli arcivi</string>
+    <string name="VerInstitucion">Vedere Tutti Gli Istituzioni</string>
+
+    <!--Botones de las opciones para realizar el crud-->
+    <string name="llenarBDSV">Riempire Arcivi</string>
+    <!--Botones para ServicioSocialActivity-->
+    <string name="CrearServicioSocial">Aggiungere Nuovo Servizio Sociale</string>
+    <string name="ActualizarServicioSocial">Aggiornare un Servizio Sociale Esistente</string>
+    <string name="EliminarServicioSocial">Cancellare un Servizio Sociale</string>
+    <string name="VerServiciosSociales">Vedere Tutti Gli Servizi Sociali</string>
+
+    <string name="Tabla_Institucion">Istituzione Opzioni</string>
+    <string name="AgregarInstitucion">Aggiungere Nuova Istituzione</string>
+    <string name="VerTodasInstituciones">Istituzioni Iscritti</string>
+    <string name="EliminarInstituciones">Cancellare una Istituzione</string>
+    <string name="ActualizarInstituciones">Aggiornare una Istituzione</string>
+    <!--Opciones de la activity AgregarInstitucion-->
+    <string name="IdInstitucion">id</string>
+    <string name="NombreInstitucion">Nome</string>
+    <string name="EmailInstitucion">Email</string>
+    <string name="NombreEncargado">Gerente Nome</string>
+    <string name="Telefono1">Telefono 1</string>
+    <string name="Telefono2">Telefono 2</string>
+    <string name="AgregarIns">Aggiungere Nuova Istituzione</string>
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarInstitucionText">Selezionate un Articolo a Cancellare</string>
+    <string name="SeleccionarInstituciones">Istituzioni nel Sistema </string>
+    <string name="ActualizarInstitucionActivity">Selezionate una Istituzione a Aggiornare </string>
+    <string name="BotonActualizarInstitucion">Aggiorna Istituzione</string>
+
+    <string name="Tabla_Servicio_Social">Servizio Sociale Articoli</string>
+    <string name="AgregarServicioSocial">Aggiungere Nuovo Servizio Sociale</string>
+    <string name="VerTodosServiciosSociales">Servizi Sociali nel Sistema</string>
+    <string name="EliminarServiciosSociales">Cancella un Servizio Sociale</string>
+    <string name="ActualizarServiciosSociales">Aggiorna Servizio Sociale</string>
+    <!--Opciones de la activity AgregarEstudiante-->
+    <string name="IdServicio">Id</string>
+    <string name="Titulo">Titolo</string>
+    <string name="Descripcion">Descrizione</string>
+    <string name="Disponible">Disponibilità</string>
+    <string name="IdentificadorInstitucion">Istituzione ID</string>
+    <string name="IdentificadorModalidad">Modalità ID</string>
+    <string name="IdentificadorTutor">Precettore ID</string>
+    <string name="CoordinadorAprobado">Coordinatore</string>
+    <string name="AgregarSS">Aggiungere Servizio Sociale</string>
+    <!--Demas elementos para activities estudiante-->
+    <string name="EliminarServicioSocialText">Selezionate un Servizio Sociale a Cancellare</string>
+    <string name="SeleccionarServicioSocial">Servizi sociali nel sistema</string>
+    <string name="ActualizarServicioSocialActivity">Selezionate un Servizio Sociale a Aggiornare</string>
+    <string name="BotonActualizarServicioSocial">Aggiorna Servizio Sociale</string>
+
+    <!--Botones de las opciones para realizar el crud Tutor-->
+    <string name="llenarBDTutor">Riempire database</string>
+    <!--Botones para TutorActivity-->
+    <string name="CrearTutor">Aggiungere Nuovo Precettore</string>
+    <string name="ActualizarTutorActivity">Aggiorna un Precettore Esistente</string>
+    <string name="EliminarTutorActivity">Cancella un Precettore Esistente</string>
+    <string name="VerTutores">Verere Tutti Gli Precettori</string>
+    <!--Opciones para la activity AgregarTutor-->
+    <string name="NombreTutor">Nome</string>
+    <string name="EmailTutor">Email</string>
+    <string name="TelTutor">Precettore telefono</string>
+    <string name="BotonAgregarTutor">Aggiungi Nuovo</string>
+    <!--Demas elementos para activities modalidad-->
+    <string name="EliminarTutorText">Selezionate un Precettore a Cancellare </string>
+    <string name="SeleccionarTutores">Precettori nel Sistema </string>
+    <string name="BotonActualizarTutor">Aggiorna Precettore</string>
+
+    <!--Botones de las opciones para realizar el crud Modalidad-->
+    <string name="llenarBDModalidad">Riempire Arcivi</string>
+    <!--Botones para ModalidadActivity-->
+    <string name="CrearModalidad">Aggiungere Nuovo Modalità</string>
+    <string name="ActualizarModalidadActivity">Aggiornare Nuova Modalità</string>
+    <string name="EliminarModalidadActivity">Cancellare Modalità Iscritta</string>
+    <string name="VerModalidades">Vedete Tutte Le Modalità</string>
+    <!--Opciones para la activity AgregarModalidad-->
+    <string name="NombreModalidad">Modalità nome</string>
+    <string name="BotonAgregarModalidad">Aggiungere Nuova</string>
+    <!--Demas elementos para activities modalidad-->
+    <string name="EliminarModalidadText">Selezionate una Modalità a Cancellare</string>
+    <string name="SeleccionarModalidades">Vedete Tutte Le Modalità</string>
+    <string name="BotonActualizarModalidades">Aggiorna Modalità</string>
+
+
+    <string name="NombreUsuarioLogin">Nome Utente</string>
+    <string name="PasswordLogin">Password</string>
+    <string name="BtnIngresar">Avanti</string>
+    <string name="BtnSalir">Uscita</string>
+
+    <!--Menu del sistema-->
+    <string name="menu">Disconnettersi</string>
+</resources>

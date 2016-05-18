@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.BitacoraDAO;
@@ -16,6 +17,7 @@ public class AgregarBitacora extends AppCompatActivity  implements View.OnClickL
     //wdigets
     private EditText editTextIdBitacora, editTextFechaIn, editTextFechaFi, editTextRevCoor, editTextRevTut, editTextIdTipA;
     private Button BTNAgregar;
+    private Spinner mSpinnerCoordinador, mSpinnerTutor;
 
     //DAO
     BitacoraDAO mBitacoraDAO;
