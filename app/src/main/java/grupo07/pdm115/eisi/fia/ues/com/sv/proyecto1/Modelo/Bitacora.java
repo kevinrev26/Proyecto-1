@@ -19,16 +19,8 @@ public class Bitacora implements Serializable
     //private String id_tipoActividad;//Relacion con la tabla tipo de actividad
 
 
-    public Bitacora(String fecha_inicio, String fecha_fin, int revision_coordinador, int revision_tutor, String identificador_actividad) {
-        //this.id_bitacora = id_bitacora;
-        this.fecha_inicio = fecha_inicio;
-        this.fecha_fin = fecha_fin;
-        this.revision_coordinador = revision_coordinador;
-        this.revision_tutor = revision_tutor;
-        this.identificador_actividad = identificador_actividad;
-    }
-
     public Bitacora(int id_bitacora, String fecha_inicio, String fecha_fin, int revision_coordinador, int revision_tutor, String identificador_actividad) {
+
         this.id_bitacora = id_bitacora;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
@@ -118,7 +110,6 @@ public class Bitacora implements Serializable
     @Override
     public String toString() {
         return "Bitacora{" +
-                "id_bitacora='" + id_bitacora + '\'' +
                 ", fecha_inicio='" + fecha_inicio + '\'' +
                 ", fecha_fin='" + fecha_fin + '\'' +
                 ", revision_coordinador='" + revision_coordinador + '\'' +

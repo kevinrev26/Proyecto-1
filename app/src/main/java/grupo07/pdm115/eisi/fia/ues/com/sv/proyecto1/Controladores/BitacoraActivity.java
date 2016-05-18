@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Bitacora.ActualizarBitacora;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Bitacora.AgregarBitacora;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Bitacora.EliminarBitacora;
+import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Controladores.Bitacora.SeleccionarBitacora;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.DAO.BitacoraDAO;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo.Bitacora;
 import grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.R;
@@ -84,10 +85,9 @@ public class BitacoraActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btnVerBitacoras:
                 cargarBitacoras();
-                for (Bitacora c : Bitacoras){
-                    Log.i(TAG, c.toString());
-                }
-                Toast.makeText(BitacoraActivity.this, "Revisar LOGCAT", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this.getApplicationContext(), SeleccionarBitacora.class);
+                intent.putExtra("bitacoras",Bitacoras);
+                startActivity(intent);
                 break;
 
         }
@@ -109,16 +109,16 @@ public class BitacoraActivity extends AppCompatActivity implements View.OnClickL
         temp.setFecha_inicio("10/12/2003");
         temp.setFecha_fin("30/01/2004");
         temp.setRevision_coordinador(1);
-        temp.setRevision_tutor(2);
-        temp.setIdentificador_actividad("1234");
+        temp.setRevision_tutor(1);
+        temp.setIdentificador_actividad("0001");
         validador=(int) mBitacoraDAO.insertarBitacora(temp);
         temp=new Bitacora();
         //temp.setId_bitacora(2);
         temp.setFecha_inicio("10/12/2003");
         temp.setFecha_fin("30/01/2004");
-        temp.setRevision_coordinador(3);
-        temp.setRevision_tutor(4);
-        temp.setIdentificador_actividad("1234s");
+        temp.setRevision_coordinador(1);
+        temp.setRevision_tutor(1);
+        temp.setIdentificador_actividad("0001");
         validador=(int) mBitacoraDAO.insertarBitacora(temp);
 
         if(validador>0){

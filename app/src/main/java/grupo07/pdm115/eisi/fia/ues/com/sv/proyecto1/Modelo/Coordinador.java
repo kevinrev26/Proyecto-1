@@ -61,8 +61,7 @@ public class Coordinador implements Serializable {
 
     @Override
     public String toString() {
-        return ", id:" + id_coordinador +
-                "Nombre: " + nombre +
+        return "Nombre: " + nombre +
                 ", telefono: " + telefono;
 
     }

@@ -34,7 +34,6 @@ public class AgregarModalidad extends AppCompatActivity implements View.OnClickL
     }
 
     private void enlazarWidgets(){
-        editTextIdentificador = (EditText) findViewById(R.id.editTextIdentificadorModalidad);
         editTextNombre = (EditText) findViewById(R.id.editTextNombreModalidad);
 
         btnAgregar = (Button) findViewById(R.id.btnAgregarNuevaModalidad);
@@ -51,9 +50,6 @@ public class AgregarModalidad extends AppCompatActivity implements View.OnClickL
         if (!validarVacios()){
             Toast.makeText(AgregarModalidad.this, "Algun campo esta vacio,", Toast.LENGTH_SHORT).show();
         } else {
-            if (validarIdentificador()){
-                Toast.makeText(AgregarModalidad.this, "El identificador no es valido", Toast.LENGTH_SHORT).show();
-            } else {
 
                 Modalidad temp = new Modalidad();
                 temp.setNombre(editTextNombre.getText().toString());
@@ -64,7 +60,7 @@ public class AgregarModalidad extends AppCompatActivity implements View.OnClickL
                 } else {
                     Toast.makeText(AgregarModalidad.this, "Ocurrio algun problema al agregar", Toast.LENGTH_SHORT).show();
                 }
-            }
+
         }
 
     }
@@ -72,8 +68,7 @@ public class AgregarModalidad extends AppCompatActivity implements View.OnClickL
 
     //Validaciones
     public boolean validarVacios(){
-        if (editTextIdentificador.getText().toString().equals("") ||
-                editTextNombre.getText().toString().equals("")){
+        if (editTextNombre.getText().toString().equals("")){
             return false;
 
         } else {
@@ -81,11 +76,4 @@ public class AgregarModalidad extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    public boolean validarIdentificador(){
-        if (editTextIdentificador.getText().length() < 3){
-            return true;
-        } else {
-            return false;
-        }
-    }
 }

@@ -33,4 +33,9 @@ public class Modalidad implements Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public String toString() {
+        return
+                "Nombre: " + nombre;
+    }
 }

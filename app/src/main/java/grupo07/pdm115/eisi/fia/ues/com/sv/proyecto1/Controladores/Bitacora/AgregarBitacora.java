@@ -59,12 +59,12 @@ public class AgregarBitacora extends AppCompatActivity  implements View.OnClickL
                 Toast.makeText(AgregarBitacora.this, "El telefono no es valido", Toast.LENGTH_SHORT).show();
             } else {*/
 
-                Bitacora temp = new Bitacora(
-                               editTextFechaIn.getText().toString(),
-                               editTextFechaFi.getText().toString(),
-                               Integer.parseInt(editTextRevCoor.getText().toString()),
-                               Integer.parseInt(editTextRevTut.getText().toString()),
-                               editTextIdTipA.getText().toString());
+                Bitacora temp = new Bitacora();
+                               temp.setFecha_inicio(editTextFechaIn.getText().toString());
+                               temp.setFecha_fin(editTextFechaFi.getText().toString());
+                               temp.setRevision_coordinador(Integer.parseInt(editTextRevCoor.getText().toString()));
+                               temp.setRevision_tutor(Integer.parseInt(editTextRevTut.getText().toString()));
+                               temp.setIdentificador_actividad(editTextIdTipA.getText().toString());
                 if (mBitacoraDAO.insertarBitacora(temp)>0){
                     Toast.makeText(AgregarBitacora.this, "Bitacora agregada con exito", Toast.LENGTH_SHORT).show();
                     this.finish();

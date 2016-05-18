@@ -111,11 +111,9 @@ public class ModalidadActivity extends AppCompatActivity implements View.OnClick
         Modalidad temp;
         int validador;
         temp = new Modalidad();
-        temp.setIdModalidad(123);
         temp.setNombre("Pasantia");
         validador = (int) ModDAO.insertarModalidad(temp);
         temp = new Modalidad();
-        temp.setIdModalidad(321);
         temp.setNombre("Ayudantia");
         validador += (int) ModDAO.insertarModalidad(temp);
 

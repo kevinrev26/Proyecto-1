@@ -39,7 +39,7 @@ public class CustomAdapterModalidad extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.listview_row_modalidad,parent,false);
         }
 
-        TextView textNombre = (TextView) convertView.findViewById(R.id.editTextNombreModalidad);
+        TextView textNombre = (TextView) convertView.findViewById(R.id.textViewNombreModalidad);
 
         Modalidad temp = lista.get(position);
 

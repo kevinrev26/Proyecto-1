@@ -39,9 +39,9 @@ public class CustomAdapterTutor extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.listview_row_tutor,parent,false);
         }
 
-        TextView textNombre = (TextView) convertView.findViewById(R.id.editTextNombreTutor);
-        TextView textEmail = (TextView) convertView.findViewById(R.id.editTextCorreoTutor);
-        TextView textTelefono = (TextView) convertView.findViewById(R.id.editTextTelefonoTutor);
+        TextView textNombre = (TextView) convertView.findViewById(R.id.textViewNombreTutor);
+        TextView textEmail = (TextView) convertView.findViewById(R.id.textViewEmailTutor);
+        TextView textTelefono = (TextView) convertView.findViewById(R.id.textViewTelefonoTutor);
 
         Tutor temp = lista.get(position);
 

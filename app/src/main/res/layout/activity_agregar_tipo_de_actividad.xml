@@ -88,11 +88,9 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:ems="10"
             android:id="@+id/desctext"
-            android:layout_column="7"
-            android:maxLength="8"/>
+            android:layout_column="7" />
+
     </TableRow>
 
 

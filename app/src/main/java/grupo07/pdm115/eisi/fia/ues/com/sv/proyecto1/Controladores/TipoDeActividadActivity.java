@@ -86,14 +86,14 @@ public class TipoDeActividadActivity extends AppCompatActivity implements View.O
             case R.id.btnSeleccionarTP:
                 cargarTipoActividad();
                 intent = new Intent(this.getApplicationContext(), SeleccionarTipoDeActividad.class);
-                intent.putExtra("tipos de actividades", tipoActividad);
+                intent.putExtra("tipos_de_actividades", tipoActividad);
                 startActivity(intent);
                 break;
         }
     }
 
     private void llenarDB() {
-        if (mTipoDeActividadDAO.insertarTipoActividad(new TipoDeActividad("ABCDf", "Limpieza", 400, "Limpieza Impresora")) > 0) {
+        if (mTipoDeActividadDAO.insertarTipoActividad(new TipoDeActividad("0001", "Limpieza", 400, "Limpieza Impresora")) > 0) {
             Toast.makeText(TipoDeActividadActivity.this, "Registro Isertado con Exito", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(TipoDeActividadActivity.this, "Error al insertar", Toast.LENGTH_SHORT).show();

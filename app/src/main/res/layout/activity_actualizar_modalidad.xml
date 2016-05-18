@@ -38,24 +38,6 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Identificador modalidad"
-                android:id="@+id/textView25" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/editTextActualizarIdentificadorModalidad"
-                android:layout_column="5" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:id="@+id/textView26"
                 android:layout_column="0"

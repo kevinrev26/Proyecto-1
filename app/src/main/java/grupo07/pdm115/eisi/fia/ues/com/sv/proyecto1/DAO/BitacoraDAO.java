@@ -101,7 +101,7 @@ public class BitacoraDAO extends MasterDAO {
         } else {
             try {
                 return new Bitacora(
-
+                        cursor.getInt(ID_BITACORA_COL),
                         cursor.getString(FECH_INICIO_COL),
                         cursor.getString(FECH_FINALE_COL),
                         cursor.getInt(REV_COORDINADOR_COL),
