@@ -146,7 +146,8 @@
 
     <!--Opciones para la activity AgregarBitacora-->
     <string name="IdentidicadorBitacora">Id</string>
-    <string name="FechaInicioBitacora">Data D'inizio</string>
+    <string name="FechaInicioBitacora">Data Dinizio</string>
+    <!--<string name="FechaInicioBitacora">Data Dinizio</string>-->
     <string name="FechaFinBitacota">Data Di Fine</string>
     <string name="RevisionCoordinador">Coordinatore</string>
     <string name="RevisonTutor">Precettore</string>
