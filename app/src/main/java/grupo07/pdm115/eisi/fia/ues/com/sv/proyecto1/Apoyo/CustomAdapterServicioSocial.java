@@ -55,7 +55,6 @@ public class CustomAdapterServicioSocial extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.listview_row_servicio_social,parent,false);
         }
 
-        TextView mIdSSText = (TextView) convertView.findViewById(R.id.textViewIdSS);
         TextView mTituloSSText = (TextView) convertView.findViewById(R.id.textViewTituloSS);
         TextView mDesSSText = (TextView) convertView.findViewById(R.id.textViewDesSS);
         TextView mDispSSText= (TextView) convertView.findViewById(R.id.textViewDispSS);
@@ -66,7 +65,6 @@ public class CustomAdapterServicioSocial extends BaseAdapter {
 
         ServicioSocial temp = lista.get(position);
 
-        mIdSSText.setText(temp.getIdServicio());
         mTituloSSText.setText(temp.getTitulo());
         mDesSSText.setText(temp.getDescripcion());
         mDispSSText.setText(temp.getDisponible());

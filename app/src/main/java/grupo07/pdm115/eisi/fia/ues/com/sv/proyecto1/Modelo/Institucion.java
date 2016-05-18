@@ -1,9 +1,11 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 
+import java.io.Serializable;
+
 /**
  * Created by Usuario on 09/05/2016.
  */
-public class Institucion {
+public class Institucion implements Serializable{
 
     //Atributos
 
@@ -14,9 +16,10 @@ public class Institucion {
     private String telefono1;
     private String telefono2;
 
-    public Institucion(String nombreInstitucion, String emailInstitucion,
+    public Institucion(int idInstitucion, String nombreInstitucion, String emailInstitucion,
                           String nombreEncargado, String telefono1, String telefono2) {
 
+        this.idInstitucion=idInstitucion;
         this.nombreInstitucion=nombreInstitucion;
         this.emailInstitucion=emailInstitucion;
         this.nombreEncargado=nombreEncargado;
@@ -80,8 +83,7 @@ public class Institucion {
     public String toString() {
 
         return "instituciones{" +
-                "idInstitucion=" + idInstitucion +
-                ", nombreInstitucion='" + nombreInstitucion+ '\'' +
+                "nombreInstitucion='" + nombreInstitucion+ '\'' +
                 ", emailInstitucion='" + emailInstitucion + '\'' +
                 ", nombreEncargado='" + nombreEncargado + '\'' +
                 ", telefono1='" + telefono1 + '\'' +

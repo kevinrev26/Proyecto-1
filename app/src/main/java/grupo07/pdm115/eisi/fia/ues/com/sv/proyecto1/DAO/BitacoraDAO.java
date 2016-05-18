@@ -45,7 +45,11 @@ public class BitacoraDAO extends MasterDAO {
                 REVI_COORDINADOR + " INTEGER NOT NULL, " +
                 REVI_TUTOR + " INTEGER NOT NULL, " +
                 ID_TIPO_ACTIVIDAD + " TEXT(5) NOT NULL, " +
+<<<<<<< HEAD
                 " CONSTRAINT " +
+=======
+                "CONSTRAINT " +
+>>>>>>> 3ca5bcc590c2a108982082a12d8279a961542b9e
                 "fk_bitacora_coordinador FOREIGN KEY (" + REVI_COORDINADOR + ") " +
                 "REFERENCES " + CoordinadorDAO.COORDINADOR_TABLE  + "(" + CoordinadorDAO.IDENTIFICADOR_COORDINADOR + ")" + " ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "CONSTRAINT fk_bitacora_tutor FOREIGN KEY (" + REVI_TUTOR + ") REFERENCES " + TutorDAO.TUTOR_TABLE + "(" + TutorDAO.IDENTIFICADOR_TUTOR + ")" + " ON DELETE CASCADE ON UPDATE CASCADE, " +

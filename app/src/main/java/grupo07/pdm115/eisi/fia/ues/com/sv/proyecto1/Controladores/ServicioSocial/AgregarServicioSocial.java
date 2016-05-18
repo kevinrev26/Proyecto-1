@@ -58,13 +58,13 @@ public class AgregarServicioSocial extends AppCompatActivity implements View.OnC
             Toast.makeText(AgregarServicioSocial.this, "Disponibilidad solo puede ser 1=Disponible o 0=No Disponible", Toast.LENGTH_SHORT).show();
         } else {
 
-            ServicioSocial temp = new ServicioSocial(Integer.parseInt(mIdInsSSText.getText().toString()),
-                    Integer.parseInt(mIdTutorSSText.getText().toString()),
-                    Integer.parseInt(mIdModSSText.getText().toString()),
-                    mTituloSSText.getText().toString(),
-                    mDesSSText.getText().toString(),
-                    Integer.parseInt(mDispSSText.getText().toString()),
-                    Integer.parseInt(mCooAprSSText.getText().toString()));
+            ServicioSocial temp = new ServicioSocial();
+                    temp.setIdentificadorTutor(Integer.parseInt(mIdTutorSSText.getText().toString()));
+                    temp.setIdentificadorModalidad(Integer.parseInt(mIdModSSText.getText().toString()));
+                    temp.setTitulo(mTituloSSText.getText().toString());
+                    temp.setDescripcion(mDesSSText.getText().toString());
+                    temp.setDisponible(Integer.parseInt(mDispSSText.getText().toString()));
+                    temp.setCoordinadorAprobado(Integer.parseInt(mCooAprSSText.getText().toString()));
             if (mServicioSocialDAO.insertarServicioSocial(temp) > 0) {
                 Toast.makeText(AgregarServicioSocial.this, "Servicio social agregado con exito", Toast.LENGTH_SHORT).show();
                 this.finish();

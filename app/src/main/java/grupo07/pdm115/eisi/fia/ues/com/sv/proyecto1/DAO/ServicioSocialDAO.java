@@ -137,6 +137,7 @@ public class ServicioSocialDAO extends MasterDAO {
         } else {
             try {
                 return new ServicioSocial(
+                        cursor.getInt(ID_SERVICIO_COL),
                         cursor.getInt(ID_INSTITUCION_COL),
                         cursor.getInt(ID_TUTOR_COL),
                         cursor.getInt(ID_MODALIDAD_COL),
