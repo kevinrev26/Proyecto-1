@@ -40,7 +40,7 @@ public class InstitucionDAO extends MasterDAO{
 
     public static String crearTablaInstitucion() {
         return "CREATE TABLE " + INSTITUCION_TABLE + " (" +
-                ID_INSTITUCION + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                ID_INSTITUCION + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 NOMBRE_INSTITUCION + " TEXT NOT NULL, " +
                 EMAIL_INSTITUCION + " TEXT NOT NULL, " +
                 NOMBRE_ENCARGADO + " TEXT NOT NULL, " +
@@ -53,17 +53,16 @@ public class InstitucionDAO extends MasterDAO{
         return "DROP TABLE IF EXISTS " + INSTITUCION_TABLE;
     }
 
-    public long insertarInstitucion(Institucion institucion) {
-        //super.abrirDB();
+    public long insertarInstitucion(Institucion institucion){
         ContentValues contentValues = new ContentValues();
         contentValues.put(NOMBRE_INSTITUCION, institucion.getNombreInstitucion());
-        contentValues.put(EMAIL_INSTITUCION, institucion.getEmailInstitucion());
+        contentValues.put(EMAIL_INSTITUCION, institucion.getNombreInstitucion());
         contentValues.put(NOMBRE_ENCARGADO, institucion.getNombreEncargado());
         contentValues.put(TELEFONO1, institucion.getTelefono1());
         contentValues.put(TELEFONO2, institucion.getTelefono2());
-        return mDatabase.insert(INSTITUCION_TABLE, null, contentValues);
-    }
+        return mDatabase.insert(INSTITUCION_TABLE,null,contentValues);
 
+    }
     public int actualizarInstitucion(Institucion institucion) {
         //super.abrirDB();
         ContentValues contentValues = new ContentValues();
@@ -122,6 +121,7 @@ public class InstitucionDAO extends MasterDAO{
         } else {
             try {
                 return new Institucion(
+                        cursor.getInt(ID_INSTITUCION_COL),
                         cursor.getString(NOMBRE_INSTITUCION_COL),
                         cursor.getString(EMAIL_INSTITUCION_COL),
                         cursor.getString(NOMBRE_ENCARGADO_COL),

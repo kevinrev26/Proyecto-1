@@ -1,9 +1,11 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 
+import java.io.Serializable;
+
 /**
  * Created by Marvin on 07/05/2016.
  */
-public class Tutor {
+public class Tutor implements Serializable {
     private int idTutor;
     private String nombre;
     private String email;

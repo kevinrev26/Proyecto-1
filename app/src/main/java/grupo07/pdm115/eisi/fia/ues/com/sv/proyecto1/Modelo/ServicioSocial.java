@@ -1,9 +1,11 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 
+import java.io.Serializable;
+
 /**
  * Created by Usuario on 08/05/2016.
  */
-public class ServicioSocial {
+public class ServicioSocial implements Serializable {
 
     //Atributos
 
@@ -16,9 +18,10 @@ public class ServicioSocial {
     private int disponible;
     private int coordinadorAprobado;
 
-    public ServicioSocial(int identificadorInstitucion, int identificadorTutor,
+    public ServicioSocial(int idServicio, int identificadorInstitucion, int identificadorTutor,
                           int identificadorModalidad, String titulo, String descripcion, int disponible, int coordinadorAprobado) {
 
+        this.idServicio=idServicio;
         this.identificadorInstitucion=identificadorInstitucion;
         this.identificadorTutor=identificadorTutor;
         this.identificadorModalidad=identificadorModalidad;
@@ -97,8 +100,7 @@ public class ServicioSocial {
     @Override
     public String toString() {
         return "ServicioSocial{" +
-                "idServicio=" + idServicio +
-                ", identificadorInstitucion=" + identificadorInstitucion +
+                "identificadorInstitucion=" + identificadorInstitucion +
                 ", identificadorTutor=" + identificadorTutor +
                 ", identificadorModalidad=" + identificadorModalidad +
                 ", titulo='" + titulo + '\'' +

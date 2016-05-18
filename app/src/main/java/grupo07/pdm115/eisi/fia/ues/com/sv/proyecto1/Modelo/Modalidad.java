@@ -1,9 +1,11 @@
 package grupo07.pdm115.eisi.fia.ues.com.sv.proyecto1.Modelo;
 
+import java.io.Serializable;
+
 /**
  * Created by Diego on 09/05/2016.
  */
-public class Modalidad {
+public class Modalidad implements Serializable {
 
     private int idModalidad;
     private String nombre;
